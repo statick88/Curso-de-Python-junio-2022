@@ -18,6 +18,7 @@ format:
     transition: fade
     chalkboard: false #Pizarra
     auto-stretch: false
+    scrollable: true
   html: 
     code-fold: true
     html-math-method: katex
@@ -25,7 +26,9 @@ format:
     transition: fade
     auto-stretch: false
 editor: visual
-    
+execute:
+  echo: true
+
 bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
 ---
