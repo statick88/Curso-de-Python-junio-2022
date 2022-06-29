@@ -6,6 +6,7 @@ author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
 format:
   revealjs:
+    toc: true
     incremental: true
     slide-number: true
     preview-links: auto
@@ -18,13 +19,13 @@ format:
     transition: fade
     chalkboard: false #Pizarra
     auto-stretch: false
-  html: 
-    code-fold: true
-    html-math-method: katex
-    multiplex: true
-    transition: fade
-    auto-stretch: false
     scrollable: true
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
 editor: visual
 execute: 
   echo: true
@@ -53,8 +54,6 @@ Básicamente es el shell de python, un shell interactivo, el acrónimo REPL sign
 
 Este interprete se puede utilizar para comprobar de una forma sencilla algunos comando de Python. Para iniciar el interprete es necesario tecla el comando **python3** en una terminal (Gnu/Linux o Mac) o **python** en una consola según [@repl-p]
 
-## 
-
 El proceso que se utiliza es el siguiente.
 
 1.  **Read**: Toma la entrada del usuario (input).
@@ -78,8 +77,6 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 4-2
 ```
 
-## 
-
 **Multiplicación**
 
 ```{python}
@@ -98,8 +95,6 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 4//2
 ```
 
-## 
-
 **Módulo:**
 
 ```{python}
@@ -116,23 +111,17 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 
 Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
 
-Existe una frase que dice "Los buenos programadores crean código que spueden leer los humanos", (Anonimó).
+Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anonimó).
 
 Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores **no escriben código**, y esto se debe a las **malas prácticas** de escritura de código.
 
-## 
-
-Clean Code es una buena referencia para este punto, puesto que brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
+**Clean Code** como mencion [@anaya2018] brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
 
 Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
 
-Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anonimó).
-
-## 
+Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anónimo).
 
 Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores no escriben código, y esto se debe a las malas prácticas de escritura de código.
-
-Clean Code es una buena referencia para este punto, puesto que brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
 
 ## Formas de escribir comentarios.
 
@@ -154,8 +143,6 @@ Existen distintas formas de escribir variables, solo se debe tomar en cuenta alg
 
 -   No escribir variables de más de una palabra separadas
 
-## 
-
 ### Qué se debe hacer.
 
 -   Escribir variables que tengan sentido.
@@ -164,7 +151,7 @@ Existen distintas formas de escribir variables, solo se debe tomar en cuenta alg
 
 -   Separar variables con un "\_".
 
--   Utilizar Camel Case.
+-   Utilizar Camel Case .
 
 ## Ejemplos
 
@@ -172,12 +159,64 @@ Mal
 
 ```{python}
 a = "Diego Saavedra"
+print(a) #Imprime el valor que se almacena en la variable a
 ```
 
 Bien
 
 ```{python}
-nombre = "Diego Saavedra"
+nombre = "Diego Saavedra" 
+print(nombre) #Imprime el valor que se almacena en la variable nombre
+```
+
+Se recomienda utilizar nombres de variables que hagan sentido a lo que se programa.
+
+Ejemplos de Variables.
+
+```{python}
+correo = "dsaavedra88@gmail.com" #String
+print(correo) #Imprime el valor que se almacena en la variable correo
+
+número = 5 #Int
+print(número) #Imprime el valor que se almacena en la variable número
+
+nacido_vivo = True #Boolean
+print(nacido_vivo) #Imprime el varlor que se almacena en nacido_vivo
+
+notaFinal = 10.0 #Float
+print(notaFinal) #Imprime el varlor que se almacena en notaFinal
+
+complejo = 1j #Complex
+print(complejo) #Imprime el varlor que se almacena en complejo
+```
+
+## Más de una Variable.
+
+Es posible programar más de una variable en una sola línea de código.
+
+Ejemplo.
+
+```{python}
+nombre, apellido, teléfono = "Diego", "Saavedra", "+593992018216"
+print(nombre, apellido, teléfono)
+
+valorInicial = valorMedio = valorFinal = 10
+print(valorInicial, valorMedio, valorFinal)
+```
+
+## Concatenación de Variables.
+
+Una posibilidad al programar en Python es unir (concatenar) más de un resultado en una salida después de un proceso.
+
+Ejemplo:
+
+```{python}
+inicio = "Bienvenidos"
+final = "al curso de Python en Abacom"
+
+print(inicio + final) #No se recomienda
+print(inicio + " " + final) #Se recomienda
+print(inicio, final) #Se recomienda
 ```
 
 ## Referencias Bibliográficas.

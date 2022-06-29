@@ -5,26 +5,33 @@ date: "today"
 author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
 format:
-  revealjs:
-    incremental: true
-    slide-number: true
-    preview-links: auto
-    logo: img/favicon-50x56.png
-    css: styles.css
-    footer: <https://abacom.edu.ec>
-    theme: dark
-    makeindex: true
-    multiplex: true
-    transition: fade
-    chalkboard: false #Pizarra
-    auto-stretch: false
+  #revealjs:
+    #incremental: true
+    #slide-number: true
+    #preview-links: auto
+    #logo: img/favicon-50x56.png
+    #css: styles.css
+    #footer: <https://abacom.edu.ec>
+    #theme: dark
+    #makeindex: true
+    #multiplex: true
+    #transition: fade
+    #chalkboard: false #Pizarra
+    #auto-stretch: false
   html: 
+    theme: dark
     code-fold: true
     html-math-method: katex
     multiplex: true
     transition: fade
     auto-stretch: false
     scrollable: true
+    mainfont: font-family
+    #fontcolor: blue
+    background-color: green
+    image: img/favicon-50x56.png
+    abstract: "El presente material didáctico se realiza con el objetivo de servir como apoyo al Curso de Programación en Python de la empresa Abacom Loja, empresa especializada en cursos de capacitación y servicios informáticos"
+
 editor: visual
 execute: 
   echo: true
@@ -32,4 +39,4 @@ execute:
 
 ## Indice
 
-### 1. [Intro Python](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Intro)
+### [Intro Python](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Intro)
