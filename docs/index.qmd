@@ -71,6 +71,7 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 ```{python}
 2+2
 ```
+
 **Resta:**
 
 ```{python}
@@ -119,7 +120,7 @@ Existe una frase que dice "Los buenos programadores crean código que spueden le
 
 Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores **no escriben código**, y esto se debe a las **malas prácticas** de escritura de código.
 
-##
+## 
 
 Clean Code es una buena referencia para este punto, puesto que brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
 
@@ -127,7 +128,7 @@ Una buena práctica es el uso de comentarios para nosotros mismos o para otras p
 
 Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anonimó).
 
-##
+## 
 
 Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores no escriben código, y esto se debe a las malas prácticas de escritura de código.
 
@@ -153,7 +154,7 @@ Existen distintas formas de escribir variables, solo se debe tomar en cuenta alg
 
 -   No escribir variables de más de una palabra separadas
 
-##
+## 
 
 ### Qué se debe hacer.
 
