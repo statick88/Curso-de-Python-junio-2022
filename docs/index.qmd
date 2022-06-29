@@ -1,6 +1,6 @@
 ---
-title: "Intro Python"
-subtitle: "REPL, operaciones matemáticas, Comentarios, Variables, Más de una Variable, Concatenación"
+title: "Curso de Programación en Python junio 2022"
+#subtitle: "REPL, operaciones matemáticas, Comentarios, Variables, Más de una Variable, Concatenación"
 date: "today"
 author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
