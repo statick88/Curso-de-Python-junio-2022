@@ -18,17 +18,17 @@ format:
     transition: fade
     chalkboard: false #Pizarra
     auto-stretch: false
-    scrollable: true
   html: 
     code-fold: true
     html-math-method: katex
     multiplex: true
     transition: fade
     auto-stretch: false
+    scrollable: true
 editor: visual
-execute:
+execute: 
   echo: true
-
+    
 bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
 ---
@@ -64,19 +64,20 @@ El proceso que se utiliza es el siguiente.
 
 ## Un poco de matemáticas.
 
-Con python es posible el desarrollo de operaciones matemáticas de forma sencilla. a continuación algunos ejemplos.
+Con python es posible el desarrollo de operaciones matemáticas de forma sencilla, a continuación algunos ejemplos.
 
 **Suma:**
 
 ```{python}
 2+2
 ```
-
 **Resta:**
 
 ```{python}
 4-2
 ```
+
+## 
 
 **Multiplicación**
 
@@ -96,6 +97,8 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 4//2
 ```
 
+## 
+
 **Módulo:**
 
 ```{python}
@@ -106,6 +109,74 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 
 ```{python}
 4**2
+```
+
+## Comentarios.
+
+Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
+
+Existe una frase que dice "Los buenos programadores crean código que spueden leer los humanos", (Anonimó).
+
+Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores **no escriben código**, y esto se debe a las **malas prácticas** de escritura de código.
+
+##
+
+Clean Code es una buena referencia para este punto, puesto que brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
+
+Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
+
+Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anonimó).
+
+##
+
+Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores no escriben código, y esto se debe a las malas prácticas de escritura de código.
+
+Clean Code es una buena referencia para este punto, puesto que brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
+
+## Formas de escribir comentarios.
+
+-   Comentarios de media línea.
+
+-   Comentarios de una línea.
+
+-   Comentarios de varias líneas.
+
+## Variables
+
+Existen distintas formas de escribir variables, solo se debe tomar en cuenta algunos parámetros básicos para no tener inconvenientes.
+
+### Qué **no** se debe hacer.
+
+-   No escribir variables que empiecen con números.
+
+-   No utilizar palabras reservadas.
+
+-   No escribir variables de más de una palabra separadas
+
+##
+
+### Qué se debe hacer.
+
+-   Escribir variables que tengan sentido.
+
+-   Escribir variables que empiecen con un "\_"
+
+-   Separar variables con un "\_".
+
+-   Utilizar Camel Case.
+
+## Ejemplos
+
+Mal
+
+```{python}
+a = "Diego Saavedra"
+```
+
+Bien
+
+```{python}
+nombre = "Diego Saavedra"
 ```
 
 ## Referencias Bibliográficas.
