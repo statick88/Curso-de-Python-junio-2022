@@ -6,9 +6,10 @@ author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
 format:
   revealjs:
+    scrollable: true
     chalkboard: 
       buttons: false
-    toc: true
+    #toc: true
     incremental: true
     slide-number: true
     preview-links: auto
@@ -21,7 +22,7 @@ format:
     transition: fade
     chalkboard: false #Pizarra
     auto-stretch: false
-    scrollable: true
+
   #html: 
     #code-fold: true
     #html-math-method: katex
@@ -36,7 +37,7 @@ bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
 ---
 
-## Generalidades.
+# Generalidades.
 
 Existen distintos tipos de datos denominados **primitivos** y **compuestos** que nosotros podemos encontrar en Python. Los datos primitivos son: strings, números, booleanos y los datos compuestos son tuplas, listas, diccionarios.
 
@@ -94,7 +95,7 @@ print(lista)
 
 **Recuerda**: Las listas son tipos de datos **Mutables**, es decir se pueden modificar.
 
-## Métodos de Listas.
+### Métodos de Listas.
 
 Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipo de dato.
 
@@ -110,7 +111,7 @@ Las listas también utilizan métodos que nos permiten agregar, quitar o modific
 
 **Len**: Nos cuenta los elementos que están en la lista.
 
-## Código de Listas Parte 1.
+### Código de Listas Parte 1.
 
 ```{python}
 lista = []
@@ -128,7 +129,7 @@ print(lista_vocales.count("e"))
 print(len(lista_vocales))
 ```
 
-## Agregando elementos a una lista.
+### Agregando elementos a una lista.
 
 ::: columns
 ::: {.column width="80%"}
@@ -140,7 +141,7 @@ Para leer elementos de una lista se accede a través de la posición en la que s
 :::
 :::
 
-## Código de Listas Parte 2.
+### Código de Listas Parte 2.
 
 ```{python}
 lista = [1, 2, 3]
@@ -152,7 +153,7 @@ print("Indice 2 =", lista[2])
 
 **Recuerda**: Para acceder a los elementos de una lista, se utiliza siempre el índice y no la posición en la que se encuentra este elemento.
 
-## Eliminar elementos de una lista.
+### Eliminar elementos de una lista.
 
 Existen algunos métodos para eliminar elementos de una lista, si por ejemplo quermos eliminar elementos mediante su posición podemos utilizar **Pop** (lista.pop), esto eliminará el último elemento de la lista.
 
@@ -223,7 +224,7 @@ print(lista[4])
 
 Las tuplas no son modificables por lo que no podemos acceder al método **Append.**
 
-## Transformar una Tupla en una Lista
+### Transformar una Tupla en una Lista
 
 Para transformar una tupla en una lista podemos hacer lo siguiente.
 
@@ -265,7 +266,7 @@ print(diccionario["trabajo"])
 print(diccionario["edad"])
 ```
 
-## Métodos en Diccionarios.
+### Métodos en Diccionarios.
 
 Para poder acceder a métodos de diccionarios podemos utilizar **Get**, esto lo realizamos de la siguiente forma.
 
@@ -305,7 +306,7 @@ print(diccionario)
 print(len(diccionario))
 ```
 
-## Agregando elementos a un Diccionario.
+### Agregando elementos a un Diccionario.
 
 Para agregar elementos a un diccionario podemos utilizar la siguiente sintaxis.
 
@@ -321,7 +322,7 @@ diccionario["sexo"]= "Masculino"
 print(diccionario)
 ```
 
-## Eliminar elementos de un Diccionario.
+### Eliminar elementos de un Diccionario.
 
 Para eliminar elementos de un diccionario podemos utilizar la siguiente sintaxis.
 
@@ -344,7 +345,7 @@ del diccionario["trabajo"] #Elimina el valor de trabajo
 print(diccionario)
 ```
 
-## Copias de Diccionarios.
+### Copias de Diccionarios.
 
 También es posible generar copias de Diccionarios, esto lo hacemos de la siguiente forma.
 
@@ -367,7 +368,7 @@ print(copiaDiccionario, diccionario)
 
 ```
 
-## Más ejercicios con Diccionarios.
+### Más ejercicios con Diccionarios.
 
 Vamos a crear diccionarios anidados
 

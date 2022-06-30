@@ -409,39 +409,10 @@
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
   <p class="date">29/6/22</p>
 </section>
-<section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Indice de contenidos</h2>
-<ul>
-<li class="fragment"><a href="#/generalidades." id="/toc-generalidades.">Generalidades.</a></li>
-<li class="fragment"><a href="#/strings." id="/toc-strings.">Strings.</a></li>
-<li class="fragment"><a href="#/números." id="/toc-números.">Números.</a></li>
-<li class="fragment"><a href="#/listas." id="/toc-listas.">Listas.</a></li>
-<li class="fragment"><a href="#/métodos-de-listas." id="/toc-métodos-de-listas.">Métodos de Listas.</a></li>
-<li class="fragment"><a href="#/código-de-listas-parte-1." id="/toc-código-de-listas-parte-1.">Código de Listas Parte 1.</a></li>
-<li class="fragment"><a href="#/agregando-elementos-a-una-lista." id="/toc-agregando-elementos-a-una-lista.">Agregando elementos a una lista.</a></li>
-<li class="fragment"><a href="#/código-de-listas-parte-2." id="/toc-código-de-listas-parte-2.">Código de Listas Parte 2.</a></li>
-<li class="fragment"><a href="#/eliminar-elementos-de-una-lista." id="/toc-eliminar-elementos-de-una-lista.">Eliminar elementos de una lista.</a></li>
-<li class="fragment"><a href="#/tuplas." id="/toc-tuplas.">Tuplas.</a></li>
-<li class="fragment"><a href="#/transformar-una-tupla-en-una-lista" id="/toc-transformar-una-tupla-en-una-lista">Transformar una Tupla en una Lista</a></li>
-<li class="fragment"><a href="#/range." id="/toc-range.">Range.</a></li>
-<li class="fragment"><a href="#/diccionarios." id="/toc-diccionarios.">Diccionarios.</a></li>
-<li class="fragment"><a href="#/métodos-en-diccionarios." id="/toc-métodos-en-diccionarios.">Métodos en Diccionarios.</a></li>
-<li class="fragment"><a href="#/agregando-elementos-a-un-diccionario." id="/toc-agregando-elementos-a-un-diccionario.">Agregando elementos a un Diccionario.</a></li>
-<li class="fragment"><a href="#/eliminar-elementos-de-un-diccionario." id="/toc-eliminar-elementos-de-un-diccionario.">Eliminar elementos de un Diccionario.</a></li>
-<li class="fragment"><a href="#/copias-de-diccionarios." id="/toc-copias-de-diccionarios.">Copias de Diccionarios.</a></li>
-<li class="fragment"><a href="#/más-ejercicios-con-diccionarios." id="/toc-más-ejercicios-con-diccionarios.">Más ejercicios con Diccionarios.</a>
-<ul>
-<li class="fragment"><a href="#/diccionarios-desde-variables." id="/toc-diccionarios-desde-variables.">Diccionarios desde Variables.</a></li>
-</ul></li>
-<li class="fragment"><a href="#/booleanos." id="/toc-booleanos.">Booleanos.</a></li>
-<li class="fragment"><a href="#/referencias-bibliográficas." id="/toc-referencias-bibliográficas.">Referencias Bibliográficas.</a></li>
-</ul>
-</nav>
-</section>
 
-<section id="generalidades." class="slide level2">
-<h2>Generalidades.</h2>
+<section>
+<section id="generalidades." class="title-slide slide level1 center">
+<h1>Generalidades.</h1>
 <p>Existen distintos tipos de datos denominados <strong>primitivos</strong> y <strong>compuestos</strong> que nosotros podemos encontrar en Python. Los datos primitivos son: strings, números, booleanos y los datos compuestos son tuplas, listas, diccionarios.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -503,9 +474,7 @@
 </div>
 </div>
 <p><strong>Recuerda</strong>: Las listas son tipos de datos <strong>Mutables</strong>, es decir se pueden modificar.</p>
-</section>
-<section id="métodos-de-listas." class="slide level2">
-<h2>Métodos de Listas.</h2>
+<h3 id="métodos-de-listas.">Métodos de Listas.</h3>
 <p>Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipo de dato.</p>
 <p><strong>Append</strong>: Permite agregar datos a la lista.</p>
 <p><strong>Clear:</strong> Elimina todos los elementos de la lista</p>
@@ -513,9 +482,7 @@
 <p><strong>Count</strong>: Permite contar cuantas veces existe un elemento en una lista.</p>
 <p><strong>Print</strong>: Nos permite conocer los valores en la lista.</p>
 <p><strong>Len</strong>: Nos cuenta los elementos que están en la lista.</p>
-</section>
-<section id="código-de-listas-parte-1." class="slide level2">
-<h2>Código de Listas Parte 1.</h2>
+<h3 id="código-de-listas-parte-1.">Código de Listas Parte 1.</h3>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>lista <span class="op">=</span> []</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía.</span></span>
@@ -539,9 +506,7 @@
 6</code></pre>
 </div>
 </div>
-</section>
-<section id="agregando-elementos-a-una-lista." class="slide level2">
-<h2>Agregando elementos a una lista.</h2>
+<h3 id="agregando-elementos-a-una-lista.">Agregando elementos a una lista.</h3>
 <div class="columns">
 <div class="column" style="width:80%;">
 <p>Para leer elementos de una lista se accede a través de la posición en la que se encuentra el mismo (indice), en programación se cuenta desde <strong>0</strong> y no desde <strong>1</strong> como se lo hace comúnmente. En palabras sencillas si quiero acceder al primer elemento de una lista en lugar de utilizar <strong>1</strong>, debería utilizar <strong>0</strong>, para el segundo elemento <strong>1,</strong> para el tercero <strong>2</strong> y así sucesivamente<strong>.</strong></p>
@@ -553,9 +518,7 @@
 </div>
 </div>
 </div>
-</section>
-<section id="código-de-listas-parte-2." class="slide level2">
-<h2>Código de Listas Parte 2.</h2>
+<h3 id="código-de-listas-parte-2.">Código de Listas Parte 2.</h3>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(<span class="st">"Indice 0 ="</span>, lista[<span class="dv">0</span>])</span>
@@ -568,9 +531,7 @@ Indice 2 = 3</code></pre>
 </div>
 </div>
 <p><strong>Recuerda</strong>: Para acceder a los elementos de una lista, se utiliza siempre el índice y no la posición en la que se encuentra este elemento.</p>
-</section>
-<section id="eliminar-elementos-de-una-lista." class="slide level2">
-<h2>Eliminar elementos de una lista.</h2>
+<h3 id="eliminar-elementos-de-una-lista.">Eliminar elementos de una lista.</h3>
 <p>Existen algunos métodos para eliminar elementos de una lista, si por ejemplo quermos eliminar elementos mediante su posición podemos utilizar <strong>Pop</strong> (lista.pop), esto eliminará el último elemento de la lista.</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>lista <span class="op">=</span> [<span class="st">"manzana"</span>,<span class="st">"pera"</span>,<span class="st">"banana"</span>]</span>
@@ -635,7 +596,7 @@ Indice 2 = 3</code></pre>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>tupla <span class="op">=</span> (<span class="st">"a"</span>,<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>,<span class="st">"d"</span>,<span class="st">"e"</span>)</span>
 <span id="cb21-2"><a href="#cb21-2"></a>tupla.count(<span class="st">"a"</span>)</span>
 <span id="cb21-3"><a href="#cb21-3"></a>tupla.index(<span class="st">"e"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="61">
 <pre><code>5</code></pre>
 </div>
 </div>
@@ -648,9 +609,7 @@ Indice 2 = 3</code></pre>
 </div>
 </div>
 <p>Las tuplas no son modificables por lo que no podemos acceder al método <strong>Append.</strong></p>
-</section>
-<section id="transformar-una-tupla-en-una-lista" class="slide level2">
-<h2>Transformar una Tupla en una Lista</h2>
+<h3 id="transformar-una-tupla-en-una-lista">Transformar una Tupla en una Lista</h3>
 <p>Para transformar una tupla en una lista podemos hacer lo siguiente.</p>
 <div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>tupla <span class="op">=</span> (<span class="st">"a"</span>,<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>,<span class="st">"d"</span>,<span class="st">"e"</span>)</span>
@@ -699,9 +658,7 @@ electricista
 35</code></pre>
 </div>
 </div>
-</section>
-<section id="métodos-en-diccionarios." class="slide level2">
-<h2>Métodos en Diccionarios.</h2>
+<h3 id="métodos-en-diccionarios.">Métodos en Diccionarios.</h3>
 <p>Para poder acceder a métodos de diccionarios podemos utilizar <strong>Get</strong>, esto lo realizamos de la siguiente forma.</p>
 <div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>diccionario <span class="op">=</span> { </span>
@@ -745,9 +702,7 @@ electricista
 3</code></pre>
 </div>
 </div>
-</section>
-<section id="agregando-elementos-a-un-diccionario." class="slide level2">
-<h2>Agregando elementos a un Diccionario.</h2>
+<h3 id="agregando-elementos-a-un-diccionario.">Agregando elementos a un Diccionario.</h3>
 <p>Para agregar elementos a un diccionario podemos utilizar la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a>diccionario <span class="op">=</span> { </span>
@@ -764,9 +719,7 @@ electricista
 {'nombre': 'Juan', 'trabajo': 'electricista', 'edad': '35', 'sexo': 'Masculino'}</code></pre>
 </div>
 </div>
-</section>
-<section id="eliminar-elementos-de-un-diccionario." class="slide level2">
-<h2>Eliminar elementos de un Diccionario.</h2>
+<h3 id="eliminar-elementos-de-un-diccionario.">Eliminar elementos de un Diccionario.</h3>
 <p>Para eliminar elementos de un diccionario podemos utilizar la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a>diccionario <span class="op">=</span> { </span>
@@ -792,9 +745,7 @@ electricista
 {'nombre': 'Juan'}</code></pre>
 </div>
 </div>
-</section>
-<section id="copias-de-diccionarios." class="slide level2">
-<h2>Copias de Diccionarios.</h2>
+<h3 id="copias-de-diccionarios.">Copias de Diccionarios.</h3>
 <p>También es posible generar copias de Diccionarios, esto lo hacemos de la siguiente forma.</p>
 <div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a>diccionario <span class="op">=</span> { </span>
@@ -820,9 +771,7 @@ electricista
 {'nombre': 'Juan', 'trabajo': 'electricista', 'edad': '35', 'sexo': 'Masculino'} {'nombre': 'Juan', 'trabajo': 'electricista', 'edad': '35', 'sexo': 'Masculino'}</code></pre>
 </div>
 </div>
-</section>
-<section id="más-ejercicios-con-diccionarios." class="slide level2">
-<h2>Más ejercicios con Diccionarios.</h2>
+<h3 id="más-ejercicios-con-diccionarios.">Más ejercicios con Diccionarios.</h3>
 <p>Vamos a crear diccionarios anidados</p>
 <div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>perros <span class="op">=</span> {</span>
@@ -907,7 +856,7 @@ Python Software Fundation. (2022a). <em>3. Una introducción informal a Python <
 Python Software Fundation. (2022b). <em>3. Una introducción informal a Python <span></span> documentación de Python - 3.10.5</em>. <a href="https://docs.python.org/es/3/tutorial/introduction.html#lists">https://docs.python.org/es/3/tutorial/introduction.html#lists</a>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

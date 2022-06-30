@@ -6,7 +6,7 @@ author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
 format:
   revealjs:
-    toc: true
+    #toc: true
     incremental: true
     slide-number: true
     preview-links: auto
