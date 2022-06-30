@@ -111,11 +111,11 @@ Con python es posible el desarrollo de operaciones matemáticas de forma sencill
 
 Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
 
-Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anonimó).
+Existe una frase que dice "Los buenos programadores crean código que pueden leer los humanos", (Anónimo).
 
 Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores **no escriben código**, y esto se debe a las **malas prácticas** de escritura de código.
 
-**Clean Code** como mencion [@anaya2018] brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
+**Clean Code** como menciona [@anaya2018] brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.
 
 Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.
 

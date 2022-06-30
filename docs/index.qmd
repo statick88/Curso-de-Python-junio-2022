@@ -37,6 +37,7 @@ execute:
   echo: true
 ---
 
-## Indice
+# Indice
 
 ### [Intro Python](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Intro)
+### [Tipos de Datos](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Tipos_de_Datos)

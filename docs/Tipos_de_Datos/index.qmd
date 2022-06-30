@@ -1,0 +1,435 @@
+---
+title: "Tipos de Datos"
+subtitle: "Strings, Números, Listas, Tuplas, Range, Diccionarios, Booleanos"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    chalkboard: 
+      buttons: false
+    toc: true
+    incremental: true
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: false #Pizarra
+    auto-stretch: false
+    scrollable: true
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+## Generalidades.
+
+Existen distintos tipos de datos denominados **primitivos** y **compuestos** que nosotros podemos encontrar en Python. Los datos primitivos son: strings, números, booleanos y los datos compuestos son tuplas, listas, diccionarios.
+
+![](img/Bases_de_datos_de_particulares.jpg "Fuente: https://upload.wikimedia.org/wikipedia/commons/0/06/Bases_de_datos_de_particulares.jpg"){fig-align="center" width="400"}
+
+## Strings.
+
+::: columns
+::: {.column width="50%"}
+Se puede manipular **cadenas de texto**, las cuales pueden ser expresadas de distintas formas. Pueden estar entre **comillas simples ('...')** o **dobles ("...")** según la @pythonsoftwarefundation2022.
+:::
+
+::: {.column width="50%"}
+Código.
+
+```{python}
+nombre = "Diego"
+apellido = 'Saavedra'
+print(nombre, apellido)
+```
+:::
+:::
+
+## Números.
+
+::: columns
+::: {.column width="50%"}
+Los números también son un tipo de dato que se puede utilizar, en este caso tenemos enteros, flotantes o complejos @pythonsoftwarefundation2022a.
+:::
+
+::: {.column width="50%"}
+Código.
+
+```{python}
+entero = 12
+flotante = 25.12
+complejo = 8j
+print(entero, flotante, complejo)
+```
+:::
+:::
+
+## Listas.
+
+Las listas son tipos de datos compuestos, almacenan más de un solo tipo de dato (no se recomienda, pero se puede hacer).
+
+```{python}
+lista = []
+print(lista)
+lista = ["Pedro", "diego.saavedra@gmail.com", True, 5, 14.9]
+print(lista)
+lista = ["Juan", "Sebastian", [True, "blue"], 8]
+print(lista)
+```
+
+**Recuerda**: Las listas son tipos de datos **Mutables**, es decir se pueden modificar.
+
+## Métodos de Listas.
+
+Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipo de dato.
+
+**Append**: Permite agregar datos a la lista.
+
+**Clear:** Elimina todos los elementos de la lista
+
+**Copy**: Copia los elementos de una lista a otra.
+
+**Count**: Permite contar cuantas veces existe un elemento en una lista.
+
+**Print**: Nos permite conocer los valores en la lista.
+
+**Len**: Nos cuenta los elementos que están en la lista.
+
+## Código de Listas Parte 1.
+
+```{python}
+lista = []
+print(lista) #Lista vacía.
+lista.append(50)
+print(lista) #Lista con datos.
+lista1 =[]
+lista1 = lista.copy()
+lista.clear()
+print(lista) #Lista vacía
+print(lista, lista1)
+
+lista_vocales = ["a","e","e","i","o","u"]
+print(lista_vocales.count("e"))
+print(len(lista_vocales))
+```
+
+## Agregando elementos a una lista.
+
+::: columns
+::: {.column width="80%"}
+Para leer elementos de una lista se accede a través de la posición en la que se encuentra el mismo (indice), en programación se cuenta desde **0** y no desde **1** como se lo hace comúnmente. En palabras sencillas si quiero acceder al primer elemento de una lista en lugar de utilizar **1**, debería utilizar **0**, para el segundo elemento **1,** para el tercero **2** y así sucesivamente**.**
+:::
+
+::: {.column width="20%"}
+![](img/Bases_de_datos_de_particulares.png){fig-align="center" width="200"}
+:::
+:::
+
+## Código de Listas Parte 2.
+
+```{python}
+lista = [1, 2, 3]
+print("Indice 0 =", lista[0])
+print("Indice 1 =", lista[1])
+print("Indice 2 =", lista[2])
+
+```
+
+**Recuerda**: Para acceder a los elementos de una lista, se utiliza siempre el índice y no la posición en la que se encuentra este elemento.
+
+## Eliminar elementos de una lista.
+
+Existen algunos métodos para eliminar elementos de una lista, si por ejemplo quermos eliminar elementos mediante su posición podemos utilizar **Pop** (lista.pop), esto eliminará el último elemento de la lista.
+
+```{python}
+lista = ["manzana","pera","banana"]
+print(lista)
+lista.pop()
+print(lista)
+```
+
+Para eliminar elementos de una lista mediante su valor existe el método **Remove**.
+
+```{python}
+lista = ["Juan", "Pedro", "María"]
+print(lista)
+
+lista.remove("Pedro")
+print(lista)
+```
+
+Si se presenta el caso en el cual tengamos por diversas razones que dar la vuelta a una lista (voltear), existe el método reverse.
+
+```{python}
+lista = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+print(lista)
+lista.reverse()
+print(lista)
+```
+
+Si tenemos una lista desordenada lo más probable es que tengamos o necesitemos ordenarla antes de realizar cualquier tipo de operación.
+
+```{python}
+lista = ["q","w","e","r","t","y","u","i","o","p","ñ","l","k","j","h","g","f","d","s","a","z","x","c","v","b","n","m"]
+print(lista)
+lista.sort()
+print(lista)
+```
+
+**Recuerda**: Para poder utilizar el método **Sort** debemos utilizar datos del mismo tipo en la lista.
+
+## Tuplas.
+
+Las tuplas son una colección de datos pero en este caso son **Inmutables**, es decir **No se puede modificar**. Y esta es la principal diferencia de las **Listas**.
+
+Si se desea modificar una **Tupla**, se puede generar una copia de esta y a esta copia modificarla.
+
+```{python}
+tupla = ("Hola mundo", "esto", "es", "una", "tupla")
+print(tupla)
+```
+
+Aquí se pueden utilizar algunos métodos (bastante reducidos en comparación con las listas)
+
+Por ejemplo se encuentran **Count**, **Index**,
+
+```{python}
+tupla = ("a","a","b","c","d","e")
+tupla.count("a")
+tupla.index("e")
+```
+
+Para poder acceder a los elementos de una tupla, se lo hace como en las listas.
+
+```{python}
+lista = (1, 2, 3, 4, 5)
+print(lista[4])
+```
+
+Las tuplas no son modificables por lo que no podemos acceder al método **Append.**
+
+## Transformar una Tupla en una Lista
+
+Para transformar una tupla en una lista podemos hacer lo siguiente.
+
+```{python}
+tupla = ("a","a","b","c","d","e")
+print(tupla)
+lista = list(tupla)
+print(lista)
+lista.append("f")
+print(lista)
+```
+
+## Range.
+
+Los rangos permiten tener muchos elementos desde un número inicial hasta un número final.
+
+```{python}
+rango = range(6)
+print(rango)
+```
+
+Este tipo de dato en particular permite trabajar con interacciones. Lo veremos más adelante.
+
+## Diccionarios.
+
+Los diccionarios son similares a las listas o tuplas, sin embargo en lugar de utilizar el índice como en los casos anteriores utilizamos un **llaves** y obtenernos **valores**.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35"
+  }
+print(diccionario)
+
+#Acceder a un valor
+
+print(diccionario["trabajo"])
+print(diccionario["edad"])
+```
+
+## Métodos en Diccionarios.
+
+Para poder acceder a métodos de diccionarios podemos utilizar **Get**, esto lo realizamos de la siguiente forma.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35"
+  }
+  
+print(diccionario.get("nombre"))
+```
+
+Para poder cambiar los valores de este diccionario podemos llamar nuevamente al diccionario, y a través de corchetes cambiar el valor mediante la llave.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35"
+  }
+print(diccionario)
+
+diccionario["trabajo"] = "Programador"
+print(diccionario)
+```
+
+Otro método que podemos utilizar el **Len.**
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35"
+  }
+print(diccionario)
+print(len(diccionario))
+```
+
+## Agregando elementos a un Diccionario.
+
+Para agregar elementos a un diccionario podemos utilizar la siguiente sintaxis.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35"
+  }
+print(diccionario)
+
+diccionario["sexo"]= "Masculino"
+print(diccionario)
+```
+
+## Eliminar elementos de un Diccionario.
+
+Para eliminar elementos de un diccionario podemos utilizar la siguiente sintaxis.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35",
+    "sexo": "Masculino"
+  }
+print(diccionario)
+
+diccionario.pop("sexo")
+print(diccionario)
+
+diccionario.popitem() #Elimina el últmo valor que se agregó al diccinario.
+print(diccionario)
+
+del diccionario["trabajo"] #Elimina el valor de trabajo
+print(diccionario)
+```
+
+## Copias de Diccionarios.
+
+También es posible generar copias de Diccionarios, esto lo hacemos de la siguiente forma.
+
+```{python}
+diccionario = { 
+    "nombre":"Juan",
+    "trabajo":"electricista",
+    "edad":"35",
+    "sexo": "Masculino"
+  }
+print(diccionario)
+copiaDiccionario = diccionario.copy()
+print(copiaDiccionario)
+del diccionario["edad"]
+print(copiaDiccionario, diccionario)
+diccionario.clear()
+print(copiaDiccionario, diccionario)
+diccionario = dict(copiaDiccionario)
+print(copiaDiccionario, diccionario)
+
+```
+
+## Más ejercicios con Diccionarios.
+
+Vamos a crear diccionarios anidados
+
+```{python}
+perros = {
+  "Tobby":{
+    "name": "Tobby",
+    "age": 6
+    },
+  "Leo":{
+    "name": "Leo",
+    "age": 1
+    }
+}
+print(perros)
+```
+
+### Diccionarios desde Variables.
+
+```{python}
+Tobby = {
+    "name": "Tobby",
+    "age": 6
+    }
+Leo = {
+    "name": "Leo",
+    "age": 1
+    }
+perros = {
+  "Tobby": Tobby,
+  "Leo":Leo
+}
+print(perros)
+```
+
+Función especial **dict**.
+
+```{python}
+perros = {
+  "Tobby":{
+    "name": "Tobby",
+    "age": 6
+    },
+  "Leo":{
+    "name": "Leo",
+    "age": 1
+    }
+}
+print(perros)
+
+perritos = dict(name="Rocky", age=7)
+print(perritos)
+```
+
+## Booleanos.
+
+Los tipos de datos booleanos solo contienen 2 valores **True** o **False**.
+
+```{python}
+booleano = True
+falso = False
+print(booleano, falso)
+```
+
+## Referencias Bibliográficas.

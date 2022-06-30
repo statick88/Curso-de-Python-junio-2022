@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-0.9.629">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
-  <title>Intro Python</title>
+  <title>Tipos de Datos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -404,8 +404,8 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Intro Python</h1>
-  <p class="subtitle">REPL, operaciones matemáticas, Comentarios, Variables, Más de una Variable, Concatenación</p>
+  <h1 class="title">Tipos de Datos</h1>
+  <p class="subtitle">Strings, Números, Listas, Tuplas, Range, Diccionarios, Booleanos</p>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
   <p class="date">29/6/22</p>
 </section>
@@ -413,223 +413,170 @@
 <nav role="doc-toc"> 
 <h2 id="toc-title">Indice de contenidos</h2>
 <ul>
-<li class="fragment"><a href="#/generalidades" id="/toc-generalidades">Generalidades</a>
-<ul>
-<li class="fragment"><a href="#/instalación" id="/toc-instalación">Instalación</a></li>
-<li class="fragment"><a href="#/repl---python-interactive-shell" id="/toc-repl---python-interactive-shell">REPL - Python Interactive Shell</a>
-<ul>
-<li class="fragment"><a href="#/qué-es-repl" id="/toc-qué-es-repl">¿Qué es REPL?</a></li>
-</ul></li>
-<li class="fragment"><a href="#/un-poco-de-matemáticas." id="/toc-un-poco-de-matemáticas.">Un poco de matemáticas.</a></li>
-<li class="fragment"><a href="#/comentarios." id="/toc-comentarios.">Comentarios.</a></li>
-<li class="fragment"><a href="#/formas-de-escribir-comentarios." id="/toc-formas-de-escribir-comentarios.">Formas de escribir comentarios.</a></li>
-<li class="fragment"><a href="#/variables" id="/toc-variables">Variables</a>
-<ul>
-<li class="fragment"><a href="#/qué-no-se-debe-hacer." id="/toc-qué-no-se-debe-hacer.">Qué <strong>no</strong> se debe hacer.</a></li>
-<li class="fragment"><a href="#/qué-se-debe-hacer." id="/toc-qué-se-debe-hacer.">Qué se debe hacer.</a></li>
-</ul></li>
-<li class="fragment"><a href="#/ejemplos" id="/toc-ejemplos">Ejemplos</a></li>
-<li class="fragment"><a href="#/más-de-una-variable." id="/toc-más-de-una-variable.">Más de una Variable.</a></li>
-<li class="fragment"><a href="#/concatenación-de-variables." id="/toc-concatenación-de-variables.">Concatenación de Variables.</a></li>
+<li class="fragment"><a href="#/generalidades" id="/toc-generalidades">Generalidades</a></li>
+<li class="fragment"><a href="#/strings." id="/toc-strings.">Strings.</a></li>
+<li class="fragment"><a href="#/números." id="/toc-números.">Números.</a></li>
+<li class="fragment"><a href="#/listas." id="/toc-listas.">Listas.</a></li>
+<li class="fragment"></li>
+<li class="fragment"><a href="#/listas.-1" id="/toc-listas.-1">Listas.</a></li>
+<li class="fragment"><a href="#/tuplas." id="/toc-tuplas.">Tuplas.</a></li>
+<li class="fragment"><a href="#/range" id="/toc-range">Range</a></li>
+<li class="fragment"><a href="#/diccionarios" id="/toc-diccionarios">Diccionarios</a></li>
+<li class="fragment"><a href="#/booleanos" id="/toc-booleanos">Booleanos</a></li>
 <li class="fragment"><a href="#/referencias-bibliográficas." id="/toc-referencias-bibliográficas.">Referencias Bibliográficas.</a></li>
-</ul></li>
 </ul>
 </nav>
 </section>
 
-<section>
-<section id="generalidades" class="title-slide slide level1 center">
-<h1>Generalidades</h1>
-
+<section id="generalidades" class="slide level2">
+<h2>Generalidades</h2>
+<p>Existen distintos tipos de datos denominados primitivos y compuestos que nosotros podemos encontrar en Python. Los datos primitivos son: strings, números, booleanos y los datos compuestos son tuplas, listas, diccionarios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Bases_de_datos_de_particulares.jpg" title="Fuente: https://upload.wikimedia.org/wikipedia/commons/0/06/Bases_de_datos_de_particulares.jpg" width="400"></p>
+</figure>
+</div>
 </section>
-<section id="instalación" class="slide level2">
-<h2>Instalación</h2>
-<p>Para realizar la instalación de Python es necesario tener en cuenta que existen algunas opciones.</p>
-<p>En los sistemas operativos de la empresa Microsoft.</p>
-<ol type="1">
-<li class="fragment">Descarga e Instalación desde la página oficial.</li>
-<li class="fragment">Descarga e Instalación desde la Tienda de Microsoft <span class="citation" data-cites="noauthor_4_nodate">(<a href="#/ref-noauthor_4_nodate" role="doc-biblioref" onclick="return false;"><em>4. <span>Uso</span> de <span>Python</span> En <span>Windows</span> Documentación de <span>Python</span> - 3.10.5</em>, s.&nbsp;f.</a>)</span></li>
-<li class="fragment">Existen otras alternativas para el uso de Python.</li>
-</ol>
-</section>
-<section id="repl---python-interactive-shell" class="slide level2">
-<h2>REPL - Python Interactive Shell</h2>
-<h3 id="qué-es-repl">¿Qué es REPL?</h3>
-<p>Básicamente es el shell de python, un shell interactivo, el acrónimo REPL significa la abreviatura de: <strong>R</strong>ead, <strong>E</strong>val, <strong>P</strong>rint y <strong>L</strong>oop.</p>
-<p>Este interprete se puede utilizar para comprobar de una forma sencilla algunos comando de Python. Para iniciar el interprete es necesario tecla el comando <strong>python3</strong> en una terminal (Gnu/Linux o Mac) o <strong>python</strong> en una consola según <span class="citation" data-cites="repl-p">(<a href="#/ref-repl-p" role="doc-biblioref" onclick="return false;"><em>REPL - Python Interactive Shell - Python</em>, s.&nbsp;f.</a>)</span></p>
-<p>El proceso que se utiliza es el siguiente.</p>
-<ol type="1">
-<li class="fragment"><strong>Read</strong>: Toma la entrada del usuario (input).</li>
-<li class="fragment"><strong>Eval</strong>: Evalúa la entrada (input).</li>
-<li class="fragment"><strong>Print</strong>: Muestra la salida del usuario (output).</li>
-<li class="fragment"><strong>Loop</strong>: Repite el proceso.</li>
-</ol>
-</section>
-<section id="un-poco-de-matemáticas." class="slide level2">
-<h2>Un poco de matemáticas.</h2>
-<p>Con python es posible el desarrollo de operaciones matemáticas de forma sencilla, a continuación algunos ejemplos.</p>
-<p><strong>Suma:</strong></p>
+<section id="strings." class="slide level2">
+<h2>Strings.</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Se puede manipular <strong>cadenas de texto</strong>, las cuales pueden ser expresadas de distintas formas. Pueden estar entre <strong>comillas simples (‘…’)</strong> o <strong>dobles (“…”)</strong> .</p>
+</div><div class="column" style="width:50%;">
+<p>Código.</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">2</span><span class="op">+</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>4</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>apellido <span class="op">=</span> <span class="st">'Saavedra'</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="bu">print</span>(nombre, apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Diego Saavedra</code></pre>
 </div>
 </div>
-<p><strong>Resta:</strong></p>
+</div>
+</div>
+</section>
+<section id="números." class="slide level2">
+<h2>Números.</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Los números también son un tipo de dato que se puede utilizar, en este caso tenemos enteros, flotantes o complejos.</p>
+</div><div class="column" style="width:50%;">
+<p>Código.</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="dv">4</span><span class="op">-</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>2</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>entero <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>flotante <span class="op">=</span> <span class="fl">25.12</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>complejo <span class="op">=</span> <span class="ot">8j</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(entero, flotante, complejo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>12 25.12 8j</code></pre>
 </div>
 </div>
-<p><strong>Multiplicación</strong></p>
+</div>
+</div>
+</section>
+<section id="listas." class="slide level2">
+<h2>Listas.</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Según <span class="citation" data-cites="pythonsoftwarefundation">(<a href="#/ref-pythonsoftwarefundation" role="doc-biblioref" onclick="return false;">Python Software Fundation, s.&nbsp;f.</a>)</span> Python tiene varios <strong>tipos de datos</strong> <strong><em>compuestos</em></strong>, utilizados para agrupar otros valores, estos pueden sers escritos como una <strong>lista de valores separados por coma</strong> (ítems) <strong>entre corchetes</strong>.</p>
+</div><div class="column" style="width:50%;">
+<p>Código.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="dv">4</span><span class="op">*</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>8</code></pre>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>lista <span class="op">=</span> []</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(lista)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>lista <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>]</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="bu">print</span>(lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]
+[50, 60, 70]</code></pre>
 </div>
 </div>
-<p><strong>División:</strong></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Código.</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="dv">4</span><span class="op">/</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>2.0</code></pre>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>lista <span class="op">=</span> []</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía.</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>lista.append(<span class="dv">50</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(lista) <span class="co">#Lista con datos.</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>lista1 <span class="op">=</span>[]</span>
+<span id="cb7-6"><a href="#cb7-6"></a>lista1 <span class="op">=</span> lista.copy()</span>
+<span id="cb7-7"><a href="#cb7-7"></a>lista.clear()</span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="bu">print</span>(lista, lista1)</span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a>lista_vocales <span class="op">=</span> [<span class="st">"a"</span>,<span class="st">"e"</span>,<span class="st">"e"</span>,<span class="st">"i"</span>,<span class="st">"o"</span>,<span class="st">"u"</span>]</span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="bu">print</span>(lista_vocales.count(<span class="st">"e"</span>))</span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="bu">print</span>(<span class="bu">len</span>(lista_vocales))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]
+[50]
+[]
+[] [50]
+2
+6</code></pre>
 </div>
 </div>
-<p><strong>División Exacta:</strong></p>
+</div><div class="column" style="width:50%;">
+<p>Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipos de dato.</p>
+<p><strong>Append</strong>: Permite agregar datos a la lista.</p>
+<p><strong>Clear:</strong> Elimina todos los elementos de la lista</p>
+<p><strong>Copy</strong>: Copia los elementos de una lista a otra.</p>
+<p><strong>Count</strong>: Permite contar cuantas veces existe un elemento en una lista.</p>
+<p><strong>Print</strong>: Nos vermite conocer los valores en la lista.</p>
+<p><strong>Len</strong>: Nos cuenta los elementos que están en la lista.</p>
+</div>
+</div>
+</section>
+<section id="listas.-1" class="slide level2">
+<h2>Listas.</h2>
+<p>Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipos de dato.</p>
+<p><strong>Append</strong>: Permite agregar datos a la lista.</p>
+<p><strong>Clear:</strong> Elimina todos los elementos de la lista</p>
+<p><strong>Copy</strong>: Copia los elementos de una lista a otra.</p>
+<p><strong>Count</strong>: Permite contar cuantas veces existe un elemento en una lista.</p>
+<p><strong>Print</strong>: Nos vermite conocer los valores en la lista.</p>
+<p><strong>Len</strong>: Nos cuenta los elementos que están en la lista.</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="dv">4</span><span class="op">//</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>2</code></pre>
-</div>
-</div>
-<p><strong>Módulo:</strong></p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="dv">4</span><span class="op">%</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>0</code></pre>
-</div>
-</div>
-<p><strong>Potenciación:</strong></p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="dv">4</span><span class="op">**</span><span class="dv">2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>16</code></pre>
-</div>
-</div>
-</section>
-<section id="comentarios." class="slide level2">
-<h2>Comentarios.</h2>
-<p>Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.</p>
-<p>Existe una frase que dice “Los buenos programadores crean código que pueden leer los humanos”, (Anonimó).</p>
-<p>Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores <strong>no escriben código</strong>, y esto se debe a las <strong>malas prácticas</strong> de escritura de código.</p>
-<p><strong>Clean Code</strong> como mencion <span class="citation" data-cites="anaya2018">(<a href="#/ref-anaya2018" role="doc-biblioref" onclick="return false;">Anaya, 2018</a>)</span> brinda las bases necesarias para tener que escribir código una sola vez, y sea fácil de mantener, así se puede dedicar tiempo a la creación de nuevos features o utilizar nuestro tiempo en otro tipo de actividades.</p>
-<p>Una buena práctica es el uso de comentarios para nosotros mismos o para otras personas.</p>
-<p>Existe una frase que dice “Los buenos programadores crean código que pueden leer los humanos”, (Anónimo).</p>
-<p>Aunque la ejecución de código permite obtener una solución a un problema (bug) o la complementación de un feacture (características, funcionalidad), la mayor parte del tiempo los programadores no escriben código, y esto se debe a las malas prácticas de escritura de código.</p>
-</section>
-<section id="formas-de-escribir-comentarios." class="slide level2">
-<h2>Formas de escribir comentarios.</h2>
-<ul>
-<li class="fragment"><p>Comentarios de media línea.</p></li>
-<li class="fragment"><p>Comentarios de una línea.</p></li>
-<li class="fragment"><p>Comentarios de varias líneas.</p></li>
-</ul>
-</section>
-<section id="variables" class="slide level2">
-<h2>Variables</h2>
-<p>Existen distintas formas de escribir variables, solo se debe tomar en cuenta algunos parámetros básicos para no tener inconvenientes.</p>
-<h3 id="qué-no-se-debe-hacer.">Qué <strong>no</strong> se debe hacer.</h3>
-<ul>
-<li class="fragment"><p>No escribir variables que empiecen con números.</p></li>
-<li class="fragment"><p>No utilizar palabras reservadas.</p></li>
-<li class="fragment"><p>No escribir variables de más de una palabra separadas</p></li>
-</ul>
-<h3 id="qué-se-debe-hacer.">Qué se debe hacer.</h3>
-<ul>
-<li class="fragment"><p>Escribir variables que tengan sentido.</p></li>
-<li class="fragment"><p>Escribir variables que empiecen con un “_”</p></li>
-<li class="fragment"><p>Separar variables con un “_”.</p></li>
-<li class="fragment"><p>Utilizar Camel Case .</p></li>
-</ul>
-</section>
-<section id="ejemplos" class="slide level2">
-<h2>Ejemplos</h2>
-<p>Mal</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>a <span class="op">=</span> <span class="st">"Diego Saavedra"</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="bu">print</span>(a) <span class="co">#Imprime el valor que se almacena en la variable a</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>lista <span class="op">=</span> []</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía.</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>lista.append(<span class="dv">50</span>)</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="bu">print</span>(lista) <span class="co">#Lista con datos.</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>lista1 <span class="op">=</span>[]</span>
+<span id="cb9-6"><a href="#cb9-6"></a>lista1 <span class="op">=</span> lista.copy()</span>
+<span id="cb9-7"><a href="#cb9-7"></a>lista.clear()</span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="bu">print</span>(lista, lista1)</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>lista_vocales <span class="op">=</span> [<span class="st">"a"</span>,<span class="st">"e"</span>,<span class="st">"e"</span>,<span class="st">"i"</span>,<span class="st">"o"</span>,<span class="st">"u"</span>]</span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="bu">print</span>(lista_vocales.count(<span class="st">"e"</span>))</span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="bu">print</span>(<span class="bu">len</span>(lista_vocales))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra</code></pre>
-</div>
-</div>
-<p>Bien</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>nombre <span class="op">=</span> <span class="st">"Diego Saavedra"</span> </span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="bu">print</span>(nombre) <span class="co">#Imprime el valor que se almacena en la variable nombre</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra</code></pre>
-</div>
-</div>
-<p>Se recomienda utilizar nombres de variables que hagan sentido a lo que se programa.</p>
-<p>Ejemplos de Variables.</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>correo <span class="op">=</span> <span class="st">"dsaavedra88@gmail.com"</span> <span class="co">#String</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">print</span>(correo) <span class="co">#Imprime el valor que se almacena en la variable correo</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a></span>
-<span id="cb19-4"><a href="#cb19-4"></a>número <span class="op">=</span> <span class="dv">5</span> <span class="co">#Int</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="bu">print</span>(número) <span class="co">#Imprime el valor que se almacena en la variable número</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a></span>
-<span id="cb19-7"><a href="#cb19-7"></a>nacido_vivo <span class="op">=</span> <span class="va">True</span> <span class="co">#Boolean</span></span>
-<span id="cb19-8"><a href="#cb19-8"></a><span class="bu">print</span>(nacido_vivo) <span class="co">#Imprime el varlor que se almacena en nacido_vivo</span></span>
-<span id="cb19-9"><a href="#cb19-9"></a></span>
-<span id="cb19-10"><a href="#cb19-10"></a>notaFinal <span class="op">=</span> <span class="fl">10.0</span> <span class="co">#Float</span></span>
-<span id="cb19-11"><a href="#cb19-11"></a><span class="bu">print</span>(notaFinal) <span class="co">#Imprime el varlor que se almacena en notaFinal</span></span>
-<span id="cb19-12"><a href="#cb19-12"></a></span>
-<span id="cb19-13"><a href="#cb19-13"></a>complejo <span class="op">=</span> <span class="ot">1j</span> <span class="co">#Complex</span></span>
-<span id="cb19-14"><a href="#cb19-14"></a><span class="bu">print</span>(complejo) <span class="co">#Imprime el varlor que se almacena en complejo</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>dsaavedra88@gmail.com
-5
-True
-10.0
-1j</code></pre>
+<pre><code>[]
+[50]
+[]
+[] [50]
+2
+6</code></pre>
 </div>
 </div>
 </section>
-<section id="más-de-una-variable." class="slide level2">
-<h2>Más de una Variable.</h2>
-<p>Es posible programar más de una variable en una sola línea de código.</p>
-<p>Ejemplo.</p>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>nombre, apellido, teléfono <span class="op">=</span> <span class="st">"Diego"</span>, <span class="st">"Saavedra"</span>, <span class="st">"+593992018216"</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="bu">print</span>(nombre, apellido, teléfono)</span>
-<span id="cb21-3"><a href="#cb21-3"></a></span>
-<span id="cb21-4"><a href="#cb21-4"></a>valorInicial <span class="op">=</span> valorMedio <span class="op">=</span> valorFinal <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a><span class="bu">print</span>(valorInicial, valorMedio, valorFinal)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra +593992018216
-10 10 10</code></pre>
-</div>
-</div>
+<section id="tuplas." class="slide level2">
+<h2>Tuplas.</h2>
 </section>
-<section id="concatenación-de-variables." class="slide level2">
-<h2>Concatenación de Variables.</h2>
-<p>Una posibilidad al programar en Python es unir (concatenar) más de un resultado en una salida después de un proceso.</p>
-<p>Ejemplo:</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>inicio <span class="op">=</span> <span class="st">"Bienvenidos"</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>final <span class="op">=</span> <span class="st">"al curso de Python en Abacom"</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a></span>
-<span id="cb23-4"><a href="#cb23-4"></a><span class="bu">print</span>(inicio <span class="op">+</span> final) <span class="co">#No se recomienda</span></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="bu">print</span>(inicio <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> final) <span class="co">#Se recomienda</span></span>
-<span id="cb23-6"><a href="#cb23-6"></a><span class="bu">print</span>(inicio, final) <span class="co">#Se recomienda</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Bienvenidosal curso de Python en Abacom
-Bienvenidos al curso de Python en Abacom
-Bienvenidos al curso de Python en Abacom</code></pre>
-</div>
-</div>
+<section id="range" class="slide level2">
+<h2>Range</h2>
+</section>
+<section id="diccionarios" class="slide level2">
+<h2>Diccionarios</h2>
+</section>
+<section id="booleanos" class="slide level2">
+<h2>Booleanos</h2>
 </section>
 <section id="referencias-bibliográficas." class="slide level2 smaller scrollable">
 <h2>Referencias Bibliográficas.</h2>
@@ -638,17 +585,11 @@ Bienvenidos al curso de Python en Abacom</code></pre>
 <p><a href="https://abacom.edu.ec" class="uri">https://abacom.edu.ec</a></p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-noauthor_4_nodate" class="csl-entry" role="doc-biblioentry">
-<em>4. <span>Uso</span> de <span>Python</span> En <span>Windows</span> Documentación de <span>Python</span> - 3.10.5</em>. (s.&nbsp;f.). https://docs.python.org/es/3/using/windows.html#windows-store.
-</div>
-<div id="ref-anaya2018" class="csl-entry" role="doc-biblioentry">
-Anaya, M. (2018). <em>Clean Code in Python: Refactor your legacy code base</em>. Packt Publishing.
-</div>
-<div id="ref-repl-p" class="csl-entry" role="doc-biblioentry">
-<em>REPL - Python Interactive Shell - Python</em>. (s.&nbsp;f.). <a href="https://pythonprogramminglanguage.com/repl/">https://pythonprogramminglanguage.com/repl/</a>
+<div id="ref-pythonsoftwarefundation" class="csl-entry" role="doc-biblioentry">
+Python Software Fundation. (s.&nbsp;f.). <em>3. Una introducción informal a Python <span></span> documentación de Python - 3.10.5</em>. <a href="https://docs.python.org/es/3/tutorial/introduction.html#lists">https://docs.python.org/es/3/tutorial/introduction.html#lists</a>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
