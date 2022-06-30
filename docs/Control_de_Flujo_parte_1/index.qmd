@@ -1,0 +1,204 @@
+---
+title: "Control de Flujo Parte 1"
+subtitle: "If, Elif, Else, And, Or"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    scrollable: true
+    chalkboard: 
+      buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: false #Pizarra
+    auto-stretch: false
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+::: columns
+::: {.column width="30%"}
+[![Figura 1: Logo Python](img/Python_(programming_language)-Logo.wine.png){fig-align="left"}](https://download.logo.wine/logo/Python_(programming_language)/Python_(programming_language)-Logo.wine.png)
+:::
+
+::: {.column width="70%"}
+En esa sección aprenderemos acerca del **Control de Flujo** para la toma de decisiones al momento de escribir código, básicamente seguir un camino u otro. Si deseas ampliar tus conocimientos puedes revisar la documentación oficial [@python_software_fundation_3_2022]
+:::
+:::
+
+## If y Condicionales.
+
+Con el control de Flujo podemos evaluar algunas condiciones que analizamos a continuación:
+
+**Si una variable es igual a otra ("==").**
+
+```{python}
+if 2 == 2:
+  print("2 es igual a 2")
+```
+
+**Si una variable es distinta de otra ("!=").**
+
+```{python}
+if 2 != 3:
+  print("2 es distinto o igual a 3")
+```
+
+**Si una variable es mayor a otra ("\>").**
+
+```{python}
+if 2 > 1:
+  print("2 es mayor que 1")
+```
+
+**Si una variable es mayor o igual a otra ("\>=").**
+
+```{python}
+if 3 >= 3:
+  print("3 es mayor o igual a 3")
+```
+
+**Si una variable es menor a otra ("\<").**
+
+```{python}
+if 2 < 3:
+  print("2 es menor que 3")
+```
+
+**Si una variable es menor o igual a otra ("\<=").**
+
+```{python}
+if 3 <= 3:
+  print("3 es menor o igual que 3")
+```
+
+## If, elif y else.
+
+Según [@ledezma2022] En Python se puede definir los Controles de Flujo (Condicionales) utilizando:
+
+::: columns
+::: {.column width="45%"}
+-   **if**: primera condición
+
+-   **elif**: resto de condiciones (puede haber más de una condición if).
+
+-   **else**: Se ejecuta cuando las anteriores condicionales son falsas.
+:::
+
+::: {.column width="55%"}
+[![Figura 2: Condicionales](images/paste-86DB30FB.png){fig-align="center"}](https://drive.google.com/file/d/12_1yUhaGeoH7wLGqrHiSx987FMdqM_Mv/view)
+:::
+:::
+
+Ejemplos:
+
+**Se imprime la condición if.**
+
+```{python}
+if 2 > 5: 
+  print("2 es mayor a 5") # Si esta condición es verdadera se imprime
+elif 2 < 5: 
+  print("2 es menor a 5") 
+else:
+  print("No se cumple ninguna de las condiciones anteriores")
+```
+
+**Se imprime la condición elif.**
+
+```{python}
+if 2 > 5: 
+  print("2 es mayor a 5") 
+elif 2 > 5: 
+  print("2 es menor a 5") # Si esta condición if es falsa y elif es verdadera se imprime
+else:
+  print("No se cumple ninguna de las condiciones anteriores")
+```
+
+**Se imprime la condición else.**
+
+```{python}
+if 2 > 5: 
+  print("2 es mayor a 5") 
+elif 2 < 5: 
+  print("2 es menor a 5") 
+else: 
+  print("No se cumple ninguna de las condiciones anteriores") # Si esta condiciones anteriores no se cumplen se imprime
+```
+
+### Evaluación en una sola línea.
+
+Es posible evaluar en una sola línea un condicional if y else, si la condición se cumple es verdadera, caso contrario se imprime la opción falsa.
+
+```{python}
+if 2 < 10: print ("2 es menor a 5")
+```
+
+```{python}
+print("Se imprime si la condición es verdadera") if 10 > 2 else print("Se imprime si la condición es falsa")
+```
+
+```{python}
+print("Se imprime si la condición es verdadera") if 10 < 2 else print("Se imprime si la condición es falsa")
+
+```
+
+## And y Or.
+
+Se utiliza cuando tengo más de una condición.
+
+Empezamos con la palabra reservada **AND**.
+
+**AND** solo se ejecuta si ambas condiciones son verdaderas.
+
+```{python}
+if 2 < 5 and 3 > 1:
+  print("Las 2 condiciones son verdaderas")
+```
+
+Cuando ambas condicones son falsas, no se imprime el resultado.
+
+```{python}
+if 2 < 5 and 3 < 1:
+  print("Las 2 condiciones son verdaderas")
+```
+
+Ahora aprendamos como se utiliza la condición **OR**.
+
+**OR** se ejecuta si al menos una de las 2 condiciones es verdadera.
+
+```{python}
+if 5 > 3 or 10 > 20:
+  print("Al menos una de las 2 condiciones es verdadera")
+```
+
+Cuando ambas condiciones son falsas no se imprime el resultado.
+
+```{python}
+if 10 > 100 or 1000 < 500:
+  print("Esta instrucción no se va a imprimir")
+```
+
+## Referencias Bibliográficas.

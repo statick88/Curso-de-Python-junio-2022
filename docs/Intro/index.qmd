@@ -7,7 +7,7 @@ lang: "es"
 format:
   revealjs:
     #toc: true
-    incremental: true
+    incremental: false
     slide-number: true
     preview-links: auto
     logo: img/favicon-50x56.png
