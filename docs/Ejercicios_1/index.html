@@ -23,6 +23,70 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -335,6 +399,16 @@
 <h2>Utilizando Input.</h2>
 <p>Observemos la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>dato <span class="op">=</span> <span class="dv">2</span> <span class="co">#input("Por favor ingrese algo: ")</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="bu">print</span>(dato)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    </span>
+<span id="cb1-5"><a href="#cb1-5"></a>lista <span class="op">=</span> [<span class="st">"Hola"</span>,<span class="st">"Mundo"</span>]</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    </span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="cf">if</span> lista.count(dato) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="bu">print</span>(<span class="st">"Esta información existe:"</span>, dato)</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="cf">else</span>:</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="bu">print</span>(<span class="st">"Esta información no existe"</span>, dato)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2
 Esta información no existe 2</code></pre>
@@ -345,24 +419,71 @@ Esta información no existe 2</code></pre>
 <h2>Calculadora.</h2>
 <p>Observemos la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>primerNumero <span class="op">=</span> <span class="dv">4</span> <span class="co">#input("Ingrese el primer número: ")</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>segundoNumero <span class="op">=</span> <span class="dv">5</span> <span class="co">#input("Ingrese el segundo número: ")</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(primerNumero <span class="op">+</span> segundoNumero)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>9</code></pre>
 </div>
 </div>
 <h3 id="corrección-del-ejercicio-anterior.">Corrección del Ejercicio Anterior.</h3>
 <div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>primerNumero <span class="op">=</span> <span class="dv">5</span> <span class="co">#input("Ingrese el primer número: ")</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>segundoNumero <span class="op">=</span> <span class="dv">6</span> <span class="co">#input("Ingrese el segundo número: ")</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>primero <span class="op">=</span> <span class="bu">int</span>(primerNumero)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>segundo <span class="op">=</span> <span class="bu">int</span>(segundoNumero)</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="bu">print</span>(primero <span class="op">+</span> segundo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>11</code></pre>
 </div>
 </div>
 <h3 id="agregando-una-validación.">Agregando una validación.</h3>
 <div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>primerNumero <span class="op">=</span> <span class="dv">6</span> <span class="co">#input("Ingrese el primer número: ")</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="cf">try</span>:</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    primero <span class="op">=</span> <span class="bu">int</span>(primerNumero)</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="cf">except</span>:</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    primero <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>segundoNumero <span class="op">=</span> <span class="dv">8</span> <span class="co">#input("Ingrese el segundo número: ")</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="cf">try</span>:</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    segundo <span class="op">=</span> <span class="bu">int</span>(segundoNumero)</span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="cf">except</span>:</span>
+<span id="cb7-13"><a href="#cb7-13"></a>    segundo <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="cf">if</span> primero <span class="op">==</span> <span class="st">"Cadena"</span> <span class="kw">or</span> segundo <span class="op">==</span> <span class="st">"Cadena"</span>:</span>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="bu">print</span>(<span class="st">"Ingreso mal un dato, pruebe por favor una vez mas ingresando numeros"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="cf">else</span>:</span>
+<span id="cb7-18"><a href="#cb7-18"></a>    <span class="bu">print</span>(primero <span class="op">+</span> segundo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>14</code></pre>
 </div>
 </div>
 <h3 id="validación-con-esteroides.">Validación con Esteroides.</h3>
 <div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>primerNumero <span class="op">=</span> <span class="dv">9</span> <span class="co">#input("Ingrese el primer número: ")</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="cf">try</span>:</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    primero <span class="op">=</span> <span class="bu">int</span>(primerNumero)</span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="cf">except</span>:</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    primero <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a>segundoNumero <span class="op">=</span> <span class="dv">6</span> <span class="co">#input("Ingrese el segundo número: ")</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="cf">try</span>:</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    segundo <span class="op">=</span> <span class="bu">int</span>(segundoNumero)</span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="cf">except</span>:</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    segundo <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="cf">if</span> primero <span class="op">==</span> <span class="st">"Cadena"</span> <span class="kw">or</span> segundo <span class="op">==</span> <span class="st">"Cadena"</span>:</span>
+<span id="cb9-16"><a href="#cb9-16"></a>    <span class="bu">print</span>(<span class="st">"Ingreso mal un dato, pruebe por favor una vez mas ingresando numeros"</span>)</span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="cf">else</span>:</span>
+<span id="cb9-18"><a href="#cb9-18"></a>    <span class="bu">print</span>(primero <span class="op">+</span> segundo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>15</code></pre>
 </div>
@@ -371,6 +492,40 @@ Esta información no existe 2</code></pre>
 <section id="agregando-más-funcionalidades." class="slide level2">
 <h2>Agregando más funcionalidades.</h2>
 <div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>primerNumero <span class="op">=</span> <span class="dv">9</span> <span class="co">#input("Ingrese el primer número: ")</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="cf">try</span>:</span>
+<span id="cb11-4"><a href="#cb11-4"></a>    primero <span class="op">=</span> <span class="bu">int</span>(primerNumero)</span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="cf">except</span>:</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    primero <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="cf">if</span> primero <span class="op">==</span> <span class="st">"Cadena"</span>:</span>
+<span id="cb11-9"><a href="#cb11-9"></a>    <span class="bu">print</span>(<span class="st">"El valor ingresado no es un entero"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10"></a>    exit()</span>
+<span id="cb11-11"><a href="#cb11-11"></a></span>
+<span id="cb11-12"><a href="#cb11-12"></a>segundoNumero <span class="op">=</span> <span class="dv">8</span> <span class="co">#input("Ingrese el segundo número: ")</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a></span>
+<span id="cb11-14"><a href="#cb11-14"></a><span class="cf">try</span>:</span>
+<span id="cb11-15"><a href="#cb11-15"></a>    segundo <span class="op">=</span> <span class="bu">int</span>(segundoNumero)</span>
+<span id="cb11-16"><a href="#cb11-16"></a><span class="cf">except</span>:</span>
+<span id="cb11-17"><a href="#cb11-17"></a>    segundo <span class="op">=</span> <span class="st">"Cadena"</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a></span>
+<span id="cb11-19"><a href="#cb11-19"></a><span class="cf">if</span> segundo <span class="op">==</span> <span class="st">"Cadena"</span>:</span>
+<span id="cb11-20"><a href="#cb11-20"></a>    <span class="bu">print</span>(<span class="st">"El valor ingresado no es un entero"</span>)</span>
+<span id="cb11-21"><a href="#cb11-21"></a>    exit()</span>
+<span id="cb11-22"><a href="#cb11-22"></a></span>
+<span id="cb11-23"><a href="#cb11-23"></a>simbolo <span class="op">=</span> <span class="st">"+"</span> <span class="co">#input("Ingrese la operacion: ")</span></span>
+<span id="cb11-24"><a href="#cb11-24"></a></span>
+<span id="cb11-25"><a href="#cb11-25"></a><span class="cf">if</span> simbolo <span class="op">==</span> <span class="st">"+"</span>:</span>
+<span id="cb11-26"><a href="#cb11-26"></a>    <span class="bu">print</span>(<span class="st">"Suma: "</span>, primero <span class="op">+</span> segundo)</span>
+<span id="cb11-27"><a href="#cb11-27"></a><span class="cf">elif</span> simbolo <span class="op">==</span> <span class="st">"-"</span>:</span>
+<span id="cb11-28"><a href="#cb11-28"></a>    <span class="bu">print</span>(<span class="st">"Resta: "</span>, primero <span class="op">-</span> segundo)</span>
+<span id="cb11-29"><a href="#cb11-29"></a><span class="cf">elif</span> simbolo <span class="op">==</span> <span class="st">"*"</span>:</span>
+<span id="cb11-30"><a href="#cb11-30"></a>    <span class="bu">print</span>(<span class="st">"Multiplicacion: "</span>, primero <span class="op">*</span> segundo)</span>
+<span id="cb11-31"><a href="#cb11-31"></a><span class="cf">elif</span> simbolo <span class="op">==</span> <span class="st">"/"</span>:</span>
+<span id="cb11-32"><a href="#cb11-32"></a>    <span class="bu">print</span>(<span class="st">"Division: "</span>, primero <span class="op">/</span> segundo)</span>
+<span id="cb11-33"><a href="#cb11-33"></a><span class="cf">else</span>:</span>
+<span id="cb11-34"><a href="#cb11-34"></a>    <span class="bu">print</span>(<span class="st">"El simbolo ingresado no es valido"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Suma:  17</code></pre>
 </div>

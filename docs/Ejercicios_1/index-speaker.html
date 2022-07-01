@@ -7,10 +7,10 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.629">
+  <meta name="generator" content="quarto-0.9.634">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
-  <title>Tipos de Datos</title>
+  <title>Ejercicios - Control de Flujo Parte 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -23,92 +23,8 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -404,192 +320,66 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Tipos de Datos</h1>
-  <p class="subtitle">Strings, Números, Listas, Tuplas, Range, Diccionarios, Booleanos</p>
+  <h1 class="title">Ejercicios - Control de Flujo Parte 1</h1>
+  <p class="subtitle">If, Elif, Else, And, Or</p>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
-  <p class="date">29/6/22</p>
-</section>
-<section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Indice de contenidos</h2>
-<ul>
-<li class="fragment"><a href="#/generalidades" id="/toc-generalidades">Generalidades</a></li>
-<li class="fragment"><a href="#/strings." id="/toc-strings.">Strings.</a></li>
-<li class="fragment"><a href="#/números." id="/toc-números.">Números.</a></li>
-<li class="fragment"><a href="#/listas." id="/toc-listas.">Listas.</a></li>
-<li class="fragment"></li>
-<li class="fragment"><a href="#/listas.-1" id="/toc-listas.-1">Listas.</a></li>
-<li class="fragment"><a href="#/tuplas." id="/toc-tuplas.">Tuplas.</a></li>
-<li class="fragment"><a href="#/range" id="/toc-range">Range</a></li>
-<li class="fragment"><a href="#/diccionarios" id="/toc-diccionarios">Diccionarios</a></li>
-<li class="fragment"><a href="#/booleanos" id="/toc-booleanos">Booleanos</a></li>
-<li class="fragment"><a href="#/referencias-bibliográficas." id="/toc-referencias-bibliográficas.">Referencias Bibliográficas.</a></li>
-</ul>
-</nav>
+  <p class="date">1/7/22</p>
 </section>
 
-<section id="generalidades" class="slide level2">
-<h2>Generalidades</h2>
-<p>Existen distintos tipos de datos denominados primitivos y compuestos que nosotros podemos encontrar en Python. Los datos primitivos son: strings, números, booleanos y los datos compuestos son tuplas, listas, diccionarios.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/Bases_de_datos_de_particulares.jpg" title="Fuente: https://upload.wikimedia.org/wikipedia/commons/0/06/Bases_de_datos_de_particulares.jpg" width="400"></p>
-</figure>
-</div>
+<section>
+<section id="generalidades." class="title-slide slide level1 center">
+<h1>Generalidades.</h1>
+<p>En esta sección vamos a realizar una serie de ejercicios para reforzar lo que hemos aprendido hasta el momento.</p>
 </section>
-<section id="strings." class="slide level2">
-<h2>Strings.</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Se puede manipular <strong>cadenas de texto</strong>, las cuales pueden ser expresadas de distintas formas. Pueden estar entre <strong>comillas simples (‘…’)</strong> o <strong>dobles (“…”)</strong> .</p>
-</div><div class="column" style="width:50%;">
-<p>Código.</p>
+<section id="utilizando-input." class="slide level2">
+<h2>Utilizando Input.</h2>
+<p>Observemos la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>apellido <span class="op">=</span> <span class="st">'Saavedra'</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="bu">print</span>(nombre, apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra</code></pre>
-</div>
-</div>
+<pre><code>2
+Esta información no existe 2</code></pre>
 </div>
 </div>
 </section>
-<section id="números." class="slide level2">
-<h2>Números.</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Los números también son un tipo de dato que se puede utilizar, en este caso tenemos enteros, flotantes o complejos.</p>
-</div><div class="column" style="width:50%;">
-<p>Código.</p>
+<section id="calculadora." class="slide level2">
+<h2>Calculadora.</h2>
+<p>Observemos la siguiente sintaxis.</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>entero <span class="op">=</span> <span class="dv">12</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>flotante <span class="op">=</span> <span class="fl">25.12</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>complejo <span class="op">=</span> <span class="ot">8j</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(entero, flotante, complejo)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>12 25.12 8j</code></pre>
+<pre><code>9</code></pre>
 </div>
 </div>
-</div>
-</div>
-</section>
-<section id="listas." class="slide level2">
-<h2>Listas.</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Según <span class="citation" data-cites="pythonsoftwarefundation">(<a href="#/ref-pythonsoftwarefundation" role="doc-biblioref" onclick="return false;">Python Software Fundation, s.&nbsp;f.</a>)</span> Python tiene varios <strong>tipos de datos</strong> <strong><em>compuestos</em></strong>, utilizados para agrupar otros valores, estos pueden sers escritos como una <strong>lista de valores separados por coma</strong> (ítems) <strong>entre corchetes</strong>.</p>
-</div><div class="column" style="width:50%;">
-<p>Código.</p>
+<h3 id="corrección-del-ejercicio-anterior.">Corrección del Ejercicio Anterior.</h3>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>lista <span class="op">=</span> []</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(lista)</span>
-<span id="cb5-3"><a href="#cb5-3"></a>lista <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>]</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="bu">print</span>(lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[]
-[50, 60, 70]</code></pre>
+<pre><code>11</code></pre>
 </div>
 </div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Código.</p>
+<h3 id="agregando-una-validación.">Agregando una validación.</h3>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>lista <span class="op">=</span> []</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía.</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>lista.append(<span class="dv">50</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(lista) <span class="co">#Lista con datos.</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>lista1 <span class="op">=</span>[]</span>
-<span id="cb7-6"><a href="#cb7-6"></a>lista1 <span class="op">=</span> lista.copy()</span>
-<span id="cb7-7"><a href="#cb7-7"></a>lista.clear()</span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="bu">print</span>(lista, lista1)</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a>lista_vocales <span class="op">=</span> [<span class="st">"a"</span>,<span class="st">"e"</span>,<span class="st">"e"</span>,<span class="st">"i"</span>,<span class="st">"o"</span>,<span class="st">"u"</span>]</span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="bu">print</span>(lista_vocales.count(<span class="st">"e"</span>))</span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="bu">print</span>(<span class="bu">len</span>(lista_vocales))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[]
-[50]
-[]
-[] [50]
-2
-6</code></pre>
+<pre><code>14</code></pre>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
-<p>Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipos de dato.</p>
-<p><strong>Append</strong>: Permite agregar datos a la lista.</p>
-<p><strong>Clear:</strong> Elimina todos los elementos de la lista</p>
-<p><strong>Copy</strong>: Copia los elementos de una lista a otra.</p>
-<p><strong>Count</strong>: Permite contar cuantas veces existe un elemento en una lista.</p>
-<p><strong>Print</strong>: Nos vermite conocer los valores en la lista.</p>
-<p><strong>Len</strong>: Nos cuenta los elementos que están en la lista.</p>
-</div>
-</div>
-</section>
-<section id="listas.-1" class="slide level2">
-<h2>Listas.</h2>
-<p>Las listas también utilizan métodos que nos permiten agregar, quitar o modificar este tipos de dato.</p>
-<p><strong>Append</strong>: Permite agregar datos a la lista.</p>
-<p><strong>Clear:</strong> Elimina todos los elementos de la lista</p>
-<p><strong>Copy</strong>: Copia los elementos de una lista a otra.</p>
-<p><strong>Count</strong>: Permite contar cuantas veces existe un elemento en una lista.</p>
-<p><strong>Print</strong>: Nos vermite conocer los valores en la lista.</p>
-<p><strong>Len</strong>: Nos cuenta los elementos que están en la lista.</p>
+<h3 id="validación-con-esteroides.">Validación con Esteroides.</h3>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>lista <span class="op">=</span> []</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía.</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>lista.append(<span class="dv">50</span>)</span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="bu">print</span>(lista) <span class="co">#Lista con datos.</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>lista1 <span class="op">=</span>[]</span>
-<span id="cb9-6"><a href="#cb9-6"></a>lista1 <span class="op">=</span> lista.copy()</span>
-<span id="cb9-7"><a href="#cb9-7"></a>lista.clear()</span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="bu">print</span>(lista) <span class="co">#Lista vacía</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="bu">print</span>(lista, lista1)</span>
-<span id="cb9-10"><a href="#cb9-10"></a></span>
-<span id="cb9-11"><a href="#cb9-11"></a>lista_vocales <span class="op">=</span> [<span class="st">"a"</span>,<span class="st">"e"</span>,<span class="st">"e"</span>,<span class="st">"i"</span>,<span class="st">"o"</span>,<span class="st">"u"</span>]</span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="bu">print</span>(lista_vocales.count(<span class="st">"e"</span>))</span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="bu">print</span>(<span class="bu">len</span>(lista_vocales))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[]
-[50]
-[]
-[] [50]
-2
-6</code></pre>
+<pre><code>15</code></pre>
 </div>
 </div>
 </section>
-<section id="tuplas." class="slide level2">
-<h2>Tuplas.</h2>
-</section>
-<section id="range" class="slide level2">
-<h2>Range</h2>
-</section>
-<section id="diccionarios" class="slide level2">
-<h2>Diccionarios</h2>
-</section>
-<section id="booleanos" class="slide level2">
-<h2>Booleanos</h2>
-</section>
-<section id="referencias-bibliográficas." class="slide level2 smaller scrollable">
-<h2>Referencias Bibliográficas.</h2>
+<section id="agregando-más-funcionalidades." class="slide level2">
+<h2>Agregando más funcionalidades.</h2>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Suma:  17</code></pre>
+</div>
+</div>
 <p><img src="img/favicon-50x56.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://abacom.edu.ec" class="uri">https://abacom.edu.ec</a></p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-pythonsoftwarefundation" class="csl-entry" role="doc-biblioentry">
-Python Software Fundation. (s.&nbsp;f.). <em>3. Una introducción informal a Python <span></span> documentación de Python - 3.10.5</em>. <a href="https://docs.python.org/es/3/tutorial/introduction.html#lists">https://docs.python.org/es/3/tutorial/introduction.html#lists</a>
-</div>
-</div>
-</section>
+</section></section>
     </div>
   </div>
 

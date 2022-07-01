@@ -30,8 +30,8 @@ format:
     #transition: fade
     #auto-stretch: false
 editor: visual
-#execute: 
-  #echo: true
+execute: 
+  echo: true
     
 bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
