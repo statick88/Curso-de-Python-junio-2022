@@ -1,0 +1,169 @@
+---
+title: "Ejercicios - Control de Flujo Parte 1"
+subtitle: "If, Elif, Else, And, Or"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    scrollable: true
+    chalkboard: 
+      buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: false #Pizarra
+    auto-stretch: false
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+#execute: 
+  #echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+En esta sección vamos a realizar una serie de ejercicios para reforzar lo que hemos aprendido hasta el momento.
+
+## Utilizando Input.
+
+Observemos la siguiente sintaxis.
+
+```{python}
+dato = 2 #input("Por favor ingrese algo: ")
+
+print(dato)
+    
+lista = ["Hola","Mundo"]
+    
+if lista.count(dato) > 0:
+    print("Esta información existe:", dato)
+else:
+    print("Esta información no existe", dato)
+
+```
+
+## Calculadora.
+
+Observemos la siguiente sintaxis.
+
+```{python}
+primerNumero = 4 #input("Ingrese el primer número: ")
+segundoNumero = 5 #input("Ingrese el segundo número: ")
+
+print(primerNumero + segundoNumero)
+```
+
+### Corrección del Ejercicio Anterior.
+
+```{python}
+primerNumero = 5 #input("Ingrese el primer número: ")
+segundoNumero = 6 #input("Ingrese el segundo número: ")
+
+primero = int(primerNumero)
+segundo = int(segundoNumero)
+
+print(primero + segundo)
+```
+
+### Agregando una validación.
+
+```{python}
+primerNumero = 6 #input("Ingrese el primer número: ")
+
+try:
+    primero = int(primerNumero)
+except:
+    primero = "Cadena"
+
+segundoNumero = 8 #input("Ingrese el segundo número: ")
+
+try:
+    segundo = int(segundoNumero)
+except:
+    segundo = "Cadena"
+
+if primero == "Cadena" or segundo == "Cadena":
+    print("Ingreso mal un dato, pruebe por favor una vez mas ingresando numeros")
+else:
+    print(primero + segundo)
+```
+
+### Validación con Esteroides.
+
+```{python}
+primerNumero = 9 #input("Ingrese el primer número: ")
+
+try:
+    primero = int(primerNumero)
+except:
+    primero = "Cadena"
+
+segundoNumero = 6 #input("Ingrese el segundo número: ")
+
+try:
+    segundo = int(segundoNumero)
+except:
+    segundo = "Cadena"
+
+if primero == "Cadena" or segundo == "Cadena":
+    print("Ingreso mal un dato, pruebe por favor una vez mas ingresando numeros")
+else:
+    print(primero + segundo)
+```
+
+## Agregando más funcionalidades.
+
+```{python}
+primerNumero = 9 #input("Ingrese el primer número: ")
+
+try:
+    primero = int(primerNumero)
+except:
+    primero = "Cadena"
+
+if primero == "Cadena":
+    print("El valor ingresado no es un entero")
+    exit()
+
+segundoNumero = 8 #input("Ingrese el segundo número: ")
+
+try:
+    segundo = int(segundoNumero)
+except:
+    segundo = "Cadena"
+
+if segundo == "Cadena":
+    print("El valor ingresado no es un entero")
+    exit()
+
+simbolo = "+" #input("Ingrese la operacion: ")
+
+if simbolo == "+":
+    print("Suma: ", primero + segundo)
+elif simbolo == "-":
+    print("Resta: ", primero - segundo)
+elif simbolo == "*":
+    print("Multiplicacion: ", primero * segundo)
+elif simbolo == "/":
+    print("Division: ", primero / segundo)
+else:
+    print("El simbolo ingresado no es valido")
+
+```

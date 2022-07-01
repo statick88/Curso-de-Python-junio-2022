@@ -43,6 +43,6 @@ execute:
 
 ## [Tipos de Datos](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Tipos_de_Datos)
 
-## [Control de Flujo Parte 1](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_1)
+## [Control de Flujo Parte 1 1](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_1)
 
-## [Control de Flujo Parte 2](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_2)
+## [Control de Flujo Parte 2 2](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_2)
