@@ -1,0 +1,154 @@
+---
+title: "Ejercicios de Repaso"
+author: "Lic. Diego Saavedra Mg. Sc."
+date: today
+execute: 
+  enabled: true
+format: 
+  pdf:
+    lang: es
+    #toc: true #
+    #toc-title: Tutorial de Django 001
+    toc-depth: 3
+    #number-sections: true
+    colorlinks: true
+    documentclass: report #tipo de documento
+    papersize: A4
+    #lof: true #lista de figuras
+    #lot: true #ista de tablas
+    highlight-style: radical #Resaltado de código
+    fontfamily: libertinus #Fuente de Texto
+    
+    cite-method: biblatex
+    bibliography: references.bib
+    cls: apa.csl
+    biblio-title: Bibliografía
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Ejercicios.
+
+## Ejercicio 1:
+
+Multiplicar 2 números sin usar el símbolo de la multiplicación
+
+## Ejercicio 2:
+
+Ingresar nombre y apellido e imprimirlo al revés.
+
+## Ejercicio 3:
+
+Crear un script que encuentre el elemento menor de una lista
+
+## Ejercicio 4:
+
+Crear un script que imprima el volumen de una esfera por su radio 4/3 \* pi \* r \*\* 3
+
+## Ejercicio 5:
+
+Crear una script que indique si el usuario es mayor de edad.
+
+## Ejercicio 6:
+
+Crear un script que permita calcular si un número es par o impar.
+
+## Ejercicio 7:
+
+Crear un script que indique cuantas vocales tiene una palabra.
+
+## Ejercicio 8:
+
+Crear un script que reciba una cantidad infinita de números hasta decir basta, luego que imprima la suma de los números ingresados.
+
+## Ejercicio 9:
+
+El objetivo del ejercicio es crear un **sistema de calificaciones**, tomando en cuenta la siguiente información:
+
+1.  El usuario proporcionará un valor entre 0 y 10.
+
+2.  Si está entre 9 y 10: imprimir una A
+
+3.  Si está entre 8 y menor a 9: imprimir una B
+
+4.  Si está entre 7 y menor a 8: imprimir una C
+
+5.  Si está entre 6 y menor a 7: imprimir una D
+
+6.  Si está entre 0 y menor a 6: imprimir una F
+
+7.  Cualquier otro valor debe imprimir: Valor desconocido\
+
+Por ejemplo:\
+Proporciona un valor entre 0 y 10:
+
+A
+
+## Ejercicio 10:
+
+Imprimir números de 5 a 1 de manera descendente.
+
+## Ejercicio 11:
+
+Imprimir los números naturales del 0 al 10 utilizando un ciclo while
+
+## Ejercicio 12:
+
+Calcular el área y el perímetro de un Rectángulo,
+
+Crear las variables
+
+alto (int)
+
+ancho (int)
+
+Área: alto \* ancho
+
+Perímetro: alto + ancho
+
+## Ejercicio 13:
+
+Iterar un rango de 0 a 10 e imprimir sólo los números divisibles entre 3
+
+## Ejercicio 14:
+
+Presentar un string con el titulo y el autor de un libro
+
+## Ejercicio 15:
+
+Solicitar al usuario dos valores:
+
+numero1 (int)
+
+numero2 (int)
+
+Se debe imprimir el mayor de los dos números (la salida debe ser idéntica a la que sigue):
+
+Proporciona el numero1:
+
+Proporciona el numero2:
+
+El numero mayor es: numeroMayor
+
+## Ejercicio 16:
+
+Dada la siguiente tupla, crear una lista que sólo incluya los números menor que 5 utilizando un ciclo for:
+
+tupla = (13, 1, 8, 3, 2, 5, 8)
+
+## Ejercicio 17:
+
+Crear un script que encuentre la potencia de un número ingresado por el teclado.
+
+## Ejercicio 18:
+
+Dado dos números enteros, encontrar la suma.
+
+## Ejercicio 19:
+
+Dado un número de 5 dígitos, devolver el número en orden inverso.
+
+## Ejercicio 20:
+
+Crear un scrpt para saludar desde Python.
