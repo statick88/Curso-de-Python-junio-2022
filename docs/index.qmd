@@ -48,3 +48,5 @@ execute:
 ## [Ejercicios 1](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Ejercicios_1)
 
 ## [Control de Flujo Parte 2](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_2)
+
+## [Ejercicios Semana 1](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/EjerciciosSemana1)
