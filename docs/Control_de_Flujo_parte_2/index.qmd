@@ -39,12 +39,128 @@ csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ap
 
 # Generalidades.
 
-## Introducción a While
+En esta parte vamos a aprender acerca de los **Loops** (Ciclos repetitivos)
 
-## While Loop.
+## Introducción a While.
+
+```{python}
+i = 0
+
+while i <= 10:
+  print(i)
+  i=i+1
+
+```
+
+Otro ejemplo es utilizando la versión abreviada de **incremento**.
+
+```{python}
+i = 0
+
+while i < 10:
+  print(i)
+  i+=1
+```
 
 ## While, Break y Continue.
 
+Break me permite detener la ejecución de while.
+
+```{python}
+i = 0
+
+while i < 10:
+  print(i)
+  if i == 3:
+    break
+  i+=1
+```
+
+También tenemos continue.
+
+```{python}
+#No ejecute este script.
+i = 0
+
+while i < 10:
+  i+=1
+  if i == 3:
+    continue
+  print(i)
+```
+
 ## For Loop.
 
-## Referencias Bibliográficas.
+El For Loop se utiliza cuando queremos **iterar** sobre **listas** o **tuplas** pero sobre una secuencia de datos. También se podrían utilizar para iterar **diccionarios.**
+
+```{python}
+personas = ["Juan", "Pedro", "María"]
+
+for persona in personas:
+  print (persona)
+```
+
+También es posible iterar en cadenas:
+
+```{python}
+persona = "Juan"
+
+for c in persona:
+  print(c)
+```
+
+Uso de Break con For.
+
+```{python}
+personas = ["Juan", "Pedro", "Felipe", "Juana"]
+
+for persona in personas:
+  if persona == "Felipe":
+    break
+  print(persona)
+```
+
+Uso de Continue en For
+
+```{python}
+personas = ["Juan", "Pedro", "Felipe", "Juana"]
+
+for persona in personas:
+  if persona == "Felipe":
+    continue
+  print(persona)
+```
+
+Uso de Range.
+
+```{python}
+for x in range(10, 20):
+  print(x)
+```
+
+Una variante de Range.
+
+```{python}
+for x in range(10, 20, 2):
+  print(x)
+```
+
+También podemos utilizar For con Else.
+
+```{python}
+for x in range(10, 20, 2):
+  print(x)
+else:
+  print("Se ha terminado la ejecución")
+```
+
+For dentro de un For.
+
+```{python}
+personas = ["Juan", "María", "Pedro", "Luis"]
+edades = [5, 27, 14, 35]
+
+for persona in personas:
+  for edad in edades:
+    print(persona, edad)
+```
