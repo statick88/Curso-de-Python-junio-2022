@@ -1,0 +1,458 @@
+---
+title: "Programación Orientada a Objetos"
+subtitle: "Clases, Objetos, Atributos, Métodos"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    #chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+La programación orientada a objetos es otro **paradigma** que trabaja el Lenguaje de Programación Python.
+
+```{python}
+class NombreDeLaClase:
+  pass
+```
+
+## Definiciones Básicas.
+
+Para poder entender este paradigma debemos utilizar la **Abstracción**. Para poder comprender mejor es necesario entender algunos conceptos básicos de este paradigma.
+
+::: columns
+::: {.column width="40%"}
+**¿Qué es una Clase?**\
+**Una clase es una plantilla genérica de un objeto**.
+
+La clase proporciona variables iniciales de estado (donde se guardan los atributos) e implementaciones de comportamiento (métodos)
+:::
+
+::: {.column width="60%"}
+![](img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.16.43-c55250b1-a09b-4025-b263-c09ae7364008.jpg){fig-align="right"}
+:::
+:::
+
+::: columns
+::: {.column width="60%"}
+![](img/poo-10-728.webp){fig-align="center"}
+:::
+
+::: {.column width="40%"}
+**¿Qué es un Objeto?**\
+Los objetos son la clave para entender la **Programación Orientada a Objetos**. Si miramos a nuestro alrededor  encontraremos un sin fin de objetos de la vida real: perro, escritorio, televisor, bicicleta, etc...
+:::
+:::
+
+::: columns
+::: {.column width="40%"}
+**¿Qué es un Método?**\
+Los métodos son la acción o función que realiza un objeto. Si nuestro objeto es **Perro**, los métodos pueden ser: **caminar**, **ladrar**, **saltar**, **dormir**, etc...
+:::
+
+::: {.column width="60%"}
+![](img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.webp){fig-align="center"}
+:::
+:::
+
+::: columns
+::: {.column width="60%"}
+![](img/Definiendo%20clase%20Mascota%20en%20Python.png){fig-align="center"}
+:::
+
+::: {.column width="40%"}
+**¿Qué es un Atributo?**\
+Los atributos o propiedades de los objetos son las características que puede tener un objeto: **Si el objeto fuera Perro**, los atributos podrían ser: tamaño, edad, color, raza, etc...
+:::
+:::
+
+## Intentando entender la POO.
+
+Para poder entender mejor estos conceptos **analicemos** desde la perspectiva de abstracción.
+
+![](img/30854178_ml.jpg){fig-align="center" width="397"}
+
+Pensemos en un objeto sencillo, por ejemplo **usuario**.
+
+## Después del análisis.
+
+El objeto usuario va a tener algunos atributos que le permitirán acceder a algún sistema como por ejemplo **nombre, correo, password.** Estos 3 atributos (o propiedades), ahora cuando este usuario quiera ingresar a un sistema, va a empezar a ejecutar acciones, esas **acciones** nosotros las vamos a agregar como métodos.
+
+## **Objetos y Clases.**
+
+```{python}
+class Usuario:
+  nombre = "Diego"
+  
+usuario = Usuario()
+print(usuario)
+```
+
+Con esta ejecución podemos observar que el objeto **usuario** es una instancia de la clase **Usuario** y la dirección en memoria **0x7f5254ee1fa0** para referencia a este objeto.
+
+Si yo deseo acceder a las propiedades de este objeto utilizo la notación de "**.**", si el **punto**, nos permite acceder a las propiedades (o atributos) del objeto.
+
+```{python}
+class Usuario:
+  nombre = "Diego"
+  
+usuario = Usuario()
+print(usuario.nombre)
+```
+
+También es posible acceder a más propiedades de la clase y crearlas mientras se modela el objeto que está siendo objeto de **abstracción** de la realidad.
+
+```{python}
+class Usuario:
+  nombre = "Diego"
+  apellido = "Saavedra"
+  
+usuario = Usuario()
+print(usuario.nombre, usuario.apellido)
+```
+
+Al igual que como aprendimos en las funciones, se puede crear **más de un objeto** (instancia) de esta clase.
+
+```{python}
+
+class Usuario:
+  nombre = "Diego"
+  apellido = "Saavedra"
+  
+usuario = Usuario()
+print(usuario.nombre, usuario.apellido)
+
+usuario1 = Usuario()
+print(usuario1.nombre, usuario1.apellido)
+```
+
+## Método Init.
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+usuario = Usuario("Juan", "Martinez")
+usuario1 = Usuario("Pedro", "Benitez")
+
+print(usuario.nombre, usuario.apellido)
+print( usuario1.nombre, usuario1.apellido)
+```
+
+**Self** es la referencia del objeto cuando a este lo instanciamos. Por ejemplo, **self** es igual a usuario o usuario1 en los ejemplos anteriores. Nos referimos a él desconociendo el nombre que se le vaya a asignar en el futuro. Nos permite crear objetos de las clases con valores distintos.
+
+**Self** es la instancia del usuario (Es decir el nombre que le asignamos al usuario). Esto permite que la creación de nuevos objetos (o instancias de la clase) puedan ser de carácter dinámico. Por otra parte el método INIT es el primer método de la clase que se ejecuta al crear una nueva instancia.
+
+**Self** es un valor que tienen reservados las clases en python al cual nosotros podemos llamar para hacer referencia a las instancias de nuestras clases.
+
+Cuando se crea una nueva instancia de clase es necesario pasar como parámetros los argumentos (o propiedades) que han sido creados en el método INIT.
+
+## Métodos.
+
+Ahora vamos a crear un método que nos permita mostrar por pantalla tanto el nombre como el apellido de los usuarios que acabaos de crear.
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+usuario1 = Usuario("Pedro", "Benitez")
+
+usuario.saludo()
+usuario1.saludo()
+```
+
+## Self, eliminar propiedades y objetos.
+
+No es explicita mente necesario utilizar el nombre de **self** en los métodos (diferentes al método INIT).
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(octocat):
+    print("Hola, mi nombre es", octocat.nombre, octocat.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+usuario1 = Usuario("Pedro", "Benitez")
+
+usuario.saludo()
+usuario1.saludo()
+```
+
+El problemas se dará cuando otros programadores vean nuestro código, y se pregunten por ejemplo **¿Qué es octocat?,** octocat es el primer argumento del método, por tal razón hace referencia a la instancia. Ahora es más sencillo de entender ¿verdad?
+
+Es necesario agregar este proceso mental para poder entender. Por lo tanto, para poder eliminar este proceso mental cuando se lee el código, se sugiere utilizar la conversión de **self**.
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+usuario1 = Usuario("Pedro", "Benitez")
+
+usuario.saludo()
+usuario1.saludo()
+```
+
+Cuando veamos ahora la palabra reservada **"self"** ya sabemos que hace referencia a la instancia de la clase.
+
+## Modificando propiedades de nuestras instancias.
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+
+usuario.saludo()
+usuario.nombre = "Pedro"
+usuario.saludo()
+```
+
+También es posible eliminar las propiedades de estas instancias.
+
+```{python}
+
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+
+usuario.saludo()
+del usuario.nombre
+#usuario.saludo()
+```
+
+También es posible eliminar a un objeto por completo.
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+
+usuario.saludo()
+del usuario.nombre
+del usuario
+#print(usuario)
+```
+
+## Herencia.
+
+Herencia es un concepto que se utiliza en POO, el objetivo de utilizar esta particularidad es poder reutilizar el código en estructuras que sean similares.
+
+Por ejemplo, si queremos crear además de la clase usuario, una clase administrador, que además de poseer un nombre, apellido y pueda saludar, también se le incluya un método que mencione "Soy el administrador del Sistema"
+
+```{python}
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+usuario = Usuario("Juan", "Martinez")
+
+usuario.saludo()
+```
+
+**¿Qué haría?**
+
+## Solución
+
+```{python}
+
+class Usuario:
+  def __init__(self, nombre, apellido):
+    
+    self.nombre = nombre
+    self.apellido = apellido
+    
+  def saludo(self):
+    print("Hola, mi nombre es", self.nombre, self.apellido)
+    
+class Admin(Usuario):
+  def superSaludo(self):
+    print("Hola, me llamo", self.nombre, "Soy el administrador del Sistema")
+    
+usuario = Usuario("Juan", "Martinez")
+
+usuario.saludo()
+
+admin = Admin("Super", "Administrador")
+admin.saludo()
+admin.superSaludo()
+```
+
+## Ejercicio.
+
+Crear una clase Gato que tenga 2 atributos, nombre y sonido. También agregar un método que permita saludar, en este método indicar que clase es a la que pertenece y cual es su sonido.
+
+Crear una clase Perro con los mismos métodos y atributos del Gato, la particularidad es que este debe indicar en el método saludo, que es un perro y su sonido.
+
+## Solución
+
+```{python}
+
+class Gato:
+  
+  def __init__(self, nombre, sonido):
+    
+    self.nombre = nombre
+    self.sonido = sonido
+    
+  def saludo(self):
+    print("Hola, soy un gato y mi sonido es el", self.sonido)
+    
+class Perro:
+  
+  def __init__(self, nombre, sonido):
+    
+    self.nombre = nombre
+    self.sonido = sonido
+    
+  def saludo(self):
+    print("Hola, soy un perro y mi sonido es el", self.sonido)
+    
+
+gato = Gato("Serafin", "maullido")
+gato.saludo()
+
+
+perro = Perro("Leo", "ladrido")
+perro.saludo()
+  
+
+```
+
+Mejoremos el código.
+
+```{python}
+class Animal:
+  
+  def __init__(self, nombre, sonido):
+    
+    self.nombre = nombre
+    self.sonido = sonido
+
+class Gato(Animal):
+
+  def saludo(self):
+    print("Hola, soy un gato y mi sonido es el", self.sonido)
+    
+class Perro(Animal):
+  
+  def saludo(self):
+    print("Hola, soy un perro y mi sonido es el", self.sonido)
+    
+
+gato = Gato("Serafin", "maullido")
+gato.saludo()
+
+
+perro = Perro("Leo", "ladrido")
+perro.saludo()
+```
+
+Mejoremos un poco más el código.
+
+```{python}
+class Animal:
+  
+  def __init__(self, nombre, sonido):
+    
+    self.nombre = nombre
+    self.sonido = sonido
+  
+  def saludo(self):
+    print("Hola, yo soy un", self.tipo, "y mi sonido es", self.sonido)
+
+class Gato(Animal):
+  tipo = "gato"
+
+class Perro(Animal):
+  tipo = "perro"
+  
+class Ave(Animal):
+  tipo = "ave"
+  
+gato = Gato("Serafin", "maullido")
+gato.saludo()
+
+
+perro = Perro("Leo", "ladrido")
+perro.saludo()
+
+ave = Ave("Piolin", "trinar")
+ave.saludo()
+```

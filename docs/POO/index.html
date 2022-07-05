@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.640">
+
+  <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
+  <title>Programación Orientada a Objetos</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="center">
+  <h1 class="title">Programación Orientada a Objetos</h1>
+  <p class="subtitle">Clases, Objetos, Atributos, Métodos</p>
+  <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
+  <p class="date">5/7/22</p>
+</section>
+
+<section>
+<section id="generalidades." class="title-slide slide level1 center">
+<h1>Generalidades.</h1>
+<p>La programación orientada a objetos es otro <strong>paradigma</strong> que trabaja el Lenguaje de Programación Python.</p>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> NombreDeLaClase:</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="definiciones-básicas." class="slide level2">
+<h2>Definiciones Básicas.</h2>
+<p>Para poder entender este paradigma debemos utilizar la <strong>Abstracción</strong>. Para poder comprender mejor es necesario entender algunos conceptos básicos de este paradigma.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>¿Qué es una Clase?</strong><br>
+<strong>Una clase es una plantilla genérica de un objeto</strong>.</p>
+<p>La clase proporciona variables iniciales de estado (donde se guardan los atributos) e implementaciones de comportamiento (métodos)</p>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.16.43-c55250b1-a09b-4025-b263-c09ae7364008.jpg"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/poo-10-728.webp"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><strong>¿Qué es un Objeto?</strong><br>
+Los objetos son la clave para entender la <strong>Programación Orientada a Objetos</strong>. Si miramos a nuestro alrededor&nbsp; encontraremos un sin fin de objetos de la vida real: perro, escritorio, televisor, bicicleta, etc…</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>¿Qué es un Método?</strong><br>
+Los métodos son la acción o función que realiza un objeto. Si nuestro objeto es <strong>Perro</strong>, los métodos pueden ser: <strong>caminar</strong>, <strong>ladrar</strong>, <strong>saltar</strong>, <strong>dormir</strong>, etc…</p>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.webp"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Definiendo%20clase%20Mascota%20en%20Python.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><strong>¿Qué es un Atributo?</strong><br>
+Los atributos o propiedades de los objetos son las características que puede tener un objeto: <strong>Si el objeto fuera Perro</strong>, los atributos podrían ser: tamaño, edad, color, raza, etc…</p>
+</div>
+</div>
+</section>
+<section id="intentando-entender-la-poo." class="slide level2">
+<h2>Intentando entender la POO.</h2>
+<p>Para poder entender mejor estos conceptos <strong>analicemos</strong> desde la perspectiva de abstracción.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/30854178_ml.jpg" width="397"></p>
+</figure>
+</div>
+<p>Pensemos en un objeto sencillo, por ejemplo <strong>usuario</strong>.</p>
+</section>
+<section id="después-del-análisis." class="slide level2">
+<h2>Después del análisis.</h2>
+<p>El objeto usuario va a tener algunos atributos que le permitirán acceder a algún sistema como por ejemplo <strong>nombre, correo, password.</strong> Estos 3 atributos (o propiedades), ahora cuando este usuario quiera ingresar a un sistema, va a empezar a ejecutar acciones, esas <strong>acciones</strong> nosotros las vamos a agregar como métodos.</p>
+</section>
+<section id="objetos-y-clases." class="slide level2">
+<h2><strong>Objetos y Clases.</strong></h2>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  </span>
+<span id="cb2-4"><a href="#cb2-4"></a>usuario <span class="op">=</span> Usuario()</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(usuario)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;__main__.Usuario object at 0x7fcc319a6830&gt;</code></pre>
+</div>
+</div>
+<p>Con esta ejecución podemos observar que el objeto <strong>usuario</strong> es una instancia de la clase <strong>Usuario</strong> y la dirección en memoria <strong>0x7f5254ee1fa0</strong> para referencia a este objeto.</p>
+<p>Si yo deseo acceder a las propiedades de este objeto utilizo la notación de “<strong>.</strong>”, si el <strong>punto</strong>, nos permite acceder a las propiedades (o atributos) del objeto.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  </span>
+<span id="cb4-4"><a href="#cb4-4"></a>usuario <span class="op">=</span> Usuario()</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="bu">print</span>(usuario.nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Diego</code></pre>
+</div>
+</div>
+<p>También es posible acceder a más propiedades de la clase y crearlas mientras se modela el objeto que está siendo objeto de <strong>abstracción</strong> de la realidad.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5"></a>usuario <span class="op">=</span> Usuario()</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Diego Saavedra</code></pre>
+</div>
+</div>
+<p>Al igual que como aprendimos en las funciones, se puede crear <strong>más de un objeto</strong> (instancia) de esta clase.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  </span>
+<span id="cb8-5"><a href="#cb8-5"></a>usuario <span class="op">=</span> Usuario()</span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>usuario1 <span class="op">=</span> Usuario()</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(usuario1.nombre, usuario1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Diego Saavedra
+Diego Saavedra</code></pre>
+</div>
+</div>
+</section>
+<section id="método-init." class="slide level2">
+<h2>Método Init.</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb10-3"><a href="#cb10-3"></a>    </span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb10-5"><a href="#cb10-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb10-6"><a href="#cb10-6"></a>    </span>
+<span id="cb10-7"><a href="#cb10-7"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9"></a></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="bu">print</span>( usuario1.nombre, usuario1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Juan Martinez
+Pedro Benitez</code></pre>
+</div>
+</div>
+<p><strong>Self</strong> es la referencia del objeto cuando a este lo instanciamos. Por ejemplo, <strong>self</strong> es igual a usuario o usuario1 en los ejemplos anteriores. Nos referimos a él desconociendo el nombre que se le vaya a asignar en el futuro. Nos permite crear objetos de las clases con valores distintos.</p>
+<p><strong>Self</strong> es la instancia del usuario (Es decir el nombre que le asignamos al usuario). Esto permite que la creación de nuevos objetos (o instancias de la clase) puedan ser de carácter dinámico. Por otra parte el método INIT es el primer método de la clase que se ejecuta al crear una nueva instancia.</p>
+<p><strong>Self</strong> es un valor que tienen reservados las clases en python al cual nosotros podemos llamar para hacer referencia a las instancias de nuestras clases.</p>
+<p>Cuando se crea una nueva instancia de clase es necesario pasar como parámetros los argumentos (o propiedades) que han sido creados en el método INIT.</p>
+</section>
+<section id="métodos." class="slide level2">
+<h2>Métodos.</h2>
+<p>Ahora vamos a crear un método que nos permita mostrar por pantalla tanto el nombre como el apellido de los usuarios que acabaos de crear.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    </span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    </span>
+<span id="cb12-7"><a href="#cb12-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb12-9"><a href="#cb12-9"></a>    </span>
+<span id="cb12-10"><a href="#cb12-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb12-11"><a href="#cb12-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12"></a></span>
+<span id="cb12-13"><a href="#cb12-13"></a>usuario.saludo()</span>
+<span id="cb12-14"><a href="#cb12-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez
+Hola, mi nombre es Pedro Benitez</code></pre>
+</div>
+</div>
+</section>
+<section id="self-eliminar-propiedades-y-objetos." class="slide level2">
+<h2>Self, eliminar propiedades y objetos.</h2>
+<p>No es explicita mente necesario utilizar el nombre de <strong>self</strong> en los métodos (diferentes al método INIT).</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    </span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb14-5"><a href="#cb14-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb14-6"><a href="#cb14-6"></a>    </span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="kw">def</span> saludo(octocat):</span>
+<span id="cb14-8"><a href="#cb14-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, octocat.nombre, octocat.apellido)</span>
+<span id="cb14-9"><a href="#cb14-9"></a>    </span>
+<span id="cb14-10"><a href="#cb14-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13"></a>usuario.saludo()</span>
+<span id="cb14-14"><a href="#cb14-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez
+Hola, mi nombre es Pedro Benitez</code></pre>
+</div>
+</div>
+<p>El problemas se dará cuando otros programadores vean nuestro código, y se pregunten por ejemplo <strong>¿Qué es octocat?,</strong> octocat es el primer argumento del método, por tal razón hace referencia a la instancia. Ahora es más sencillo de entender ¿verdad?</p>
+<p>Es necesario agregar este proceso mental para poder entender. Por lo tanto, para poder eliminar este proceso mental cuando se lee el código, se sugiere utilizar la conversión de <strong>self</strong>.</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    </span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    </span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb16-8"><a href="#cb16-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb16-9"><a href="#cb16-9"></a>    </span>
+<span id="cb16-10"><a href="#cb16-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb16-11"><a href="#cb16-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb16-12"><a href="#cb16-12"></a></span>
+<span id="cb16-13"><a href="#cb16-13"></a>usuario.saludo()</span>
+<span id="cb16-14"><a href="#cb16-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez
+Hola, mi nombre es Pedro Benitez</code></pre>
+</div>
+</div>
+<p>Cuando veamos ahora la palabra reservada <strong>“self”</strong> ya sabemos que hace referencia a la instancia de la clase.</p>
+</section>
+<section id="modificando-propiedades-de-nuestras-instancias." class="slide level2">
+<h2>Modificando propiedades de nuestras instancias.</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb18-3"><a href="#cb18-3"></a>    </span>
+<span id="cb18-4"><a href="#cb18-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb18-6"><a href="#cb18-6"></a>    </span>
+<span id="cb18-7"><a href="#cb18-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb18-8"><a href="#cb18-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb18-9"><a href="#cb18-9"></a>    </span>
+<span id="cb18-10"><a href="#cb18-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb18-11"><a href="#cb18-11"></a></span>
+<span id="cb18-12"><a href="#cb18-12"></a>usuario.saludo()</span>
+<span id="cb18-13"><a href="#cb18-13"></a>usuario.nombre <span class="op">=</span> <span class="st">"Pedro"</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a>usuario.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez
+Hola, mi nombre es Pedro Martinez</code></pre>
+</div>
+</div>
+<p>También es posible eliminar las propiedades de estas instancias.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb20-3"><a href="#cb20-3"></a>    </span>
+<span id="cb20-4"><a href="#cb20-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb20-5"><a href="#cb20-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb20-6"><a href="#cb20-6"></a>    </span>
+<span id="cb20-7"><a href="#cb20-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb20-8"><a href="#cb20-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb20-9"><a href="#cb20-9"></a>    </span>
+<span id="cb20-10"><a href="#cb20-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb20-11"><a href="#cb20-11"></a></span>
+<span id="cb20-12"><a href="#cb20-12"></a>usuario.saludo()</span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="kw">del</span> usuario.nombre</span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="co">#usuario.saludo()</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
+</div>
+</div>
+<p>También es posible eliminar a un objeto por completo.</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb22-3"><a href="#cb22-3"></a>    </span>
+<span id="cb22-4"><a href="#cb22-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb22-5"><a href="#cb22-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb22-6"><a href="#cb22-6"></a>    </span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb22-8"><a href="#cb22-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb22-9"><a href="#cb22-9"></a>    </span>
+<span id="cb22-10"><a href="#cb22-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb22-11"><a href="#cb22-11"></a></span>
+<span id="cb22-12"><a href="#cb22-12"></a>usuario.saludo()</span>
+<span id="cb22-13"><a href="#cb22-13"></a><span class="kw">del</span> usuario.nombre</span>
+<span id="cb22-14"><a href="#cb22-14"></a><span class="kw">del</span> usuario</span>
+<span id="cb22-15"><a href="#cb22-15"></a><span class="co">#print(usuario)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
+</div>
+</div>
+</section>
+<section id="herencia." class="slide level2">
+<h2>Herencia.</h2>
+<p>Herencia es un concepto que se utiliza en POO, el objetivo de utilizar esta particularidad es poder reutilizar el código en estructuras que sean similares.</p>
+<p>Por ejemplo, si queremos crear además de la clase usuario, una clase administrador, que además de poseer un nombre, apellido y pueda saludar, también se le incluya un método que mencione “Soy el administrador del Sistema”</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb24-3"><a href="#cb24-3"></a>    </span>
+<span id="cb24-4"><a href="#cb24-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb24-5"><a href="#cb24-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb24-6"><a href="#cb24-6"></a>    </span>
+<span id="cb24-7"><a href="#cb24-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb24-8"><a href="#cb24-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb24-9"><a href="#cb24-9"></a>    </span>
+<span id="cb24-10"><a href="#cb24-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb24-11"><a href="#cb24-11"></a></span>
+<span id="cb24-12"><a href="#cb24-12"></a>usuario.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
+</div>
+</div>
+<p><strong>¿Qué haría?</strong></p>
+</section>
+<section id="solución" class="slide level2">
+<h2>Solución</h2>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">class</span> Usuario:</span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
+<span id="cb26-3"><a href="#cb26-3"></a>    </span>
+<span id="cb26-4"><a href="#cb26-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb26-5"><a href="#cb26-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb26-6"><a href="#cb26-6"></a>    </span>
+<span id="cb26-7"><a href="#cb26-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb26-8"><a href="#cb26-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
+<span id="cb26-9"><a href="#cb26-9"></a>    </span>
+<span id="cb26-10"><a href="#cb26-10"></a><span class="kw">class</span> Admin(Usuario):</span>
+<span id="cb26-11"><a href="#cb26-11"></a>  <span class="kw">def</span> superSaludo(<span class="va">self</span>):</span>
+<span id="cb26-12"><a href="#cb26-12"></a>    <span class="bu">print</span>(<span class="st">"Hola, me llamo"</span>, <span class="va">self</span>.nombre, <span class="st">"Soy el administrador del Sistema"</span>)</span>
+<span id="cb26-13"><a href="#cb26-13"></a>    </span>
+<span id="cb26-14"><a href="#cb26-14"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb26-15"><a href="#cb26-15"></a></span>
+<span id="cb26-16"><a href="#cb26-16"></a>usuario.saludo()</span>
+<span id="cb26-17"><a href="#cb26-17"></a></span>
+<span id="cb26-18"><a href="#cb26-18"></a>admin <span class="op">=</span> Admin(<span class="st">"Super"</span>, <span class="st">"Administrador"</span>)</span>
+<span id="cb26-19"><a href="#cb26-19"></a>admin.saludo()</span>
+<span id="cb26-20"><a href="#cb26-20"></a>admin.superSaludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mi nombre es Juan Martinez
+Hola, mi nombre es Super Administrador
+Hola, me llamo Super Soy el administrador del Sistema</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio." class="slide level2">
+<h2>Ejercicio.</h2>
+<p>Crear una clase Gato que tenga 2 atributos, nombre y sonido. También agregar un método que permita saludar, en este método indicar que clase es a la que pertenece y cual es su sonido.</p>
+<p>Crear una clase Perro con los mismos métodos y atributos del Gato, la particularidad es que este debe indicar en el método saludo, que es un perro y su sonido.</p>
+</section>
+<section id="solución-1" class="slide level2">
+<h2>Solución</h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">class</span> Gato:</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  </span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb28-4"><a href="#cb28-4"></a>    </span>
+<span id="cb28-5"><a href="#cb28-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb28-6"><a href="#cb28-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb28-7"><a href="#cb28-7"></a>    </span>
+<span id="cb28-8"><a href="#cb28-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb28-9"><a href="#cb28-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un gato y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb28-10"><a href="#cb28-10"></a>    </span>
+<span id="cb28-11"><a href="#cb28-11"></a><span class="kw">class</span> Perro:</span>
+<span id="cb28-12"><a href="#cb28-12"></a>  </span>
+<span id="cb28-13"><a href="#cb28-13"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb28-14"><a href="#cb28-14"></a>    </span>
+<span id="cb28-15"><a href="#cb28-15"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb28-16"><a href="#cb28-16"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb28-17"><a href="#cb28-17"></a>    </span>
+<span id="cb28-18"><a href="#cb28-18"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb28-19"><a href="#cb28-19"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un perro y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb28-20"><a href="#cb28-20"></a>    </span>
+<span id="cb28-21"><a href="#cb28-21"></a></span>
+<span id="cb28-22"><a href="#cb28-22"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
+<span id="cb28-23"><a href="#cb28-23"></a>gato.saludo()</span>
+<span id="cb28-24"><a href="#cb28-24"></a></span>
+<span id="cb28-25"><a href="#cb28-25"></a></span>
+<span id="cb28-26"><a href="#cb28-26"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
+<span id="cb28-27"><a href="#cb28-27"></a>perro.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, soy un gato y mi sonido es el maullido
+Hola, soy un perro y mi sonido es el ladrido</code></pre>
+</div>
+</div>
+<p>Mejoremos el código.</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb30-2"><a href="#cb30-2"></a>  </span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb30-4"><a href="#cb30-4"></a>    </span>
+<span id="cb30-5"><a href="#cb30-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb30-6"><a href="#cb30-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb30-7"><a href="#cb30-7"></a></span>
+<span id="cb30-8"><a href="#cb30-8"></a><span class="kw">class</span> Gato(Animal):</span>
+<span id="cb30-9"><a href="#cb30-9"></a></span>
+<span id="cb30-10"><a href="#cb30-10"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb30-11"><a href="#cb30-11"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un gato y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb30-12"><a href="#cb30-12"></a>    </span>
+<span id="cb30-13"><a href="#cb30-13"></a><span class="kw">class</span> Perro(Animal):</span>
+<span id="cb30-14"><a href="#cb30-14"></a>  </span>
+<span id="cb30-15"><a href="#cb30-15"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb30-16"><a href="#cb30-16"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un perro y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb30-17"><a href="#cb30-17"></a>    </span>
+<span id="cb30-18"><a href="#cb30-18"></a></span>
+<span id="cb30-19"><a href="#cb30-19"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
+<span id="cb30-20"><a href="#cb30-20"></a>gato.saludo()</span>
+<span id="cb30-21"><a href="#cb30-21"></a></span>
+<span id="cb30-22"><a href="#cb30-22"></a></span>
+<span id="cb30-23"><a href="#cb30-23"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
+<span id="cb30-24"><a href="#cb30-24"></a>perro.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, soy un gato y mi sonido es el maullido
+Hola, soy un perro y mi sonido es el ladrido</code></pre>
+</div>
+</div>
+<p>Mejoremos un poco más el código.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb32-2"><a href="#cb32-2"></a>  </span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb32-4"><a href="#cb32-4"></a>    </span>
+<span id="cb32-5"><a href="#cb32-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb32-6"><a href="#cb32-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb32-7"><a href="#cb32-7"></a>  </span>
+<span id="cb32-8"><a href="#cb32-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb32-9"><a href="#cb32-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb32-10"><a href="#cb32-10"></a></span>
+<span id="cb32-11"><a href="#cb32-11"></a><span class="kw">class</span> Gato(Animal):</span>
+<span id="cb32-12"><a href="#cb32-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
+<span id="cb32-13"><a href="#cb32-13"></a></span>
+<span id="cb32-14"><a href="#cb32-14"></a><span class="kw">class</span> Perro(Animal):</span>
+<span id="cb32-15"><a href="#cb32-15"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
+<span id="cb32-16"><a href="#cb32-16"></a>  </span>
+<span id="cb32-17"><a href="#cb32-17"></a><span class="kw">class</span> Ave(Animal):</span>
+<span id="cb32-18"><a href="#cb32-18"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
+<span id="cb32-19"><a href="#cb32-19"></a>  </span>
+<span id="cb32-20"><a href="#cb32-20"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
+<span id="cb32-21"><a href="#cb32-21"></a>gato.saludo()</span>
+<span id="cb32-22"><a href="#cb32-22"></a></span>
+<span id="cb32-23"><a href="#cb32-23"></a></span>
+<span id="cb32-24"><a href="#cb32-24"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
+<span id="cb32-25"><a href="#cb32-25"></a>perro.saludo()</span>
+<span id="cb32-26"><a href="#cb32-26"></a></span>
+<span id="cb32-27"><a href="#cb32-27"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
+<span id="cb32-28"><a href="#cb32-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, yo soy un gato y mi sonido es maullido
+Hola, yo soy un perro y mi sonido es ladrido
+Hola, yo soy un ave y mi sonido es trinar</code></pre>
+</div>
+</div>
+<p><img src="img/favicon-50x56.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://abacom.edu.ec" class="uri">https://abacom.edu.ec</a></p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiada");
+        setTimeout(function() {
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          let href = ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    });
+    </script>
+    
+
+</body></html>
