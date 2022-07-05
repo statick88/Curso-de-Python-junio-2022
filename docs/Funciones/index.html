@@ -385,7 +385,6 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Funciones en Python</h1>
-  <p class="subtitle">Funciones</p>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
   <p class="date">4/7/22</p>
 </section>
@@ -456,8 +455,7 @@ Esta es una de mis primeras funcones en Python</code></pre>
 <span id="cb9-4"><a href="#cb9-4"></a><span class="co">#nombreApellido("Diego")</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En este caso la salida es:</p>
 <pre><code>TypeError: NombreApellido() missing 1 required positional argument: 'Apellido'</code></pre>
-<p>Lo cual indica claramente que es requerido el argumento Apellido en la función nombreApellido<br>
-</p>
+<p>Lo cual indica claramente que es requerido el argumento Apellido en la función <strong>nombreApellido()</strong></p>
 </section>
 <section id="argumentos-variables" class="slide level2">
 <h2>Argumentos Variables</h2>
@@ -482,7 +480,7 @@ Esta es una de mis primeras funcones en Python</code></pre>
 <pre><code>Su nombre es Diego</code></pre>
 </div>
 </div>
-<p>y si quisiera acceder al 2do argumento (1er item).</p>
+<p>y si quisiera acceder al 2do argumento (1er ítem).</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> nombreApellido(<span class="op">*</span>nombre):</span>
 <span id="cb15-2"><a href="#cb15-2"></a>  <span class="bu">print</span>(<span class="st">"Su apellido es"</span>, nombre[<span class="dv">1</span>])</span>

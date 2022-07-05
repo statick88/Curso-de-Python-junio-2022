@@ -1,6 +1,6 @@
 ---
 title: "Funciones en Python"
-subtitle: "Funciones"
+#subtitle: "Funciones"
 date: "today"
 author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
@@ -100,7 +100,7 @@ En este caso la salida es:
 
     TypeError: NombreApellido() missing 1 required positional argument: 'Apellido'
 
-Lo cual indica claramente que es requerido el argumento Apellido en la función nombreApellido\
+Lo cual indica claramente que es requerido el argumento Apellido en la función **nombreApellido()**
 
 ## Argumentos Variables
 
@@ -124,7 +124,7 @@ def nombreApellido(*nombre):
 nombreApellido("Diego", "Saavedra")
 ```
 
-y si quisiera acceder al 2do argumento (1er item).
+y si quisiera acceder al 2do argumento (1er ítem).
 
 ```{python}
 def nombreApellido(*nombre):

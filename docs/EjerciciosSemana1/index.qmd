@@ -151,4 +151,4 @@ Dado un número de 5 dígitos, devolver el número en orden inverso.
 
 ## Ejercicio 20:
 
-Crear un scrpt para saludar desde Python.
+Crear un script para saludar desde Python.
