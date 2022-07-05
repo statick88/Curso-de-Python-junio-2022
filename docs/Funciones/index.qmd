@@ -1,0 +1,176 @@
+---
+title: "Funciones en Python"
+subtitle: "Funciones"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    scrollable: true
+    chalkboard: 
+      buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: false #Pizarra
+    auto-stretch: false
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+El paradigma funcional es uno de los mas utilizados en el lenguaje de programación Python, ya que permite generar funcionalidad a cualquier tipo de script o sistema de una forma sencilla, a continuación vamos a revisar este paradigma.
+
+## Funciones en Python.
+
+```{python}
+def miFuncionPython():
+  print("Esta es una de mis primeras funcones en Python")
+  
+miFuncionPython()
+```
+
+**Recuerda:** Podemos llamar más de una vez a la función que acabamos de crear y se ejecutará el mismo numeró de veces.
+
+```{python}
+def miFuncionPython():
+  print("Esta es una de mis primeras funcones en Python")
+  
+miFuncionPython()
+miFuncionPython()
+miFuncionPython()
+miFuncionPython()
+
+```
+
+## Funciones con un argumento.
+
+Una ventaja muy grande que tienen las funciones es recibir argumentos. Y estos argumentos son variables que se pueden utilizar para que las funciones sean flexibles.
+
+```{python}
+def imprimirInformacion(primerArgumento):
+  print("Mi argumento es:", primerArgumento)
+  
+imprimirInformacion("Parametro1")
+```
+
+### Funciones con más de un argumento.
+
+Es posible pasar más de un argumento a una función.
+
+```{python}
+def nombreApellido(Nombre, Apellido):
+  print("Su nombre es", Nombre, "y su apellido es", Apellido)
+  
+nombreApellido("Diego", "Saavedra")
+```
+
+## Errores con funciones.
+
+Uno de los errores típicos en funciones es pasar el número inadecuado de parámetros a una función.
+
+```{python}
+def nombreApellido(Nombre, Apellido):
+  print("Su nombre es", Nombre, "y su apellido es", Apellido)
+  
+#nombreApellido("Diego")
+```
+
+En este caso la salida es:
+
+    TypeError: NombreApellido() missing 1 required positional argument: 'Apellido'
+
+Lo cual indica claramente que es requerido el argumento Apellido en la función nombreApellido\
+
+## Argumentos Variables
+
+En alguna ocasión es necesario también crear funciones con argumentos variables, es decir que desconocemos el número necesario de argumentos que se pueda necesitar por diversas razones, en estos casos podemos hacer lo siguiente.
+
+```{python}
+def nombreApellido(*nombre):
+  print("Su nombre es", nombre)
+  
+nombreApellido("Diego", "Saavedra")
+```
+
+Sin embargo hay que tomar en cuenta que lo que estamos obteniendo es una túpla, esto quiere decir, si recordamos que la característica principal de las túplas es que arroja datos que no pueden ser modificados.
+
+Qué esto no nos preocupe, ya aprendimos a trabajar con la forma de acceder a los elementos de una túpla, por lo tanto podemos utilizar ese conocimiento para poder acceder al argumento que necesitemos.
+
+```{python}
+def nombreApellido(*nombre):
+  print("Su nombre es", nombre[0])
+  
+nombreApellido("Diego", "Saavedra")
+```
+
+y si quisiera acceder al 2do argumento (1er item).
+
+```{python}
+def nombreApellido(*nombre):
+  print("Su apellido es", nombre[1])
+  
+nombreApellido("Diego", "Saavedra")
+```
+
+Que sucedería si yo quisiera iterar sobre todos los elementos de esta tupla, podría utilizar los argumentos de for, otra alternativa para acceder a los argumentos de una función es la siguiente.
+
+```{python}
+def nombreCompleto(apellido, nombre):
+  print(nombre, apellido)
+  
+nombreCompleto(nombre="Diego", apellido="Saavedra")
+```
+
+## Kwargs
+
+Los kwargs es una opción muy conocida en Python, esto se utiliza cuando se quiere pasar argumentos de forma indeterminada.
+
+```{python}
+def nombreCompleto(**kwargs):
+  print(kwargs["nombre"], kwargs["apellido"])
+  
+nombreCompleto(nombre="Diego", apellido="Saavedra")
+```
+
+## Parámetros por defecto en los argumentos.
+
+En ocasiones vamos a necesitar pasar parámetros por defecto como argumentos para evitar errores posibles en el futuro.
+
+```{python}
+def nombreCompleto(nombre="Diego", apellido="Saavedra"):
+  print("Su nombre es", nombre, apellido)
+  
+nombreCompleto()
+nombreCompleto("Juan", "Perez")
+```
+
+Otro caso que nos podríamos encontrar es la necesidad de pasar como parámetro una lista. La estructura quedaría de la siguiente manera.
+
+```{python}
+def funcionLista(lista):
+  for el in lista:
+    print(el)
+    
+funcionLista(["Diego", "Saavedra"])
+```
