@@ -470,10 +470,10 @@ Los atributos o propiedades de los objetos son las características que puede te
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Usuario:</span>
 <span id="cb2-2"><a href="#cb2-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>  </span>
-<span id="cb2-4"><a href="#cb2-4"></a>usuario <span class="op">=</span> Usuario()</span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(usuario)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4"></a>persona <span class="op">=</span> Usuario()</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(persona)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Usuario object at 0x7fcc319a6830&gt;</code></pre>
+<pre><code>&lt;__main__.Usuario object at 0x7f9e64f6bf40&gt;</code></pre>
 </div>
 </div>
 <p>Con esta ejecución podemos observar que el objeto <strong>usuario</strong> es una instancia de la clase <strong>Usuario</strong> y la dirección en memoria <strong>0x7f5254ee1fa0</strong> para referencia a este objeto.</p>
@@ -482,8 +482,8 @@ Los atributos o propiedades de los objetos son las características que puede te
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Usuario:</span>
 <span id="cb4-2"><a href="#cb4-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>  </span>
-<span id="cb4-4"><a href="#cb4-4"></a>usuario <span class="op">=</span> Usuario()</span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="bu">print</span>(usuario.nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a href="#cb4-4"></a>persona <span class="op">=</span> Usuario()</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="bu">print</span>(persona.nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Diego</code></pre>
 </div>
@@ -494,8 +494,8 @@ Los atributos o propiedades de los objetos son las características que puede te
 <span id="cb6-2"><a href="#cb6-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a>  </span>
-<span id="cb6-5"><a href="#cb6-5"></a>usuario <span class="op">=</span> Usuario()</span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-5"><a href="#cb6-5"></a>persona <span class="op">=</span> Usuario()</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Diego Saavedra</code></pre>
 </div>
@@ -506,11 +506,11 @@ Los atributos o propiedades de los objetos son las características que puede te
 <span id="cb8-2"><a href="#cb8-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
 <span id="cb8-4"><a href="#cb8-4"></a>  </span>
-<span id="cb8-5"><a href="#cb8-5"></a>usuario <span class="op">=</span> Usuario()</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>persona <span class="op">=</span> Usuario()</span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span>
 <span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>usuario1 <span class="op">=</span> Usuario()</span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(usuario1.nombre, usuario1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-8"><a href="#cb8-8"></a>persona1 <span class="op">=</span> Usuario()</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(persona1.nombre, persona1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Diego Saavedra
 Diego Saavedra</code></pre>
@@ -526,18 +526,18 @@ Diego Saavedra</code></pre>
 <span id="cb10-4"><a href="#cb10-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
 <span id="cb10-5"><a href="#cb10-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
 <span id="cb10-6"><a href="#cb10-6"></a>    </span>
-<span id="cb10-7"><a href="#cb10-7"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb10-8"><a href="#cb10-8"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
 <span id="cb10-9"><a href="#cb10-9"></a></span>
-<span id="cb10-10"><a href="#cb10-10"></a><span class="bu">print</span>(usuario.nombre, usuario.apellido)</span>
-<span id="cb10-11"><a href="#cb10-11"></a><span class="bu">print</span>( usuario1.nombre, usuario1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="bu">print</span>( persona1.nombre, persona1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Juan Martinez
 Pedro Benitez</code></pre>
 </div>
 </div>
-<p><strong>Self</strong> es la referencia del objeto cuando a este lo instanciamos. Por ejemplo, <strong>self</strong> es igual a usuario o usuario1 en los ejemplos anteriores. Nos referimos a él desconociendo el nombre que se le vaya a asignar en el futuro. Nos permite crear objetos de las clases con valores distintos.</p>
-<p><strong>Self</strong> es la instancia del usuario (Es decir el nombre que le asignamos al usuario). Esto permite que la creación de nuevos objetos (o instancias de la clase) puedan ser de carácter dinámico. Por otra parte el método INIT es el primer método de la clase que se ejecuta al crear una nueva instancia.</p>
+<p><strong>Self</strong> es la referencia del objeto cuando a este lo instanciamos. Por ejemplo, <strong>self</strong> es igual a persona o persona1 en los ejemplos anteriores. Nos referimos a él desconociendo el nombre que se le vaya a asignar en el futuro. Nos permite crear objetos de las clases con valores distintos.</p>
+<p><strong>Self</strong> es la instancia de la clase Usuario (Es decir el nombre que le asignamos a persona). Esto permite que la creación de nuevos objetos (o instancias de la clase) puedan ser de carácter dinámico. Por otra parte el método INIT es el primer método de la clase que se ejecuta al crear una nueva instancia.</p>
 <p><strong>Self</strong> es un valor que tienen reservados las clases en python al cual nosotros podemos llamar para hacer referencia a las instancias de nuestras clases.</p>
 <p>Cuando se crea una nueva instancia de clase es necesario pasar como parámetros los argumentos (o propiedades) que han sido creados en el método INIT.</p>
 </section>
@@ -554,11 +554,11 @@ Pedro Benitez</code></pre>
 <span id="cb12-7"><a href="#cb12-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb12-8"><a href="#cb12-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb12-9"><a href="#cb12-9"></a>    </span>
-<span id="cb12-10"><a href="#cb12-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb12-11"><a href="#cb12-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb12-11"><a href="#cb12-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
 <span id="cb12-12"><a href="#cb12-12"></a></span>
-<span id="cb12-13"><a href="#cb12-13"></a>usuario.saludo()</span>
-<span id="cb12-14"><a href="#cb12-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-13"><a href="#cb12-13"></a>persona.saludo()</span>
+<span id="cb12-14"><a href="#cb12-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez
 Hola, mi nombre es Pedro Benitez</code></pre>
@@ -578,11 +578,11 @@ Hola, mi nombre es Pedro Benitez</code></pre>
 <span id="cb14-7"><a href="#cb14-7"></a>  <span class="kw">def</span> saludo(octocat):</span>
 <span id="cb14-8"><a href="#cb14-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, octocat.nombre, octocat.apellido)</span>
 <span id="cb14-9"><a href="#cb14-9"></a>    </span>
-<span id="cb14-10"><a href="#cb14-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb14-11"><a href="#cb14-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
 <span id="cb14-12"><a href="#cb14-12"></a></span>
-<span id="cb14-13"><a href="#cb14-13"></a>usuario.saludo()</span>
-<span id="cb14-14"><a href="#cb14-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-13"><a href="#cb14-13"></a>persona.saludo()</span>
+<span id="cb14-14"><a href="#cb14-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez
 Hola, mi nombre es Pedro Benitez</code></pre>
@@ -600,11 +600,11 @@ Hola, mi nombre es Pedro Benitez</code></pre>
 <span id="cb16-7"><a href="#cb16-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb16-8"><a href="#cb16-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb16-9"><a href="#cb16-9"></a>    </span>
-<span id="cb16-10"><a href="#cb16-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb16-11"><a href="#cb16-11"></a>usuario1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
+<span id="cb16-10"><a href="#cb16-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb16-11"><a href="#cb16-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
 <span id="cb16-12"><a href="#cb16-12"></a></span>
-<span id="cb16-13"><a href="#cb16-13"></a>usuario.saludo()</span>
-<span id="cb16-14"><a href="#cb16-14"></a>usuario1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-13"><a href="#cb16-13"></a>persona.saludo()</span>
+<span id="cb16-14"><a href="#cb16-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez
 Hola, mi nombre es Pedro Benitez</code></pre>
@@ -624,11 +624,11 @@ Hola, mi nombre es Pedro Benitez</code></pre>
 <span id="cb18-7"><a href="#cb18-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb18-8"><a href="#cb18-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb18-9"><a href="#cb18-9"></a>    </span>
-<span id="cb18-10"><a href="#cb18-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb18-10"><a href="#cb18-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
 <span id="cb18-11"><a href="#cb18-11"></a></span>
-<span id="cb18-12"><a href="#cb18-12"></a>usuario.saludo()</span>
-<span id="cb18-13"><a href="#cb18-13"></a>usuario.nombre <span class="op">=</span> <span class="st">"Pedro"</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>usuario.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-12"><a href="#cb18-12"></a>persona.saludo()</span>
+<span id="cb18-13"><a href="#cb18-13"></a>persona.nombre <span class="op">=</span> <span class="st">"Pedro"</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a>persona.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez
 Hola, mi nombre es Pedro Martinez</code></pre>
@@ -645,11 +645,11 @@ Hola, mi nombre es Pedro Martinez</code></pre>
 <span id="cb20-7"><a href="#cb20-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb20-8"><a href="#cb20-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb20-9"><a href="#cb20-9"></a>    </span>
-<span id="cb20-10"><a href="#cb20-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb20-10"><a href="#cb20-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
 <span id="cb20-11"><a href="#cb20-11"></a></span>
-<span id="cb20-12"><a href="#cb20-12"></a>usuario.saludo()</span>
-<span id="cb20-13"><a href="#cb20-13"></a><span class="kw">del</span> usuario.nombre</span>
-<span id="cb20-14"><a href="#cb20-14"></a><span class="co">#usuario.saludo()</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-12"><a href="#cb20-12"></a>persona.saludo()</span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="kw">del</span> persona.nombre</span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="co">#persona.saludo()</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez</code></pre>
 </div>
@@ -665,12 +665,12 @@ Hola, mi nombre es Pedro Martinez</code></pre>
 <span id="cb22-7"><a href="#cb22-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb22-8"><a href="#cb22-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb22-9"><a href="#cb22-9"></a>    </span>
-<span id="cb22-10"><a href="#cb22-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb22-10"><a href="#cb22-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
 <span id="cb22-11"><a href="#cb22-11"></a></span>
-<span id="cb22-12"><a href="#cb22-12"></a>usuario.saludo()</span>
-<span id="cb22-13"><a href="#cb22-13"></a><span class="kw">del</span> usuario.nombre</span>
-<span id="cb22-14"><a href="#cb22-14"></a><span class="kw">del</span> usuario</span>
-<span id="cb22-15"><a href="#cb22-15"></a><span class="co">#print(usuario)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-12"><a href="#cb22-12"></a>persona.saludo()</span>
+<span id="cb22-13"><a href="#cb22-13"></a><span class="kw">del</span> persona.nombre</span>
+<span id="cb22-14"><a href="#cb22-14"></a><span class="kw">del</span> persona</span>
+<span id="cb22-15"><a href="#cb22-15"></a><span class="co">#print(persona)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez</code></pre>
 </div>
@@ -690,9 +690,9 @@ Hola, mi nombre es Pedro Martinez</code></pre>
 <span id="cb24-7"><a href="#cb24-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
 <span id="cb24-8"><a href="#cb24-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
 <span id="cb24-9"><a href="#cb24-9"></a>    </span>
-<span id="cb24-10"><a href="#cb24-10"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb24-10"><a href="#cb24-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
 <span id="cb24-11"><a href="#cb24-11"></a></span>
-<span id="cb24-12"><a href="#cb24-12"></a>usuario.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-12"><a href="#cb24-12"></a>persona.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez</code></pre>
 </div>
@@ -715,13 +715,12 @@ Hola, mi nombre es Pedro Martinez</code></pre>
 <span id="cb26-11"><a href="#cb26-11"></a>  <span class="kw">def</span> superSaludo(<span class="va">self</span>):</span>
 <span id="cb26-12"><a href="#cb26-12"></a>    <span class="bu">print</span>(<span class="st">"Hola, me llamo"</span>, <span class="va">self</span>.nombre, <span class="st">"Soy el administrador del Sistema"</span>)</span>
 <span id="cb26-13"><a href="#cb26-13"></a>    </span>
-<span id="cb26-14"><a href="#cb26-14"></a>usuario <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb26-15"><a href="#cb26-15"></a></span>
-<span id="cb26-16"><a href="#cb26-16"></a>usuario.saludo()</span>
-<span id="cb26-17"><a href="#cb26-17"></a></span>
-<span id="cb26-18"><a href="#cb26-18"></a>admin <span class="op">=</span> Admin(<span class="st">"Super"</span>, <span class="st">"Administrador"</span>)</span>
-<span id="cb26-19"><a href="#cb26-19"></a>admin.saludo()</span>
-<span id="cb26-20"><a href="#cb26-20"></a>admin.superSaludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-14"><a href="#cb26-14"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
+<span id="cb26-15"><a href="#cb26-15"></a>persona.saludo()</span>
+<span id="cb26-16"><a href="#cb26-16"></a></span>
+<span id="cb26-17"><a href="#cb26-17"></a>admin <span class="op">=</span> Admin(<span class="st">"Super"</span>, <span class="st">"Administrador"</span>)</span>
+<span id="cb26-18"><a href="#cb26-18"></a>admin.saludo()</span>
+<span id="cb26-19"><a href="#cb26-19"></a>admin.superSaludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, mi nombre es Juan Martinez
 Hola, mi nombre es Super Administrador
