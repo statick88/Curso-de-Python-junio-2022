@@ -455,3 +455,36 @@ perro.saludo()
 ave = Ave("Piolin", "trinar")
 ave.saludo()
 ```
+
+Un poco más, extendiendo el método Init.
+
+```{python}
+class Animal:
+  
+  def __init__(self, nombre, sonido):
+    
+    self.nombre = nombre
+    self.sonido = sonido
+  
+  def saludo(self):
+    print("Hola, yo soy un", self.tipo, "y mi sonido es", self.sonido)
+
+class Gato(Animal):
+  tipo = "gato"
+
+class Perro(Animal):
+  tipo = "perro"
+  
+class Ave(Animal):
+  tipo = "ave"
+  
+gato = Gato("Serafin", "maullido")
+gato.saludo()
+
+
+perro = Perro("Leo", "ladrido")
+perro.saludo()
+
+ave = Ave("Piolin", "trinar")
+ave.saludo()
+```

@@ -473,7 +473,7 @@ Los atributos o propiedades de los objetos son las características que puede te
 <span id="cb2-4"><a href="#cb2-4"></a>persona <span class="op">=</span> Usuario()</span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(persona)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Usuario object at 0x7f9e64f6bf40&gt;</code></pre>
+<pre><code>&lt;__main__.Usuario object at 0x7fd143fba590&gt;</code></pre>
 </div>
 </div>
 <p>Con esta ejecución podemos observar que el objeto <strong>usuario</strong> es una instancia de la clase <strong>Usuario</strong> y la dirección en memoria <strong>0x7f5254ee1fa0</strong> para referencia a este objeto.</p>
@@ -829,6 +829,42 @@ Hola, soy un perro y mi sonido es el ladrido</code></pre>
 <span id="cb32-26"><a href="#cb32-26"></a></span>
 <span id="cb32-27"><a href="#cb32-27"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
 <span id="cb32-28"><a href="#cb32-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, yo soy un gato y mi sonido es maullido
+Hola, yo soy un perro y mi sonido es ladrido
+Hola, yo soy un ave y mi sonido es trinar</code></pre>
+</div>
+</div>
+<p>Un poco más, extendiendo el método Init.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb34-2"><a href="#cb34-2"></a>  </span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb34-4"><a href="#cb34-4"></a>    </span>
+<span id="cb34-5"><a href="#cb34-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb34-6"><a href="#cb34-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb34-7"><a href="#cb34-7"></a>  </span>
+<span id="cb34-8"><a href="#cb34-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb34-9"><a href="#cb34-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb34-10"><a href="#cb34-10"></a></span>
+<span id="cb34-11"><a href="#cb34-11"></a><span class="kw">class</span> Gato(Animal):</span>
+<span id="cb34-12"><a href="#cb34-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
+<span id="cb34-13"><a href="#cb34-13"></a></span>
+<span id="cb34-14"><a href="#cb34-14"></a><span class="kw">class</span> Perro(Animal):</span>
+<span id="cb34-15"><a href="#cb34-15"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
+<span id="cb34-16"><a href="#cb34-16"></a>  </span>
+<span id="cb34-17"><a href="#cb34-17"></a><span class="kw">class</span> Ave(Animal):</span>
+<span id="cb34-18"><a href="#cb34-18"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
+<span id="cb34-19"><a href="#cb34-19"></a>  </span>
+<span id="cb34-20"><a href="#cb34-20"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
+<span id="cb34-21"><a href="#cb34-21"></a>gato.saludo()</span>
+<span id="cb34-22"><a href="#cb34-22"></a></span>
+<span id="cb34-23"><a href="#cb34-23"></a></span>
+<span id="cb34-24"><a href="#cb34-24"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
+<span id="cb34-25"><a href="#cb34-25"></a>perro.saludo()</span>
+<span id="cb34-26"><a href="#cb34-26"></a></span>
+<span id="cb34-27"><a href="#cb34-27"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
+<span id="cb34-28"><a href="#cb34-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, yo soy un gato y mi sonido es maullido
 Hola, yo soy un perro y mi sonido es ladrido
