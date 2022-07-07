@@ -488,3 +488,43 @@ perro.saludo()
 ave = Ave("Piolin", "trinar")
 ave.saludo()
 ```
+
+Extendiendo el método init heredado.
+
+```{python}
+class Animal:
+  
+  def __init__(self, nombre, sonido):
+    self.nombre = nombre
+    self.sonido = sonido
+  
+  def saludo(self):
+    print("Hola, yo soy un", self.tipo, "y mi sonido es", self.sonido)
+
+class Gato(Animal):
+  
+  tipo = "gato"
+  def __init__(self, nombre, sonido):
+    Animal.__init__(self, nombre, sonido)
+    print("Soy una instancia de gato extendida")
+
+class Perro(Animal):
+  
+  tipo = "perro"
+  def __init__(self, nombre, sonido):
+    super().__init__(nombre, sonido)
+    print("Instanciando un Perro")
+  
+class Ave(Animal):
+  
+  tipo = "ave"
+
+gato = Gato("Serafin", "maullido")
+gato.saludo()
+
+perro = Perro("Leo", "ladrido")
+perro.saludo()
+
+ave = Ave("Piolin", "trinar")
+ave.saludo()
+```

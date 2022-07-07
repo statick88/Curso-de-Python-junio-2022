@@ -7,7 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.640">
+  <meta name="generator" content="quarto-0.9.646">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
   <title>Programación Orientada a Objetos</title>
@@ -387,7 +387,7 @@
   <h1 class="title">Programación Orientada a Objetos</h1>
   <p class="subtitle">Clases, Objetos, Atributos, Métodos</p>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
-  <p class="date">5/7/22</p>
+  <p class="date">6/7/22</p>
 </section>
 
 <section>
@@ -473,7 +473,7 @@ Los atributos o propiedades de los objetos son las características que puede te
 <span id="cb2-4"><a href="#cb2-4"></a>persona <span class="op">=</span> Usuario()</span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(persona)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Usuario object at 0x7fd143fba590&gt;</code></pre>
+<pre><code>&lt;__main__.Usuario object at 0x7fd00c347af0&gt;</code></pre>
 </div>
 </div>
 <p>Con esta ejecución podemos observar que el objeto <strong>usuario</strong> es una instancia de la clase <strong>Usuario</strong> y la dirección en memoria <strong>0x7f5254ee1fa0</strong> para referencia a este objeto.</p>
@@ -867,6 +867,51 @@ Hola, yo soy un ave y mi sonido es trinar</code></pre>
 <span id="cb34-28"><a href="#cb34-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hola, yo soy un gato y mi sonido es maullido
+Hola, yo soy un perro y mi sonido es ladrido
+Hola, yo soy un ave y mi sonido es trinar</code></pre>
+</div>
+</div>
+<p>Extendiendo el método init heredado.</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb36-2"><a href="#cb36-2"></a>  </span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb36-4"><a href="#cb36-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb36-5"><a href="#cb36-5"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
+<span id="cb36-6"><a href="#cb36-6"></a>  </span>
+<span id="cb36-7"><a href="#cb36-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
+<span id="cb36-8"><a href="#cb36-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
+<span id="cb36-9"><a href="#cb36-9"></a></span>
+<span id="cb36-10"><a href="#cb36-10"></a><span class="kw">class</span> Gato(Animal):</span>
+<span id="cb36-11"><a href="#cb36-11"></a>  </span>
+<span id="cb36-12"><a href="#cb36-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb36-14"><a href="#cb36-14"></a>    Animal.<span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido)</span>
+<span id="cb36-15"><a href="#cb36-15"></a>    <span class="bu">print</span>(<span class="st">"Soy una instancia de gato extendida"</span>)</span>
+<span id="cb36-16"><a href="#cb36-16"></a></span>
+<span id="cb36-17"><a href="#cb36-17"></a><span class="kw">class</span> Perro(Animal):</span>
+<span id="cb36-18"><a href="#cb36-18"></a>  </span>
+<span id="cb36-19"><a href="#cb36-19"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
+<span id="cb36-20"><a href="#cb36-20"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
+<span id="cb36-21"><a href="#cb36-21"></a>    <span class="bu">super</span>().<span class="fu">__init__</span>(nombre, sonido)</span>
+<span id="cb36-22"><a href="#cb36-22"></a>    <span class="bu">print</span>(<span class="st">"Instanciando un Perro"</span>)</span>
+<span id="cb36-23"><a href="#cb36-23"></a>  </span>
+<span id="cb36-24"><a href="#cb36-24"></a><span class="kw">class</span> Ave(Animal):</span>
+<span id="cb36-25"><a href="#cb36-25"></a>  </span>
+<span id="cb36-26"><a href="#cb36-26"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
+<span id="cb36-27"><a href="#cb36-27"></a></span>
+<span id="cb36-28"><a href="#cb36-28"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
+<span id="cb36-29"><a href="#cb36-29"></a>gato.saludo()</span>
+<span id="cb36-30"><a href="#cb36-30"></a></span>
+<span id="cb36-31"><a href="#cb36-31"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
+<span id="cb36-32"><a href="#cb36-32"></a>perro.saludo()</span>
+<span id="cb36-33"><a href="#cb36-33"></a></span>
+<span id="cb36-34"><a href="#cb36-34"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
+<span id="cb36-35"><a href="#cb36-35"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Soy una instancia de gato extendida
+Hola, yo soy un gato y mi sonido es maullido
+Instanciando un Perro
 Hola, yo soy un perro y mi sonido es ladrido
 Hola, yo soy un ave y mi sonido es trinar</code></pre>
 </div>
