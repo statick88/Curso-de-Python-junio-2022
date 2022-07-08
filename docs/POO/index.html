@@ -7,10 +7,10 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.646">
+  <meta name="generator" content="quarto-0.9.653">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
-  <title>Programación Orientada a Objetos</title>
+  <title>Gestión de Archivos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -384,538 +384,113 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Programación Orientada a Objetos</h1>
+  <h1 class="title">Gestión de Archivos</h1>
   <p class="subtitle">Clases, Objetos, Atributos, Métodos</p>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
-  <p class="date">6/7/22</p>
+  <p class="date">8/7/22</p>
 </section>
 
 <section>
 <section id="generalidades." class="title-slide slide level1 center">
-<h1>Generalidades.</h1>
-<p>La programación orientada a objetos es otro <strong>paradigma</strong> que trabaja el Lenguaje de Programación Python.</p>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> NombreDeLaClase:</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h1>Generalidades.</h1>
+<p>La gestión de archivos es una parte fundamental en el tema de desarrollo web, python también nos permite gestionar archivos a nivel local (máquina del usuario) o en un servidor.</p>
+<p>Aprendamos de Ello.</p>
 </section>
-<section id="definiciones-básicas." class="slide level2">
-<h2>Definiciones Básicas.</h2>
-<p>Para poder entender este paradigma debemos utilizar la <strong>Abstracción</strong>. Para poder comprender mejor es necesario entender algunos conceptos básicos de este paradigma.</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><strong>¿Qué es una Clase?</strong><br>
-<strong>Una clase es una plantilla genérica de un objeto</strong>.</p>
-<p>La clase proporciona variables iniciales de estado (donde se guardan los atributos) e implementaciones de comportamiento (métodos)</p>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.16.43-c55250b1-a09b-4025-b263-c09ae7364008.jpg"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/poo-10-728.webp"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<p><strong>¿Qué es un Objeto?</strong><br>
-Los objetos son la clave para entender la <strong>Programación Orientada a Objetos</strong>. Si miramos a nuestro alrededor&nbsp; encontraremos un sin fin de objetos de la vida real: perro, escritorio, televisor, bicicleta, etc…</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><strong>¿Qué es un Método?</strong><br>
-Los métodos son la acción o función que realiza un objeto. Si nuestro objeto es <strong>Perro</strong>, los métodos pueden ser: <strong>caminar</strong>, <strong>ladrar</strong>, <strong>saltar</strong>, <strong>dormir</strong>, etc…</p>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/Captura%20de%20pantalla%202019-01-21%20a%20la(s)%201.webp"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/Definiendo%20clase%20Mascota%20en%20Python.png"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<p><strong>¿Qué es un Atributo?</strong><br>
-Los atributos o propiedades de los objetos son las características que puede tener un objeto: <strong>Si el objeto fuera Perro</strong>, los atributos podrían ser: tamaño, edad, color, raza, etc…</p>
-</div>
-</div>
+<section id="cómo-creo-archivos-desde-python" class="slide level2">
+<h2>¿Cómo creo archivos desde Python?</h2>
+<p>Para crear archivos desde python tenemos que hacer uso del método <strong>open</strong>, e indicar el tipo de permisos que vamos a otorgar al <strong>script</strong> para trabajar con este archivo.</p>
+<p>Veamos como se hace.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>"""</span>
+<span id="cb1-2"><a href="#cb1-2"></a>archivo = open("nombres.txt")</span>
+<span id="cb1-3"><a href="#cb1-3"></a>print(archivo.read())"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Es necesario tener cuidado cuando se trabaja con los métodos de la manipulación de archivos, por ejemplo si trabajamos con un archivo muy grande, será complicado poder leer (visualizar) cada una de las líneas del mismo. Si por ejemplo se trabaja con imágenes dentro del archivo, lo que devuelve será una cadena de caracteres difícil de comprender y manejar.</p>
+<h3 id="permisos-de-archivos.">Permisos de archivos.</h3>
+<p>En el código anterior pudimos observar que a la variable archivo, el método open pasa como argumento “nombres.txt”, sin embargo no es el único parámetro que se pueda pasar, también se puede optar por permisos como segundo argumento.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>"""</span>
+<span id="cb2-2"><a href="#cb2-2"></a>archivo = open("nombres.txt", "r")</span>
+<span id="cb2-3"><a href="#cb2-3"></a>print(archivo.read())"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Primer permiso es <strong>leer</strong> “r”, otro permiso es <strong>append</strong> “a”, solo funciona si el archivo existe.</p>
+<p>Segundo permiso es <strong>escribir</strong> “w”, en el caso de que el archivo no exista, Python va a crear el archivo.</p>
+<p>El tercer permiso es <strong>crear</strong> archivos utilizando la “x”, sin embargo si ya existe el archivo creado, nos envía un error.</p>
+<p>Recapitulando, el método <strong>read</strong> nos devuelve toda la información del archivo, quizá sea más útil poder avanzar línea por línea.</p>
+<p>Si ese fuera el caso, es mejor utilizar la instrucción <strong>readline</strong>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>"""</span>
+<span id="cb3-2"><a href="#cb3-2"></a>archivo = open("nombres.txt")</span>
+<span id="cb3-3"><a href="#cb3-3"></a>print(archivo.readline())</span>
+<span id="cb3-4"><a href="#cb3-4"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>si se desea leer otra línea más se puede copiar la instrucción para leerla.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>"""</span>
+<span id="cb4-2"><a href="#cb4-2"></a>archivo = open("nombres.txt")</span>
+<span id="cb4-3"><a href="#cb4-3"></a>print(archivo.readline())</span>
+<span id="cb4-4"><a href="#cb4-4"></a>print(archivo.readline())</span>
+<span id="cb4-5"><a href="#cb4-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quizá sea momento de aplicar lo aprendido, utilizar un ciclo <strong>for</strong> para ir leyendo cada línea.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>"""</span>
+<span id="cb5-2"><a href="#cb5-2"></a>archivo = open("nombres.txt")</span>
+<span id="cb5-3"><a href="#cb5-3"></a>for x in archivo:</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  print(x)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Es recomendable cuando se trabaja con archivos no dejarlos abiertos, se sugiere cerrar los archivos mediante el método <strong>close()</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>"""</span>
+<span id="cb6-2"><a href="#cb6-2"></a>archivo = open("nombres.txt")</span>
+<span id="cb6-3"><a href="#cb6-3"></a>for x in archivo:</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  print(x)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>archivo.close()</span>
+<span id="cb6-6"><a href="#cb6-6"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="intentando-entender-la-poo." class="slide level2">
-<h2>Intentando entender la POO.</h2>
-<p>Para poder entender mejor estos conceptos <strong>analicemos</strong> desde la perspectiva de abstracción.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/30854178_ml.jpg" width="397"></p>
-</figure>
-</div>
-<p>Pensemos en un objeto sencillo, por ejemplo <strong>usuario</strong>.</p>
+<section id="escribiendo-archivos." class="slide level2">
+<h2>Escribiendo archivos.</h2>
+<p>Si deseamos ingresar información en estos archivos podemos utilizar el método write(), y en este caso se agregará el siguiente texto.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>"""</span>
+<span id="cb7-2"><a href="#cb7-2"></a>archivo = open("nombres.txt", "a")</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>archivo.write("\nagregamos un ejemplo de nueva línea")</span>
+<span id="cb7-5"><a href="#cb7-5"></a>archivo.close()</span>
+<span id="cb7-6"><a href="#cb7-6"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si se desea leer el texto que acabamos de escribir, es necesario volver a abrir el archivo.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>archivo = open("nombres.txt", "a")</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a>archivo = open("nombres.txt", "r")</span>
+<span id="cb8-4"><a href="#cb8-4"></a>print(archivo.read())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ahora si queremos volver a escribir vamos a cambiar el permiso por <strong>write</strong>, en este caso el comportamiento cambia por completo.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>"""archivo = open("nombres.txt", "w")</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a>archivo = open("nombres.txt", "r")</span>
+<span id="cb9-4"><a href="#cb9-4"></a>print(archivo.read())"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Con esta instrucción, todo el contenido es eliminado.</p>
+<p>Recuerda: Si queremos modificar por completo el contenido de un archivo, vamos a utilizar el permiso de “w”, si lo que queremos es solamente agregar registros al archivo, se sugiere utilizar el permiso “a” ya que es menos riesgos.</p>
 </section>
-<section id="después-del-análisis." class="slide level2">
-<h2>Después del análisis.</h2>
-<p>El objeto usuario va a tener algunos atributos que le permitirán acceder a algún sistema como por ejemplo <strong>nombre, correo, password.</strong> Estos 3 atributos (o propiedades), ahora cuando este usuario quiera ingresar a un sistema, va a empezar a ejecutar acciones, esas <strong>acciones</strong> nosotros las vamos a agregar como métodos.</p>
-</section>
-<section id="objetos-y-clases." class="slide level2">
-<h2><strong>Objetos y Clases.</strong></h2>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  </span>
-<span id="cb2-4"><a href="#cb2-4"></a>persona <span class="op">=</span> Usuario()</span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(persona)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Usuario object at 0x7fd00c347af0&gt;</code></pre>
-</div>
-</div>
-<p>Con esta ejecución podemos observar que el objeto <strong>usuario</strong> es una instancia de la clase <strong>Usuario</strong> y la dirección en memoria <strong>0x7f5254ee1fa0</strong> para referencia a este objeto.</p>
-<p>Si yo deseo acceder a las propiedades de este objeto utilizo la notación de “<strong>.</strong>”, si el <strong>punto</strong>, nos permite acceder a las propiedades (o atributos) del objeto.</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  </span>
-<span id="cb4-4"><a href="#cb4-4"></a>persona <span class="op">=</span> Usuario()</span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="bu">print</span>(persona.nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Diego</code></pre>
-</div>
-</div>
-<p>También es posible acceder a más propiedades de la clase y crearlas mientras se modela el objeto que está siendo objeto de <strong>abstracción</strong> de la realidad.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb6-2"><a href="#cb6-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>  </span>
-<span id="cb6-5"><a href="#cb6-5"></a>persona <span class="op">=</span> Usuario()</span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra</code></pre>
-</div>
-</div>
-<p>Al igual que como aprendimos en las funciones, se puede crear <strong>más de un objeto</strong> (instancia) de esta clase.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb8-2"><a href="#cb8-2"></a>  nombre <span class="op">=</span> <span class="st">"Diego"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>  apellido <span class="op">=</span> <span class="st">"Saavedra"</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>  </span>
-<span id="cb8-5"><a href="#cb8-5"></a>persona <span class="op">=</span> Usuario()</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>persona1 <span class="op">=</span> Usuario()</span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(persona1.nombre, persona1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Diego Saavedra
-Diego Saavedra</code></pre>
-</div>
-</div>
-</section>
-<section id="método-init." class="slide level2">
-<h2>Método Init.</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb10-3"><a href="#cb10-3"></a>    </span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb10-5"><a href="#cb10-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb10-6"><a href="#cb10-6"></a>    </span>
-<span id="cb10-7"><a href="#cb10-7"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb10-8"><a href="#cb10-8"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
-<span id="cb10-9"><a href="#cb10-9"></a></span>
-<span id="cb10-10"><a href="#cb10-10"></a><span class="bu">print</span>(persona.nombre, persona.apellido)</span>
-<span id="cb10-11"><a href="#cb10-11"></a><span class="bu">print</span>( persona1.nombre, persona1.apellido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Juan Martinez
-Pedro Benitez</code></pre>
-</div>
-</div>
-<p><strong>Self</strong> es la referencia del objeto cuando a este lo instanciamos. Por ejemplo, <strong>self</strong> es igual a persona o persona1 en los ejemplos anteriores. Nos referimos a él desconociendo el nombre que se le vaya a asignar en el futuro. Nos permite crear objetos de las clases con valores distintos.</p>
-<p><strong>Self</strong> es la instancia de la clase Usuario (Es decir el nombre que le asignamos a persona). Esto permite que la creación de nuevos objetos (o instancias de la clase) puedan ser de carácter dinámico. Por otra parte el método INIT es el primer método de la clase que se ejecuta al crear una nueva instancia.</p>
-<p><strong>Self</strong> es un valor que tienen reservados las clases en python al cual nosotros podemos llamar para hacer referencia a las instancias de nuestras clases.</p>
-<p>Cuando se crea una nueva instancia de clase es necesario pasar como parámetros los argumentos (o propiedades) que han sido creados en el método INIT.</p>
-</section>
-<section id="métodos." class="slide level2">
-<h2>Métodos.</h2>
-<p>Ahora vamos a crear un método que nos permita mostrar por pantalla tanto el nombre como el apellido de los usuarios que acabaos de crear.</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb12-3"><a href="#cb12-3"></a>    </span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb12-6"><a href="#cb12-6"></a>    </span>
-<span id="cb12-7"><a href="#cb12-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb12-8"><a href="#cb12-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb12-9"><a href="#cb12-9"></a>    </span>
-<span id="cb12-10"><a href="#cb12-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb12-11"><a href="#cb12-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12"></a></span>
-<span id="cb12-13"><a href="#cb12-13"></a>persona.saludo()</span>
-<span id="cb12-14"><a href="#cb12-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez
-Hola, mi nombre es Pedro Benitez</code></pre>
-</div>
-</div>
-</section>
-<section id="self-eliminar-propiedades-y-objetos." class="slide level2">
-<h2>Self, eliminar propiedades y objetos.</h2>
-<p>No es explicita mente necesario utilizar el nombre de <strong>self</strong> en los métodos (diferentes al método INIT).</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb14-3"><a href="#cb14-3"></a>    </span>
-<span id="cb14-4"><a href="#cb14-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb14-5"><a href="#cb14-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb14-6"><a href="#cb14-6"></a>    </span>
-<span id="cb14-7"><a href="#cb14-7"></a>  <span class="kw">def</span> saludo(octocat):</span>
-<span id="cb14-8"><a href="#cb14-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, octocat.nombre, octocat.apellido)</span>
-<span id="cb14-9"><a href="#cb14-9"></a>    </span>
-<span id="cb14-10"><a href="#cb14-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb14-11"><a href="#cb14-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
-<span id="cb14-12"><a href="#cb14-12"></a></span>
-<span id="cb14-13"><a href="#cb14-13"></a>persona.saludo()</span>
-<span id="cb14-14"><a href="#cb14-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez
-Hola, mi nombre es Pedro Benitez</code></pre>
-</div>
-</div>
-<p>El problemas se dará cuando otros programadores vean nuestro código, y se pregunten por ejemplo <strong>¿Qué es octocat?,</strong> octocat es el primer argumento del método, por tal razón hace referencia a la instancia. Ahora es más sencillo de entender ¿verdad?</p>
-<p>Es necesario agregar este proceso mental para poder entender. Por lo tanto, para poder eliminar este proceso mental cuando se lee el código, se sugiere utilizar la conversión de <strong>self</strong>.</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb16-3"><a href="#cb16-3"></a>    </span>
-<span id="cb16-4"><a href="#cb16-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb16-6"><a href="#cb16-6"></a>    </span>
-<span id="cb16-7"><a href="#cb16-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb16-8"><a href="#cb16-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb16-9"><a href="#cb16-9"></a>    </span>
-<span id="cb16-10"><a href="#cb16-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb16-11"><a href="#cb16-11"></a>persona1 <span class="op">=</span> Usuario(<span class="st">"Pedro"</span>, <span class="st">"Benitez"</span>)</span>
-<span id="cb16-12"><a href="#cb16-12"></a></span>
-<span id="cb16-13"><a href="#cb16-13"></a>persona.saludo()</span>
-<span id="cb16-14"><a href="#cb16-14"></a>persona1.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez
-Hola, mi nombre es Pedro Benitez</code></pre>
-</div>
-</div>
-<p>Cuando veamos ahora la palabra reservada <strong>“self”</strong> ya sabemos que hace referencia a la instancia de la clase.</p>
-</section>
-<section id="modificando-propiedades-de-nuestras-instancias." class="slide level2">
-<h2>Modificando propiedades de nuestras instancias.</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb18-3"><a href="#cb18-3"></a>    </span>
-<span id="cb18-4"><a href="#cb18-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb18-6"><a href="#cb18-6"></a>    </span>
-<span id="cb18-7"><a href="#cb18-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb18-8"><a href="#cb18-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb18-9"><a href="#cb18-9"></a>    </span>
-<span id="cb18-10"><a href="#cb18-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb18-11"><a href="#cb18-11"></a></span>
-<span id="cb18-12"><a href="#cb18-12"></a>persona.saludo()</span>
-<span id="cb18-13"><a href="#cb18-13"></a>persona.nombre <span class="op">=</span> <span class="st">"Pedro"</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>persona.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez
-Hola, mi nombre es Pedro Martinez</code></pre>
-</div>
-</div>
-<p>También es posible eliminar las propiedades de estas instancias.</p>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb20-3"><a href="#cb20-3"></a>    </span>
-<span id="cb20-4"><a href="#cb20-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb20-5"><a href="#cb20-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb20-6"><a href="#cb20-6"></a>    </span>
-<span id="cb20-7"><a href="#cb20-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb20-8"><a href="#cb20-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb20-9"><a href="#cb20-9"></a>    </span>
-<span id="cb20-10"><a href="#cb20-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb20-11"><a href="#cb20-11"></a></span>
-<span id="cb20-12"><a href="#cb20-12"></a>persona.saludo()</span>
-<span id="cb20-13"><a href="#cb20-13"></a><span class="kw">del</span> persona.nombre</span>
-<span id="cb20-14"><a href="#cb20-14"></a><span class="co">#persona.saludo()</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
-</div>
-</div>
-<p>También es posible eliminar a un objeto por completo.</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb22-3"><a href="#cb22-3"></a>    </span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb22-5"><a href="#cb22-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb22-6"><a href="#cb22-6"></a>    </span>
-<span id="cb22-7"><a href="#cb22-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb22-8"><a href="#cb22-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb22-9"><a href="#cb22-9"></a>    </span>
-<span id="cb22-10"><a href="#cb22-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb22-11"><a href="#cb22-11"></a></span>
-<span id="cb22-12"><a href="#cb22-12"></a>persona.saludo()</span>
-<span id="cb22-13"><a href="#cb22-13"></a><span class="kw">del</span> persona.nombre</span>
-<span id="cb22-14"><a href="#cb22-14"></a><span class="kw">del</span> persona</span>
-<span id="cb22-15"><a href="#cb22-15"></a><span class="co">#print(persona)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
-</div>
-</div>
-</section>
-<section id="herencia." class="slide level2">
-<h2>Herencia.</h2>
-<p>Herencia es un concepto que se utiliza en POO, el objetivo de utilizar esta particularidad es poder reutilizar el código en estructuras que sean similares.</p>
-<p>Por ejemplo, si queremos crear además de la clase usuario, una clase administrador, que además de poseer un nombre, apellido y pueda saludar, también se le incluya un método que mencione “Soy el administrador del Sistema”</p>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb24-3"><a href="#cb24-3"></a>    </span>
-<span id="cb24-4"><a href="#cb24-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb24-5"><a href="#cb24-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb24-6"><a href="#cb24-6"></a>    </span>
-<span id="cb24-7"><a href="#cb24-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb24-8"><a href="#cb24-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb24-9"><a href="#cb24-9"></a>    </span>
-<span id="cb24-10"><a href="#cb24-10"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb24-11"><a href="#cb24-11"></a></span>
-<span id="cb24-12"><a href="#cb24-12"></a>persona.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez</code></pre>
-</div>
-</div>
-<p><strong>¿Qué haría?</strong></p>
-</section>
-<section id="solución" class="slide level2">
-<h2>Solución</h2>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">class</span> Usuario:</span>
-<span id="cb26-2"><a href="#cb26-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido):</span>
-<span id="cb26-3"><a href="#cb26-3"></a>    </span>
-<span id="cb26-4"><a href="#cb26-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb26-5"><a href="#cb26-5"></a>    <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
-<span id="cb26-6"><a href="#cb26-6"></a>    </span>
-<span id="cb26-7"><a href="#cb26-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb26-8"><a href="#cb26-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, mi nombre es"</span>, <span class="va">self</span>.nombre, <span class="va">self</span>.apellido)</span>
-<span id="cb26-9"><a href="#cb26-9"></a>    </span>
-<span id="cb26-10"><a href="#cb26-10"></a><span class="kw">class</span> Admin(Usuario):</span>
-<span id="cb26-11"><a href="#cb26-11"></a>  <span class="kw">def</span> superSaludo(<span class="va">self</span>):</span>
-<span id="cb26-12"><a href="#cb26-12"></a>    <span class="bu">print</span>(<span class="st">"Hola, me llamo"</span>, <span class="va">self</span>.nombre, <span class="st">"Soy el administrador del Sistema"</span>)</span>
-<span id="cb26-13"><a href="#cb26-13"></a>    </span>
-<span id="cb26-14"><a href="#cb26-14"></a>persona <span class="op">=</span> Usuario(<span class="st">"Juan"</span>, <span class="st">"Martinez"</span>)</span>
-<span id="cb26-15"><a href="#cb26-15"></a>persona.saludo()</span>
-<span id="cb26-16"><a href="#cb26-16"></a></span>
-<span id="cb26-17"><a href="#cb26-17"></a>admin <span class="op">=</span> Admin(<span class="st">"Super"</span>, <span class="st">"Administrador"</span>)</span>
-<span id="cb26-18"><a href="#cb26-18"></a>admin.saludo()</span>
-<span id="cb26-19"><a href="#cb26-19"></a>admin.superSaludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, mi nombre es Juan Martinez
-Hola, mi nombre es Super Administrador
-Hola, me llamo Super Soy el administrador del Sistema</code></pre>
-</div>
-</div>
-</section>
-<section id="ejercicio." class="slide level2">
-<h2>Ejercicio.</h2>
-<p>Crear una clase Gato que tenga 2 atributos, nombre y sonido. También agregar un método que permita saludar, en este método indicar que clase es a la que pertenece y cual es su sonido.</p>
-<p>Crear una clase Perro con los mismos métodos y atributos del Gato, la particularidad es que este debe indicar en el método saludo, que es un perro y su sonido.</p>
-</section>
-<section id="solución-1" class="slide level2">
-<h2>Solución</h2>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">class</span> Gato:</span>
-<span id="cb28-2"><a href="#cb28-2"></a>  </span>
-<span id="cb28-3"><a href="#cb28-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb28-4"><a href="#cb28-4"></a>    </span>
-<span id="cb28-5"><a href="#cb28-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb28-6"><a href="#cb28-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb28-7"><a href="#cb28-7"></a>    </span>
-<span id="cb28-8"><a href="#cb28-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb28-9"><a href="#cb28-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un gato y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb28-10"><a href="#cb28-10"></a>    </span>
-<span id="cb28-11"><a href="#cb28-11"></a><span class="kw">class</span> Perro:</span>
-<span id="cb28-12"><a href="#cb28-12"></a>  </span>
-<span id="cb28-13"><a href="#cb28-13"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb28-14"><a href="#cb28-14"></a>    </span>
-<span id="cb28-15"><a href="#cb28-15"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb28-16"><a href="#cb28-16"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb28-17"><a href="#cb28-17"></a>    </span>
-<span id="cb28-18"><a href="#cb28-18"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb28-19"><a href="#cb28-19"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un perro y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb28-20"><a href="#cb28-20"></a>    </span>
-<span id="cb28-21"><a href="#cb28-21"></a></span>
-<span id="cb28-22"><a href="#cb28-22"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
-<span id="cb28-23"><a href="#cb28-23"></a>gato.saludo()</span>
-<span id="cb28-24"><a href="#cb28-24"></a></span>
-<span id="cb28-25"><a href="#cb28-25"></a></span>
-<span id="cb28-26"><a href="#cb28-26"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
-<span id="cb28-27"><a href="#cb28-27"></a>perro.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, soy un gato y mi sonido es el maullido
-Hola, soy un perro y mi sonido es el ladrido</code></pre>
-</div>
-</div>
-<p>Mejoremos el código.</p>
-<div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">class</span> Animal:</span>
-<span id="cb30-2"><a href="#cb30-2"></a>  </span>
-<span id="cb30-3"><a href="#cb30-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb30-4"><a href="#cb30-4"></a>    </span>
-<span id="cb30-5"><a href="#cb30-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb30-6"><a href="#cb30-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb30-7"><a href="#cb30-7"></a></span>
-<span id="cb30-8"><a href="#cb30-8"></a><span class="kw">class</span> Gato(Animal):</span>
-<span id="cb30-9"><a href="#cb30-9"></a></span>
-<span id="cb30-10"><a href="#cb30-10"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb30-11"><a href="#cb30-11"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un gato y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb30-12"><a href="#cb30-12"></a>    </span>
-<span id="cb30-13"><a href="#cb30-13"></a><span class="kw">class</span> Perro(Animal):</span>
-<span id="cb30-14"><a href="#cb30-14"></a>  </span>
-<span id="cb30-15"><a href="#cb30-15"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb30-16"><a href="#cb30-16"></a>    <span class="bu">print</span>(<span class="st">"Hola, soy un perro y mi sonido es el"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb30-17"><a href="#cb30-17"></a>    </span>
-<span id="cb30-18"><a href="#cb30-18"></a></span>
-<span id="cb30-19"><a href="#cb30-19"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
-<span id="cb30-20"><a href="#cb30-20"></a>gato.saludo()</span>
-<span id="cb30-21"><a href="#cb30-21"></a></span>
-<span id="cb30-22"><a href="#cb30-22"></a></span>
-<span id="cb30-23"><a href="#cb30-23"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
-<span id="cb30-24"><a href="#cb30-24"></a>perro.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, soy un gato y mi sonido es el maullido
-Hola, soy un perro y mi sonido es el ladrido</code></pre>
-</div>
-</div>
-<p>Mejoremos un poco más el código.</p>
-<div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">class</span> Animal:</span>
-<span id="cb32-2"><a href="#cb32-2"></a>  </span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb32-4"><a href="#cb32-4"></a>    </span>
-<span id="cb32-5"><a href="#cb32-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb32-6"><a href="#cb32-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb32-7"><a href="#cb32-7"></a>  </span>
-<span id="cb32-8"><a href="#cb32-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb32-9"><a href="#cb32-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb32-10"><a href="#cb32-10"></a></span>
-<span id="cb32-11"><a href="#cb32-11"></a><span class="kw">class</span> Gato(Animal):</span>
-<span id="cb32-12"><a href="#cb32-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
-<span id="cb32-13"><a href="#cb32-13"></a></span>
-<span id="cb32-14"><a href="#cb32-14"></a><span class="kw">class</span> Perro(Animal):</span>
-<span id="cb32-15"><a href="#cb32-15"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
-<span id="cb32-16"><a href="#cb32-16"></a>  </span>
-<span id="cb32-17"><a href="#cb32-17"></a><span class="kw">class</span> Ave(Animal):</span>
-<span id="cb32-18"><a href="#cb32-18"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
-<span id="cb32-19"><a href="#cb32-19"></a>  </span>
-<span id="cb32-20"><a href="#cb32-20"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
-<span id="cb32-21"><a href="#cb32-21"></a>gato.saludo()</span>
-<span id="cb32-22"><a href="#cb32-22"></a></span>
-<span id="cb32-23"><a href="#cb32-23"></a></span>
-<span id="cb32-24"><a href="#cb32-24"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
-<span id="cb32-25"><a href="#cb32-25"></a>perro.saludo()</span>
-<span id="cb32-26"><a href="#cb32-26"></a></span>
-<span id="cb32-27"><a href="#cb32-27"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
-<span id="cb32-28"><a href="#cb32-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, yo soy un gato y mi sonido es maullido
-Hola, yo soy un perro y mi sonido es ladrido
-Hola, yo soy un ave y mi sonido es trinar</code></pre>
-</div>
-</div>
-<p>Un poco más, extendiendo el método Init.</p>
-<div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">class</span> Animal:</span>
-<span id="cb34-2"><a href="#cb34-2"></a>  </span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb34-4"><a href="#cb34-4"></a>    </span>
-<span id="cb34-5"><a href="#cb34-5"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb34-6"><a href="#cb34-6"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb34-7"><a href="#cb34-7"></a>  </span>
-<span id="cb34-8"><a href="#cb34-8"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb34-9"><a href="#cb34-9"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb34-10"><a href="#cb34-10"></a></span>
-<span id="cb34-11"><a href="#cb34-11"></a><span class="kw">class</span> Gato(Animal):</span>
-<span id="cb34-12"><a href="#cb34-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
-<span id="cb34-13"><a href="#cb34-13"></a></span>
-<span id="cb34-14"><a href="#cb34-14"></a><span class="kw">class</span> Perro(Animal):</span>
-<span id="cb34-15"><a href="#cb34-15"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
-<span id="cb34-16"><a href="#cb34-16"></a>  </span>
-<span id="cb34-17"><a href="#cb34-17"></a><span class="kw">class</span> Ave(Animal):</span>
-<span id="cb34-18"><a href="#cb34-18"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
-<span id="cb34-19"><a href="#cb34-19"></a>  </span>
-<span id="cb34-20"><a href="#cb34-20"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
-<span id="cb34-21"><a href="#cb34-21"></a>gato.saludo()</span>
-<span id="cb34-22"><a href="#cb34-22"></a></span>
-<span id="cb34-23"><a href="#cb34-23"></a></span>
-<span id="cb34-24"><a href="#cb34-24"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
-<span id="cb34-25"><a href="#cb34-25"></a>perro.saludo()</span>
-<span id="cb34-26"><a href="#cb34-26"></a></span>
-<span id="cb34-27"><a href="#cb34-27"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
-<span id="cb34-28"><a href="#cb34-28"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hola, yo soy un gato y mi sonido es maullido
-Hola, yo soy un perro y mi sonido es ladrido
-Hola, yo soy un ave y mi sonido es trinar</code></pre>
-</div>
-</div>
-<p>Extendiendo el método init heredado.</p>
-<div class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">class</span> Animal:</span>
-<span id="cb36-2"><a href="#cb36-2"></a>  </span>
-<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb36-4"><a href="#cb36-4"></a>    <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb36-5"><a href="#cb36-5"></a>    <span class="va">self</span>.sonido <span class="op">=</span> sonido</span>
-<span id="cb36-6"><a href="#cb36-6"></a>  </span>
-<span id="cb36-7"><a href="#cb36-7"></a>  <span class="kw">def</span> saludo(<span class="va">self</span>):</span>
-<span id="cb36-8"><a href="#cb36-8"></a>    <span class="bu">print</span>(<span class="st">"Hola, yo soy un"</span>, <span class="va">self</span>.tipo, <span class="st">"y mi sonido es"</span>, <span class="va">self</span>.sonido)</span>
-<span id="cb36-9"><a href="#cb36-9"></a></span>
-<span id="cb36-10"><a href="#cb36-10"></a><span class="kw">class</span> Gato(Animal):</span>
-<span id="cb36-11"><a href="#cb36-11"></a>  </span>
-<span id="cb36-12"><a href="#cb36-12"></a>  tipo <span class="op">=</span> <span class="st">"gato"</span></span>
-<span id="cb36-13"><a href="#cb36-13"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb36-14"><a href="#cb36-14"></a>    Animal.<span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido)</span>
-<span id="cb36-15"><a href="#cb36-15"></a>    <span class="bu">print</span>(<span class="st">"Soy una instancia de gato extendida"</span>)</span>
-<span id="cb36-16"><a href="#cb36-16"></a></span>
-<span id="cb36-17"><a href="#cb36-17"></a><span class="kw">class</span> Perro(Animal):</span>
-<span id="cb36-18"><a href="#cb36-18"></a>  </span>
-<span id="cb36-19"><a href="#cb36-19"></a>  tipo <span class="op">=</span> <span class="st">"perro"</span></span>
-<span id="cb36-20"><a href="#cb36-20"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, sonido):</span>
-<span id="cb36-21"><a href="#cb36-21"></a>    <span class="bu">super</span>().<span class="fu">__init__</span>(nombre, sonido)</span>
-<span id="cb36-22"><a href="#cb36-22"></a>    <span class="bu">print</span>(<span class="st">"Instanciando un Perro"</span>)</span>
-<span id="cb36-23"><a href="#cb36-23"></a>  </span>
-<span id="cb36-24"><a href="#cb36-24"></a><span class="kw">class</span> Ave(Animal):</span>
-<span id="cb36-25"><a href="#cb36-25"></a>  </span>
-<span id="cb36-26"><a href="#cb36-26"></a>  tipo <span class="op">=</span> <span class="st">"ave"</span></span>
-<span id="cb36-27"><a href="#cb36-27"></a></span>
-<span id="cb36-28"><a href="#cb36-28"></a>gato <span class="op">=</span> Gato(<span class="st">"Serafin"</span>, <span class="st">"maullido"</span>)</span>
-<span id="cb36-29"><a href="#cb36-29"></a>gato.saludo()</span>
-<span id="cb36-30"><a href="#cb36-30"></a></span>
-<span id="cb36-31"><a href="#cb36-31"></a>perro <span class="op">=</span> Perro(<span class="st">"Leo"</span>, <span class="st">"ladrido"</span>)</span>
-<span id="cb36-32"><a href="#cb36-32"></a>perro.saludo()</span>
-<span id="cb36-33"><a href="#cb36-33"></a></span>
-<span id="cb36-34"><a href="#cb36-34"></a>ave <span class="op">=</span> Ave(<span class="st">"Piolin"</span>, <span class="st">"trinar"</span>)</span>
-<span id="cb36-35"><a href="#cb36-35"></a>ave.saludo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Soy una instancia de gato extendida
-Hola, yo soy un gato y mi sonido es maullido
-Instanciando un Perro
-Hola, yo soy un perro y mi sonido es ladrido
-Hola, yo soy un ave y mi sonido es trinar</code></pre>
-</div>
-</div>
+<section id="eliminando-archivos-y-carpetas." class="slide level2">
+<h2>Eliminando archivos y carpetas.</h2>
+<p>Hemos aprendido como abrir los archivos, agregar contenido en ellos, es decir agregar información o volviendo a reescribir los mismos desde 0, ahora vamos a aprender como eliminarlos.</p>
+<p>Para ello vamos a utilizar una librería del sistema operativo llamado os, esta librería nos va a permitir eliminar archivos y también directorios (carpetas) dentro del sistema operativo.</p>
+<p>Vamos a utilizar el método <strong>remove</strong>, veamos un ejemplo.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>"""</span>
+<span id="cb10-2"><a href="#cb10-2"></a>import os</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a>os.remove("nombres.txt")</span>
+<span id="cb10-5"><a href="#cb10-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ahora si corremos el script, y vemos el directorio, nos vamos a dar cuenta que no tenemos el archivo “nombres.txt”, pero si lo volvemos a ejecutar veamos que sucede.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {shell} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>  File "/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicios/archivos2.py", line 3, in &lt;module&gt;</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    os.remove("nombres.txt")</span>
+<span id="cb11-3"><a href="#cb11-3"></a>FileNotFoundError: [Errno 2] No such file or directory: 'nombres.txt'</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto sucede porque ya no encuentra el archivo “nombres.txt”</p>
+<p>Se sugiere en este punto utilizar una validación, si el archivo se encuentra eliminarlo, caso contrario.</p>
+<p>Veamos como se hace.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>"""</span>
+<span id="cb12-2"><a href="#cb12-2"></a>import os</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a>if os.path.exists("nombres.txt"):</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    os.remove("nombres.txt")</span>
+<span id="cb12-6"><a href="#cb12-6"></a>else:</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    print("El archivo no existe")</span>
+<span id="cb12-8"><a href="#cb12-8"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>En el caso de querer eliminar un directorio o una carpeta.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>"""</span>
+<span id="cb13-2"><a href="#cb13-2"></a>import os</span>
+<span id="cb13-3"><a href="#cb13-3"></a></span>
+<span id="cb13-4"><a href="#cb13-4"></a>os.rmdir("nombres")</span>
+<span id="cb13-5"><a href="#cb13-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="img/favicon-50x56.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://abacom.edu.ec" class="uri">https://abacom.edu.ec</a></p>

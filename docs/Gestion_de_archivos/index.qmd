@@ -1,0 +1,155 @@
+---
+title: "Módulos"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    #chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+En esta sección vamos a aprender acerca de los módulos.
+
+¿Qué son los módulos?
+
+Un set de instrucciones funciones o variables que se puede incluir dentro de los archivos cuando estemos programando.
+
+Podemos crear módulos personalizados por nosotros mismos o descargar módulos de Internet.
+
+## Crea y también importa un módulo.
+
+Veamos este ejemplo:
+
+Creamos el archivo módulos.py
+
+```{python}
+
+personas = ["Diego", "Juan", "Pedro", "María"]
+
+def saludo(nombre):
+  print("Hola", nombre)
+```
+
+Ahora creamos otro archivo modulo-1.py
+
+```{python}
+"""
+import modulos
+
+print(modulo.personas)
+modulo.saludo("Juan")
+"""
+```
+
+Los módulos pueden mostrar un código más limpio y fácil de entender, esto facilita el trabajo de muchos proyectos.
+
+## Renombrado módulos.
+
+En ocasiones es necesario renombrar módulos por una abreviatura sencilla de entender o de manejar al momento de programar, veamos este ejemplo.
+
+```{python}
+"""import modulo as m
+
+print(modulo.personas)
+modulo.saludo("Juan")"""
+```
+
+En la primera línea podemos observar seguido de la palabra import modulo la palabra **as** esto significa que de ahora en adelante es necesario representar por lo que sigue de la palabra as, en este caso "m" todas las secciones de nuestro script donde se llamaba a módulo
+
+```{python}
+"""import modulo as m
+
+print(m.personas)
+m.saludo("Juan")"""
+```
+
+## Seleccionando lo importado.
+
+Por lo general no se acostumbra importar todo un módulo, ya que puede tener funcionalidades que jamás las vamos a utilizar, es por ello que se sugiere importar solo lo estrictamente necesario.
+
+Veamos como se hace eso.
+
+```{python}
+"""
+from modulo import saludo, personas
+
+print(personas)
+saludo("Juan")
+"""
+```
+
+## ¿Donde encontramos módulos de Python?
+
+Existe un repositorio muy conocido donde es posible incluir módulos de terceros en nuestros proyectos.
+
+Pip es una herramienta que nos permite a nosotros gestionar los paquetes que tenemos instalados en python. Este gestor nos permite instalar módulos, también listar módulos y nos permite eliminar módulos.
+
+```{bash}
+pip install ***
+```
+
+podemos revisar **pypi.org** que es un sitio donde podemos buscar módulos.
+
+```{bash}
+#pip install camelcase
+```
+
+Utilizando el módulo.
+
+```{python}
+"""from modulo import saludo, personas
+from camelcase import CamelCase
+
+print(personas)
+saludo("Juan")
+
+camel = CamelCase()
+string = "Esta es una oración para probar CamelCase"
+
+camelcase = camel.hump(string)
+print(camelcase)"""
+```
+
+Otro comando que puede ser de utilidad es el siguiente
+
+```{bash}
+#pip list
+```
+
+Para eliminar un módulo tenemos que utilizar
+
+```{bash}
+#pip uninstall camelcase
+```
