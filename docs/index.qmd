@@ -54,3 +54,5 @@ execute:
 ## [Funciones](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Funciones)
 
 ## [Programación Orientada a Objetos (POO)](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/POO)
+
+## [Módulos](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Modulos)

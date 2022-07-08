@@ -1,0 +1,11 @@
+{python}
+#No ejecute este script.
+"""
+i = 0
+
+while i < 10:
+  print(i)
+  if i == 3:
+    continue
+  i+=1
+"""
