@@ -1,6 +1,6 @@
 ---
 title: "Gestión de Archivos"
-subtitle: "Clases, Objetos, Atributos, Métodos"
+#subtitle: "Clases, Objetos, Atributos, Métodos"
 date: "today"
 author: "Lic. Diego Medardo Saavedra García Mg. Sc."
 lang: "es"
