@@ -24,7 +24,6 @@ format:
     smaller: false
     scrollable: true
     menu: true
-
   #html: 
     #code-fold: true
     #html-math-method: katex
@@ -37,6 +36,8 @@ execute:
     
 bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Generalidades
@@ -47,7 +48,7 @@ Hasta ahora hemos aprendido lo básico del lenguaje de programación python y lo
 
 Para poder trabajar con Python y MySql es necesario instalar un conector mediante pip
 
-```bash
+``` bash
 pip3 install mysql-connector-python
 ```
 
@@ -81,9 +82,9 @@ Un cursor es un objeto que nos permite interactuar con la base de datos mediante
 
 La diferencia principal entre los métodos Fetchall y Fetchone son:
 
-- **Fetchall:** Devuelve todos los resultados que encuentra en la base de datos.
+-   **Fetchall:** Devuelve todos los resultados que encuentra en la base de datos.
 
-- **Fetchone:** Devuelve solo el primer resultado que encuentra en la base de datos.
+-   **Fetchone:** Devuelve solo el primer resultado que encuentra en la base de datos.
 
 ```{python}
 #| eval: false
