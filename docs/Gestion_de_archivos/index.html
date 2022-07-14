@@ -7,7 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.653">
+  <meta name="generator" content="quarto-0.9.655">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
   <title>Gestion de Archivos</title>
@@ -436,26 +436,31 @@
 <span id="cb6-4"><a href="#cb6-4"></a>  print(x)</span>
 <span id="cb6-5"><a href="#cb6-5"></a>archivo.close()</span>
 <span id="cb6-6"><a href="#cb6-6"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si deseo indicar donde crear los archivos es necesario pasar como parámetro antes del nombre la ruta del directorio donde deseo crear este archivo.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>"""</span>
+<span id="cb7-2"><a href="#cb7-2"></a>archivo = open("/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicio2/nombres.txt","w")</span>
+<span id="cb7-3"><a href="#cb7-3"></a>print(archivo.read())</span>
+<span id="cb7-4"><a href="#cb7-4"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="escribiendo-archivos." class="slide level2">
 <h2>Escribiendo archivos.</h2>
 <p>Si deseamos ingresar información en estos archivos podemos utilizar el método write(), y en este caso se agregará el siguiente texto.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>"""</span>
-<span id="cb7-2"><a href="#cb7-2"></a>archivo = open("nombres.txt", "a")</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>archivo.write("\nagregamos un ejemplo de nueva línea")</span>
-<span id="cb7-5"><a href="#cb7-5"></a>archivo.close()</span>
-<span id="cb7-6"><a href="#cb7-6"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>"""</span>
+<span id="cb8-2"><a href="#cb8-2"></a>archivo = open("nombres.txt", "a")</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a>archivo.write("\nagregamos un ejemplo de nueva línea")</span>
+<span id="cb8-5"><a href="#cb8-5"></a>archivo.close()</span>
+<span id="cb8-6"><a href="#cb8-6"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Si se desea leer el texto que acabamos de escribir, es necesario volver a abrir el archivo.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>archivo = open("nombres.txt", "a")</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>archivo = open("nombres.txt", "r")</span>
-<span id="cb8-4"><a href="#cb8-4"></a>print(archivo.read())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ahora si queremos volver a escribir vamos a cambiar el permiso por <strong>write</strong>, en este caso el comportamiento cambia por completo.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>"""archivo = open("nombres.txt", "w")</span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>archivo = open("nombres.txt", "a")</span>
 <span id="cb9-2"><a href="#cb9-2"></a></span>
 <span id="cb9-3"><a href="#cb9-3"></a>archivo = open("nombres.txt", "r")</span>
-<span id="cb9-4"><a href="#cb9-4"></a>print(archivo.read())"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4"></a>print(archivo.read())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ahora si queremos volver a escribir vamos a cambiar el permiso por <strong>write</strong>, en este caso el comportamiento cambia por completo.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>"""archivo = open("nombres.txt", "w")</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>archivo = open("nombres.txt", "r")</span>
+<span id="cb10-4"><a href="#cb10-4"></a>print(archivo.read())"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Con esta instrucción, todo el contenido es eliminado.</p>
 <p>Recuerda: Si queremos modificar por completo el contenido de un archivo, vamos a utilizar el permiso de “w”, si lo que queremos es solamente agregar registros al archivo, se sugiere utilizar el permiso “a” ya que es menos riesgos.</p>
 </section>
@@ -464,32 +469,38 @@
 <p>Hemos aprendido como abrir los archivos, agregar contenido en ellos, es decir agregar información o volviendo a reescribir los mismos desde 0, ahora vamos a aprender como eliminarlos.</p>
 <p>Para ello vamos a utilizar una librería del sistema operativo llamado os, esta librería nos va a permitir eliminar archivos y también directorios (carpetas) dentro del sistema operativo.</p>
 <p>Vamos a utilizar el método <strong>remove</strong>, veamos un ejemplo.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>"""</span>
-<span id="cb10-2"><a href="#cb10-2"></a>import os</span>
-<span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a>os.remove("nombres.txt")</span>
-<span id="cb10-5"><a href="#cb10-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>"""</span>
+<span id="cb11-2"><a href="#cb11-2"></a>import os</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a>os.remove("nombres.txt")</span>
+<span id="cb11-5"><a href="#cb11-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Ahora si corremos el script, y vemos el directorio, nos vamos a dar cuenta que no tenemos el archivo “nombres.txt”, pero si lo volvemos a ejecutar veamos que sucede.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {shell} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>  File "/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicios/archivos2.py", line 3, in &lt;module&gt;</span>
-<span id="cb11-2"><a href="#cb11-2"></a>    os.remove("nombres.txt")</span>
-<span id="cb11-3"><a href="#cb11-3"></a>FileNotFoundError: [Errno 2] No such file or directory: 'nombres.txt'</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {shell} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>  File "/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicios/archivos2.py", line 3, in &lt;module&gt;</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    os.remove("nombres.txt")</span>
+<span id="cb12-3"><a href="#cb12-3"></a>FileNotFoundError: [Errno 2] No such file or directory: 'nombres.txt'</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Esto sucede porque ya no encuentra el archivo “nombres.txt”</p>
 <p>Se sugiere en este punto utilizar una validación, si el archivo se encuentra eliminarlo, caso contrario.</p>
 <p>Veamos como se hace.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>"""</span>
-<span id="cb12-2"><a href="#cb12-2"></a>import os</span>
-<span id="cb12-3"><a href="#cb12-3"></a></span>
-<span id="cb12-4"><a href="#cb12-4"></a>if os.path.exists("nombres.txt"):</span>
-<span id="cb12-5"><a href="#cb12-5"></a>    os.remove("nombres.txt")</span>
-<span id="cb12-6"><a href="#cb12-6"></a>else:</span>
-<span id="cb12-7"><a href="#cb12-7"></a>    print("El archivo no existe")</span>
-<span id="cb12-8"><a href="#cb12-8"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>En el caso de querer eliminar un directorio o una carpeta.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>"""</span>
 <span id="cb13-2"><a href="#cb13-2"></a>import os</span>
 <span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a>os.rmdir("nombres")</span>
-<span id="cb13-5"><a href="#cb13-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4"></a>if os.path.exists("nombres.txt"):</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    os.remove("nombres.txt")</span>
+<span id="cb13-6"><a href="#cb13-6"></a>else:</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    print("El archivo no existe")</span>
+<span id="cb13-8"><a href="#cb13-8"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>En el caso de querer eliminar un directorio o una carpeta.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>"""</span>
+<span id="cb14-2"><a href="#cb14-2"></a>import os</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a>os.rmdir("nombres")</span>
+<span id="cb14-5"><a href="#cb14-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para crear archivos es necesario utilizar el comando mkdir.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {pyhon} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>"""</span>
+<span id="cb15-2"><a href="#cb15-2"></a>import os</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a>os.mkdir("nombres")</span>
+<span id="cb15-5"><a href="#cb15-5"></a>"""</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="img/favicon-50x56.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://abacom.edu.ec" class="uri">https://abacom.edu.ec</a></p>

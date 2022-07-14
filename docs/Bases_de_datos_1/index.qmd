@@ -1,0 +1,59 @@
+---
+title: "Bases de Datos"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+Para conocer acerca de las bases de datos es necesario conocer acerca de las arquitecturas, la más conocida es Cliente - Servidor.
+
+## Arquitectura Cliente - Servidor.
+
+## ![](images/arquitectura-cliente-servidor-en-la-base-de-datos-2.jpg){width="680"}
+
+![](images/distri.jpg){fig-align="right" width="694"}
+
+![](images/BD2.jpg){fig-align="left" width="690"}
+
+## Importancia de las Bases de Datos.
+
+![](images/pera.jpg)
+
+## Tabla Usuario.
+
+![](images/th-3649820418.jpg){fig-align="center" width="689"}

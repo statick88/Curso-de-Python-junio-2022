@@ -116,6 +116,15 @@ archivo.close()
 """
 ```
 
+Si deseo indicar donde crear los archivos es necesario pasar como parámetro antes del nombre la ruta del directorio donde deseo crear este archivo.
+
+```{pyhon}
+"""
+archivo = open("/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicio2/nombres.txt","w")
+print(archivo.read())
+"""
+```
+
 ## Escribiendo archivos.
 
 Si deseamos ingresar información en estos archivos podemos utilizar el método write(), y en este caso se agregará el siguiente texto.
@@ -199,5 +208,15 @@ En el caso de querer eliminar un directorio o una carpeta.
 import os
 
 os.rmdir("nombres")
+"""
+```
+
+Para crear archivos es necesario utilizar el comando mkdir.
+
+```{pyhon}
+"""
+import os
+
+os.mkdir("nombres")
 """
 ```

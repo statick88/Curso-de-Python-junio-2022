@@ -1,0 +1,76 @@
+---
+title: "Bases de Datos con Python"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+## Generalidades
+
+Hasta ahora hemos aprendido lo básico del lenguaje de programación python y lo hemos complementado con MySQL (por separado), es hora de fusionarlos, es decir trabajar con bases de datos MySQL desde Python.
+
+## Instalar el Conector de Python con MySQL.
+
+Para poder trabajar con Python y MySql es necesario instalar un conector mediante pip
+
+```{shell}
+#pip3 install mysql-connector-python
+```
+
+En el archivo.py de vscode podemos conectarnos mediante la siguiente sintaxis.
+
+```{python}
+"""
+import mysql.connector
+
+mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="D3mon1o.",
+  database="abacomconnector"
+)
+
+cursor = midb.cursor()
+
+cursor.execute('select * from Usuario')
+
+resultado = cursor.fetchall()
+
+print(resultado)
+"""
+```
+
+Un cursor es un objeto que nos permite interactuar con la base de datos mediante el lenguaje SQL (que lo hemos revisado previamente). Mediante el comando **execute**, nosotros podemos pasar código sql a través de python a la base de datos, al utilizarlo vamos a requerir que nos devuelva información, la cual vamos a necesitar que sea almacenada, en este caso se utiliza la variable **resultado**.

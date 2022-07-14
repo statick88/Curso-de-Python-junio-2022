@@ -1,0 +1,157 @@
+---
+title: "Bases de Datos"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+## Comandos SQL.
+
+Es posible interactuar con base de datos a trabes del lenguaje SQL, vamos a aprender lo básico de ello en este tema.
+
+### Crear y Eliminar bases de Datos
+
+```{sql}
+# create database prueba;
+
+# drop database prueba;
+```
+
+Si ejecuto más de una vez el script sql con una linea que ya he corrido anteriormente, me sale error.
+
+```{sql}
+#create database prueba;
+
+#use prueba;
+
+#create table Usuario(id int, email varchar(255), username varchar(50));
+```
+
+Es necesario ejecutar cada una de las líneas de la tabla.
+
+### Alter table.
+
+Es necesario utilizarlo cuando utilizamos mal un dato.
+
+```{sql}
+#alter table Usuario add edad int;
+
+#alter table Usuario drop colum edad;
+```
+
+### Modificar tabla.
+
+```{sql}
+
+# alter table Usuario modify column email varchar(50)
+```
+
+### Insertar registros.
+
+```{sql}
+#insert into Usuario (email, username)
+#values ('dsaavedra88@gmail.com','statick')
+```
+
+Eliminar registros.
+
+```{sql}
+
+#alter table Usuario add primary key (id int )
+#delete from Usuario where email = 'dsaavedra88@gmail.com' limit 1;
+```
+
+Agregar primary key a id
+
+```{sql}
+#alter table Usuario add primary key (id);
+```
+
+Agregando Autoincremento en columna id
+
+```{sql}
+#alter table Usuario modify column id int AUTO_INCREMENT;
+```
+
+## Instrucción Where.
+
+La instrucción **select \* from Tabla** me permitirá observar todos los registros y columnas de la tabla seleccionada.
+
+```{sql}
+#select * from Usuario;
+```
+
+Ahora si lo que deseo hacer como traer solo algunos datos en particular puedo agregar where.
+
+```{sql}
+#select * from Usuario where email = "juan@correo.com";
+```
+
+Podemos filtrar por campos, por ejemplo volver a agregar la edad y presentar los datos mayor o menor de cierta edad.
+
+```{sql}
+#alter table Usuario add edad int;
+
+# Aregamos algunas edades de forma manual y agrego cambios
+
+#select * from Usuario where edad < 30; 
+```
+
+## Update
+
+Tambien es posible actualizar los registros mediante la instrucción update
+
+```{sql}
+#update Usuario set edad = 32 where id 0 "1";
+```
+
+Sin colocar el where se actualizan todos los campos.
+
+```{sql}
+#update Usuario set edad = 32;
+```
+
+En Workbench no sucede ese cambio por una especie de seguridad que incluye workbench para evitar hacer ese tipo de cosas, sin embargo en producción no esta workbench y ahí si va a funcionar este comando, así que lo mejor es asegurarse de que un where siempre le sigue a un update.
+
+## Delete.
+
+La última instrucción importante de Base de Datos que nos queda por conocer es eliminar registros.
+
+```{sql}
+#delete from Usuario where id = "1";
+```
+
+Al igual que **Update**, es necesario asegurarse que existe un **where** después de un **Delete.**

@@ -1,0 +1,215 @@
+---
+title: "Ejercicios"
+#subtitle: "If, Elif, Else, And, Or"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    scrollable: true
+    chalkboard: 
+      buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: false #Pizarra
+    auto-stretch: false
+
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+---
+
+# Generalidades.
+
+Vamos a realizar una serie de ejercicios para re-afianzar los conocimientos adquiridos hasta el momento.
+
+## Ejercicio 1: Multiplicar.
+
+Multiplicar dos números sin usar el símbolo de multiplicación.
+
+## Solución del Ejercicio 1.
+
+```{python}
+a = 9
+b = 4
+respuesta = 0
+for x in range(a):
+    respuesta += b
+    
+print(respuesta) 
+```
+
+## Ejercicio 2: Al revés.
+
+Ingresar nombre y apellido e imprimirlo al reves.
+
+## Solución del Ejercicio 2.
+
+```{python}
+nombre = "Pedro"
+apellido = "Martinez"
+
+unir = nombre + " " + apellido
+
+print(unir[::-1])
+```
+
+## Ejercicio 3: El menor.
+
+Escriba una función que encuentre el elemento menor de una lista.
+
+## Solución del Ejercicio 3.
+
+```{python}
+lista = [2,-800, -40000,6,-9,-1000, -200]
+menor = "init"
+for x in lista:
+    if menor == "init" or menor > x:
+        menor = x
+    elif menor < x:
+        menor = menor       
+print(menor)
+```
+
+## Ejercicio 4: Calcular Volumen.
+
+Escribir una función que devuelva el volumen de una esfera por su radio.
+
+## Solución del Ejercicio 4.
+
+```{python}
+def calcularVolumen(r):
+    return 4/3 * 3.14 * r ** 3
+
+resultado = calcularVolumen(16)
+print(resultado)
+```
+
+## Ejercicio 5: Mayor de Edad.
+
+Escribir una funcion que indique si el usuario es mayor de edad.
+
+## Solución del Ejercicio 5.
+
+```{python}
+def esMayor(usuario):
+    if usuario.edad > 17:
+        return f"Es mayor de edad"
+    else:
+        return f"Es menor de edad"
+
+class Usuario:
+
+    def __init__(self, edad):
+        self.edad = edad
+
+usuario1 = Usuario(15)
+usuario2 = Usuario(21)
+
+resultado1 = esMayor(usuario1)
+resultado2 = esMayor(usuario2)
+
+print(resultado1)
+print(resultado2)
+```
+
+## Ejercicio 6: Par o Impar.
+
+Calcular si un número es par o impar.
+
+## Solución del Ejercicio 6.
+
+```{python}
+def esPar(n):
+    if n%2 == 0:
+        return f"Es par"
+    else:
+        return f"Es impar"
+
+print(esPar(5))
+print(esPar(6))
+```
+
+## Ejercicio 7: Mayor de Edad.
+
+Escribir una función que indique cuantas vocales tiene una palabra.
+
+## Solución del Ejercicio 7.
+
+```{python}
+palabra = "Juan"
+vocal = 0
+
+for x in palabra:
+    y = x.lower()
+    if y == "a" or y == "e" or y == "i" or y == "o" or y == "u":
+        vocal += 1
+
+print(vocal)
+```
+
+## Ejercicio 8: Devuelve la Suma.
+
+Escribir una función que reciba una cantidad infinita de números hasta decir basta, luego que devuelva la suma de los números ingresados.
+
+## Solución del Ejercicio 8.
+
+```{python}
+"""
+lista =[]
+print("Por favor ingrese numeros y para salir escriba basta")
+while True:
+    valor = input("Ingrese un valor")
+    if valor == "basta":
+        break
+    else:
+        try:
+            valor = int(valor)
+            lista.append(valor)
+        except:
+            print("Dato Invalido")
+            exit()
+resultado = 0
+for x in lista:
+    resultado += x
+
+print(resultado)
+"""
+```
+
+## Ejercicio 9: Recibir nombre y apellido y agregarlo a un archivo.
+
+Escribir una funcion que reciba nombre y apellido y los vaya agregando a un archivo.
+
+## Solución del Ejercicio 9.
+
+```{python}
+def agregarNombreyApellido(nombre, apellido):
+
+    c = open("nombrecompleto.txt","a")
+    c.write(nombre + " " + apellido + "\n")
+    c.close()
+
+agregarNombreyApellido("Diego","Saavedra")
+agregarNombreyApellido("Juan","Martinez")
+agregarNombreyApellido("Pedro","Lara")
+agregarNombreyApellido("Maria","Sarango")
+```

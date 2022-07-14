@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:America/Bogota
+LAST-MODIFIED:20220317T223602Z
+TZURL:http://tzurl.org/zoneinfo-outlook/America/Bogota
+X-LIC-LOCATION:America/Bogota
+BEGIN:STANDARD
+TZNAME:-05
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0500
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20220713T015515Z
+DTSTART;TZID=America/Bogota:20220716T073000
+DTEND;TZID=America/Bogota:20220716T133000
+SUMMARY:Tutorias Ensamblaje 3er semestre
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20220924T183000;INTERVAL=2;BYDAY=SA
+UID:ZOOM87361449048
+TZID:America/Bogota
+DESCRIPTION:ensamblaje tres le está invitando a una reunión de Zoom progr
+ amada.\n\nUnirse a la reunión Zoom\nhttps://cedia.zoom.us/j/87361449048\
+ n\nID de reunión: 873 6144 9048\n\nUnirse mediante SIP\n87361449048@zoom
+ crc.com\n\nUnirse mediante H.323\n162.255.37.11 (EE. UU. oeste)\n162.255
+ .36.11 (EE. UU. este)\n115.114.131.7 (Mumbay\n India)\n115.114.115.7 (Hy
+ derabad\n India)\n213.19.144.110 (Ámsterdam Países Bajos)\n213.244.140.1
+ 10 (Alemania)\n103.122.166.55 (Sídney\n Australia)\n103.122.167.55 (Melb
+ ourne\n Australia)\n149.137.40.110 (Singapur)\n64.211.144.160 (Brasil)\n
+ 149.137.68.253 (México)\n69.174.57.160 (Toronto\n Canadá)\n65.39.152.160
+  (Vancouver\n Canadá)\n207.226.132.110 (Tokio\n Japón)\n149.137.24.110 (
+ Osaka\n Japón)\nID de reunión: 873 6144 9048\n\nUnirse mediante Skype Em
+ presarial\nhttps://cedia.zoom.us/skype/87361449048\n
+LOCATION:https://cedia.zoom.us/j/87361449048
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

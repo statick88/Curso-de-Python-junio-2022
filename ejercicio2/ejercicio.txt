@@ -1,0 +1,7 @@
+Crear un archivo con cada vocal
+Agregar en las vocales e, i y o 
+la siguiente cadena 
+"Esto es un texto"
+
+Crear un directorio(carpeta) con su nombre 
+y otro con su apellido.
