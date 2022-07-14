@@ -38,11 +38,11 @@ bibliography: Bibliografia.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
 ---
 
-# Generalidades.
+# Generalidades.
 
 La gestión de archivos es una parte fundamental en el tema de desarrollo web, python también nos permite gestionar archivos a nivel local (máquina del usuario) o en un servidor.
 
-Aprendamos de Ello.
+Aprendamos de ello.
 
 ## ¿Cómo creo archivos desde Python?
 
@@ -50,10 +50,10 @@ Para crear archivos desde python tenemos que hacer uso del método **open**, e i
 
 Veamos como se hace.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt")
-print(archivo.read())"""
+print(archivo.read())
 ```
 
 Es necesario tener cuidado cuando se trabaja con los métodos de la manipulación de archivos, por ejemplo si trabajamos con un archivo muy grande, será complicado poder leer (visualizar) cada una de las líneas del mismo. Si por ejemplo se trabaja con imágenes dentro del archivo, lo que devuelve será una cadena de caracteres difícil de comprender y manejar.
@@ -62,76 +62,78 @@ Es necesario tener cuidado cuando se trabaja con los métodos de la manipulació
 
 En el código anterior pudimos observar que a la variable archivo, el método open pasa como argumento "nombres.txt", sin embargo no es el único parámetro que se pueda pasar, también se puede optar por permisos como segundo argumento.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt", "r")
-print(archivo.read())"""
+print(archivo.read())
 ```
 
-Primer permiso es **leer** "r", otro permiso es **append** "a", solo funciona si el archivo existe.
+- Primer permiso es **leer** `"r"`, otro permiso es **append** `"a"`, solo funciona si el archivo existe.
+- Segundo permiso es **escribir** `"w"`, en el caso de que el archivo no exista, Python va a crear el archivo.
+- El tercer permiso es **crear** archivos utilizando la `"x"`, sin embargo si ya existe el archivo creado, nos envía un error.
 
-Segundo permiso es **escribir** "w", en el caso de que el archivo no exista, Python va a crear el archivo.
 
-El tercer permiso es **crear** archivos utilizando la "x", sin embargo si ya existe el archivo creado, nos envía un error.
+:::{.callout-note}
+### Recapitulando
 
-Recapitulando, el método **read** nos devuelve toda la información del archivo, quizá sea más útil poder avanzar línea por línea.
+El método **read** nos devuelve toda la información del archivo, quizá sea más útil poder avanzar línea por línea.
+
+:::
 
 Si ese fuera el caso, es mejor utilizar la instrucción **readline**.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt")
 print(archivo.readline())
-"""
 ```
 
 si se desea leer otra línea más se puede copiar la instrucción para leerla.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt")
 print(archivo.readline())
 print(archivo.readline())
-"""
+
 ```
+
 
 Quizá sea momento de aplicar lo aprendido, utilizar un ciclo **for** para ir leyendo cada línea.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt")
 for x in archivo:
   print(x)
-"""
 ```
 
 Es recomendable cuando se trabaja con archivos no dejarlos abiertos, se sugiere cerrar los archivos mediante el método **close()**
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt")
 for x in archivo:
   print(x)
 archivo.close()
-"""
 ```
 
 ## Escribiendo archivos.
 
 Si deseamos ingresar información en estos archivos podemos utilizar el método write(), y en este caso se agregará el siguiente texto.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 archivo = open("nombres.txt", "a")
 
 archivo.write("\nagregamos un ejemplo de nueva línea")
 archivo.close()
-"""
 ```
 
 Si se desea leer el texto que acabamos de escribir, es necesario volver a abrir el archivo.
 
-```{pyhon}
+```{python}
+#| eval: false
 archivo = open("nombres.txt", "a")
 
 archivo = open("nombres.txt", "r")
@@ -140,11 +142,12 @@ print(archivo.read())
 
 Ahora si queremos volver a escribir vamos a cambiar el permiso por **write**, en este caso el comportamiento cambia por completo.
 
-```{pyhon}
-"""archivo = open("nombres.txt", "w")
+```{python}
+#| eval: false
+archivo = open("nombres.txt", "w")
 
 archivo = open("nombres.txt", "r")
-print(archivo.read())"""
+print(archivo.read())
 ```
 
 Con esta instrucción, todo el contenido es eliminado.
@@ -159,17 +162,16 @@ Para ello vamos a utilizar una librería del sistema operativo llamado os, esta 
 
 Vamos a utilizar el método **remove**, veamos un ejemplo.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 import os
 
 os.remove("nombres.txt")
-"""
 ```
 
 Ahora si corremos el script, y vemos el directorio, nos vamos a dar cuenta que no tenemos el archivo "nombres.txt", pero si lo volvemos a ejecutar veamos que sucede.
 
-```{shell}
+```bash
   File "/home/statick/workspaces/Curso-de-Python-junio-2022/ejercicios/archivos2.py", line 3, in <module>
     os.remove("nombres.txt")
 FileNotFoundError: [Errno 2] No such file or directory: 'nombres.txt'
@@ -181,23 +183,22 @@ Se sugiere en este punto utilizar una validación, si el archivo se encuentra el
 
 Veamos como se hace.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 import os
 
 if os.path.exists("nombres.txt"):
     os.remove("nombres.txt")
 else:
     print("El archivo no existe")
-"""
+
 ```
 
 En el caso de querer eliminar un directorio o una carpeta.
 
-```{pyhon}
-"""
+```{python}
+#| eval: false
 import os
 
 os.rmdir("nombres")
-"""
 ```
