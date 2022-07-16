@@ -1,0 +1,297 @@
+---
+title: "Frameworks con Python"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+    presentation-title-slide-text-alig: left
+    presentation-slide-text-align: justify
+    #menu: true
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Generalidades
+
+Ha sido un largo recorrido hasta ahora, hemos aprendido acerca de:
+
+-   [Introducción a Python.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Intro)
+
+-   [Tipos de Datos.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Tipos_de_Datos)
+
+-   [Control de Flujo parte 1.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_1/)
+
+-   [Control de Flujo parte 2.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Control_de_Flujo_parte_2/)
+
+-   [Funciones.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Funciones/)
+
+-   [POO.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/POO)
+
+-   [Módulos.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Modulos)
+
+-   [Gestión de Archivos.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Gestion_de_archivos)
+
+-   [Bases de Datos 1.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Bases_de_datos_1)
+
+-   [Bases de Datos 2.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Bases_de_datos_1/#/title-slide)
+
+-   [Python y Base de Datos.](https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Base_de_Datos_con_python)
+
+Es hora de dar un paso más en nuestro aprendizaje y avanzar hasta un conocimiento base de frameworks.
+
+## Introducción a Frameworks de Python. {fig-align="center"}
+
+::: columns
+::: {.column width="60%"}
+Los frameworks de Python son básicamente una colección de módulos o paquetes que ayudan en la creación de aplicaciones web.
+:::
+
+::: {.column width="40%"}
+![](images/TopFrameworks-1600x900.png){fig-align="center"}
+:::
+:::
+
+Permiten la automatización de la implementación común de ciertas soluciones requeridas, aumentando así el alcance para los usuarios y dándoles la flexibilidad para concentrarse más en la lógica de la aplicación en lugar de los procesos básicos involucrados en una rutina.
+
+::: columns
+::: {.column width="40%"}
+![](images/django-features-768x384.jpg){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+Finalmente haciendo las cosas bastante más fáciles para los entusiastas del desarrollo web, dándoles una estructura adecuada.
+:::
+:::
+
+Para el desarrollo de aplicaciones, y también proporcionando patrones de uso frecuente en una aplicación web, que son mejores en términos de rendimiento técnico. [@murugesanPythonFrameworksTop2022]
+
+A continuación se listan algunos de los frameworks de Python.
+
+1.  **Django**
+
+2.  **Pyramid**
+
+3.  Circuits.
+
+4.  Watson framework.
+
+5.  Picnic.
+
+6.  **TurboGears**.
+
+7.  Web2py.
+
+8.  **Flask**.
+
+9.  Bottle.
+
+## Instalando el Django Framework.
+
+Django Framework es una de las herramientas de desarrollo más utilizadas en la actualidad, su facilidad de uso y aprovechando las ventajas del lenguaje de programación python hacen de este framework uno de los más utilizados a la hora de crear soluciones de software a la medida de las empresas.
+
+Antes de instalar se recomienda visitar su sitio oficial **djangoproject.com** y analizar que nos menciona la documentación oficial.
+
+![](images/2022-07-15-162759_4652x1080_scrot.png)
+
+En la sección **Download** podemos obtener información necesaria para la instalación del framework de forma local o en un servidor.
+
+![](images/Screenshot%202022-07-15%20at%2016-32-50%20Download%20Django%20Django.png)
+
+Se puede observar que es necesario utilizar el comando **pip** visto anteriormente, seguido de la opción **install** y el parámetro **Django==4.8.6**.
+
+Por lo tanto se hace necesario el uso de la terminal de comando (De preferencia **Git Bash** o **Comand Promt**).
+
+**Pero antes de ello se sugiere tomar en cuenta algunas recomendaciones previas...**
+
+## Pasos previos antes de instalar Django.
+
+1.  **Crear** un **entorno virtual**.
+2.  **Activar** el **entorno virtual**.
+3.  **Instalar** Django.
+4.  **Crear** el archivo **requirements.txt** (este se puede hacer después).
+
+Poco a poco se van a ir explicando estos nuevos conceptos y las necesidades de aplicarlos.
+
+### ¿Porque es necesario crear un entorno virtual?
+
+Fue la pregunta que me hice cuando estaba en mi etapa de aprendiz de este framework y trataré de explicarlo de forma sencilla con un ejemplo.
+
+![](images/Virtualenv-Entorno-global-y-virtuales-con-sus-dependencias-www.Jarroba.com_.png){fig-align="center"}
+
+Como se puede visualizar en la imagen superior al principio (cuando aprendemos) solo tenemos una instalación, o quizá no, quizá por el mismo hecho de aprender realicemos algunas instalaciones, trabajemos con versiones diferentes de python o de django.
+
+En estos casos lo que comúnmente haría un desarrollador es instalar y des-instalar la versión con la que necesite trabajar en ese momento. Quizá al principio sea una solución factible, pero con el tiempo esto llegará a cansar y resultar muy molesto.
+
+Por lo tanto se hace necesario la creación de lo que se denomina **entornos virtuales**, entendamos los entornos virtuales como una caja vacía (crear el entorno), la misma que podemos abrir y cerrar (activar o desactivar) las veces que necesitemos, y de esa forma como un interruptor de un foco cuando deseemos trabajar en x proyecto activamos nuestro entorno virtual, terminamos de trabajar, desactivamos el entorno virtual.
+
+## **Crear un entorno virtual.**
+
+Entendida la necesidad de los entornos virtuales sigamos los siguientes pasos.
+
+**Paso 1. Instalación de Virtualenv.**
+
+```{bash}
+pip install virtualenv
+```
+
+**Paso 2. Creación del Entorno Virtual.**
+
+```{bash}
+python -m venv env
+```
+
+**Paso 3. Activación del Entorno Virtual.**
+
+En Windows.
+
+```{bash}
+cd /env/Scritps/
+activate
+```
+
+En Linux o Mac.
+
+```{bash}
+source /env/bin/activate
+```
+
+De esta forma podemos crear, activar o desactivar los entornos virtuales que deseemos dependiendo de los proyectos que tengamos.
+
+## Instalación de Django.
+
+Una vez instalado y activado el entorno virtual, y solo después de ello procedemos a instalar el framework.
+
+Sin embargo, es necesario tomar en cuenta algo muy importante en el tema de desarrollo con este framework y es el soporte que tienen sus versiones. Según la documentación oficial [@django2022] es necesario tomar en cuenta la siguiente tabla hasta la fecha consultada.
+
+![](images/Screenshot%202022-07-15%20at%2017-01-30%20Download%20Django%20Django.png){fig-align="center"}
+
+En la misma se puede apreciar organizado por columnas la fecha de lanzamiento de cada versión y de la misma forma el tiempo de soporte, por ejemplo la versión 3.2 de Django ha sido lanzada en Abril del 2021 y tiene soporte LTS (extendido), hasta el primer trimestre del 2024, por el contrario la versión 4.0 ha sido lanzada en Diciembre de 2022 y tiene soporte hasta el primer trimestre de 2023.
+
+Como desarrollador de este framework, en lo personal sugiero para nuestros desarrollos utilizar las versiones LTS, ya que las mismas pertenezcamos o no al proyecto en el futuro, aseguramos que el mismo tenga un soporte extendido el mismo que implica soporte de bugs, ataques informáticos, parches, entre otros inconvenientes que pueden surgir.
+
+Por lo tanto para este curso se sugiere utilizar la versión 3.2 que tiene soporte hasta el primer trimestre de 2024.
+
+### Ahora si vamos a instalar Django.
+
+Paso 1. Verificar si está activado el entorno virtual.
+
+![](images/2022-07-15-170846_1366x743_scrot.png)
+
+Se puede verificar que está activado el entorno virtual porque la palabra **env**, el nombre que le asignamos a nuestro entorno virtual (por convención) está al inicio de la terminal encerrado entre 2 paracentesis, como si se tratara de una tupla.
+
+Si en cualquier momento deseamos salir del entorno virtual basta con escribir la palabra **deactivate**.
+
+![](images/2022-07-15-171121_1366x743_scrot.png)
+
+Con ello se puede observar que han desaparecido de nuestra terminal la palabra **(env)**.
+
+Paso 2. Instalación del framework Django en su versión 3.2
+
+```{bash}
+pip install Django==3.2
+```
+
+![](images/2022-07-15-172316_1366x743_scrot.png)
+
+Paso 3. Comprobamos que se instaló correctamente
+
+```{bash}
+pip freeze
+```
+
+![](images/2022-07-15-172434_1366x743_scrot.png)
+
+## Creando el archivo requirements.txt
+
+Es recomendable crear el archivo **requirements.txt** ya que por lo general no se trabaja en un solo computador, o de forma individual, las Metodologías de Desarrollo Agil en la actualidad involucran la participación de varios desarrolladores en un proyecto mediano o grande. Esto implica que más de una persona trabaje con el mismo desarrollo, pero con las particularidades que se le asignen a cada uno.
+
+Por ejemplo, si se está creando un Sistema Académico, posiblemente un desarrollador se encargue del **Backend** es decir desarrollar la lógica del negocio, la creación de **módulos**, **vistas**, etc. Otro desarrollador se encarga del **Frontend** es decir la creación de **templates** en html, adaptación de apariencia mediante CSS, que sea responsivo, etc., en pocas palabras que se vea bonita la aplicación a nivel web o móvil.
+
+Es aquí donde se hace necesario la portabilidad del código, la división del mismo en partes que finalmente sean unidas como un solo proyecto final.
+
+Un desarrollador del 2022 en la actualidad utiliza algún gestor de versiones, el más popular y utilizado es **git**, el mismo que puede servir para poder llevar diferentes **ramas** de **desarrollo** y cada desarrollador será responsable de sus entregables.
+
+Generar un archivo con todos los requerimientos (dependencias y versiones) se lo puede hacer de forma sencilla utilizando el comando:
+
+```{bash}
+pip freeze >> requirements.txt
+```
+
+![](images/2022-07-15-173527_1366x743_scrot.png)
+
+**Recuerda:** Es necesario actualizar el archivo **requierements.txt** conforme avanza el desarrollo del proyecto previo a un **git push** a la **rama** en la que estemos desarrollando y más aún a la **rama principal**.
+
+## Patrón de Arquitectura.
+
+Django por lo general utiliza un Patrón de Arquitectura ligeramente diferente a lo habitual que se puede encontrar en cualquier framework.
+
+### Modelo Vista Controlador (MVC - Model View Controller).
+
+![](images/2022-07-15-182810_1366x768_scrot.png)
+
+### Model Template Vista (MTV - Modelo Template View).
+
+![](images/2022-07-15-174633_1366x768_scrot.png)
+
+## Creación del Primer Proyecto en Django.
+
+Para crear el primer proyecto lo podemos hacer con el comando **django-admin** el mismo que permitirá mostrar algunas de las opciones más utilizadas.
+
+![](images/2022-07-15-183228_1366x743_scrot.png)
+
+Algunas de las opciones más utilizadas con el comando **django-admin help** son:
+
+-   makemigrations
+
+-   migrate
+
+-   runserver
+
+-   shell
+
+-   startapp
+
+-   startproject
+
+Poco a poco iremos analizando cada una de ellas, por ahora nos interesa el subcomando **startproject**, ya que el mismo acompañado de **django-admin** nos permitirá crear un proyecto. Sin más que agregar, vamos a ello.
+
+```{bash}
+django-admin startproject holamundo .
+```
+
+Empezamos creando un proyecto al que denominamos **holamundo** el mismo es un proyecto sencillo para poder conocer lo básico y elemental de la arquitectura.
+
+## Bibliografía.
+
+## 

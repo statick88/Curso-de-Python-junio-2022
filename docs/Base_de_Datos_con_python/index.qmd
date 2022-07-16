@@ -60,7 +60,7 @@ En el archivo.py de vscode podemos conectarnos mediante la siguiente sintaxis.
 #| eval: false
 import mysql.connector
 
-mysql.connector.connect(
+midb = mysql.connector.connect(
   host="localhost",
   user="root",
   password="password.",
@@ -78,7 +78,7 @@ print(resultado)
 
 Un cursor es un objeto que nos permite interactuar con la base de datos mediante el lenguaje SQL (que lo hemos revisado previamente). Mediante el comando **execute**, nosotros podemos pasar código sql a través de python a la base de datos, al utilizarlo vamos a requerir que nos devuelva información, la cual vamos a necesitar que sea almacenada, en este caso se utiliza la variable **resultado**.
 
-## Diferencias entre Fetchall y Fetchone
+## Diferencias entre Fetchall y Fetchone.
 
 La diferencia principal entre los métodos Fetchall y Fetchone son:
 
@@ -107,7 +107,7 @@ print(resultado)
 
 ```
 
-## Insertar Datos.
+## Insertar Registros en la base de datos.
 
 Si no recordamos como está estructurada nuestra tabla, podemos hacer consultas mediante el comando execute para conocer dicha estructura y saber que queremos insertar.
 
@@ -150,7 +150,7 @@ sql = "insert into Usuario (email, username, edad) values (%s, %s, %s)"
 values = ("micorreo@gmail.com","minombredeusuario", 45)
 
 cursor.execute(sql, values)
-base.commit()
+midb.commit()
 
 print(cursor.rowcount)
 
@@ -177,7 +177,7 @@ resultado = cursor.fetchall()
 print(resultado)
 ```
 
-## Actualizar datos
+## Actualizar registros en la base de datos.
 
 Para poder actualizar los datos que se haya ingresado, es necesario utilizar la siguiente sintaxis.
 
@@ -220,7 +220,7 @@ resultado = cursor.fetchall()
 print(resultado)
 ```
 
-## Eliminar registros.
+## Eliminar registros en la base de datos.
 
 Un crud completo no estaría listo sin la opción de eliminar, lo único que aumentamos en este punto es la posibilidad de poder eliminar los mismos en nuestra base de datos desde código python, vamos a ello.
 
@@ -264,7 +264,7 @@ resultado = cursor.fetchall()
 print(resultado)
 ```
 
-## Limitar Resultados.
+## Limitar Resultados obtenidos de la base de datos.
 
 En ocasiones será necesario acceder a datos mediante un límite, veamos como se utiliza esto
 
