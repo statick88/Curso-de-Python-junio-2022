@@ -7,7 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.18">
+  <meta name="generator" content="quarto-1.0.28">
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
   <title>Frameworks con Python</title>
@@ -407,7 +407,7 @@
 <section id="title-slide" class="center">
   <h1 class="title">Frameworks con Python</h1>
   <p class="author">Lic. Diego Medardo Saavedra García Mg. Sc.</p>
-  <p class="date">15/7/22</p>
+  <p class="date">19/7/22</p>
 </section>
 
 <section id="generalidades" class="slide level2">
@@ -558,6 +558,15 @@
 <h3 id="model-template-vista-mtv---modelo-template-view.">Model Template Vista (MTV - Modelo Template View).</h3>
 <p><img data-src="images/2022-07-15-174633_1366x768_scrot.png"></p>
 </section>
+<section id="estructura-de-archivos." class="slide level2">
+<h2>Estructura de Archivos.</h2>
+<p>Realicemos un paseo por por lo que tenemos hasta el momento antes de introducirnos a fondo en el frameworks y su uso.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-18-182117_1920x1055_scrot.png"></p>
+</figure>
+</div>
+</section>
 <section id="creación-del-primer-proyecto-en-django." class="slide level2">
 <h2>Creación del Primer Proyecto en Django.</h2>
 <p>Para crear el primer proyecto lo podemos hacer con el comando <strong>django-admin</strong> el mismo que permitirá mostrar algunas de las opciones más utilizadas.</p>
@@ -573,7 +582,90 @@
 </ul>
 <p>Poco a poco iremos analizando cada una de ellas, por ahora nos interesa el subcomando <strong>startproject</strong>, ya que el mismo acompañado de <strong>django-admin</strong> nos permitirá crear un proyecto. Sin más que agregar, vamos a ello.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>django-admin startproject holamundo .</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-183536_1920x1055_scrot.png"></p>
+</figure>
+</div>
 <p>Empezamos creando un proyecto al que denominamos <strong>holamundo</strong> el mismo es un proyecto sencillo para poder conocer lo básico y elemental de la arquitectura.</p>
+</section>
+<section id="crear-tu-primera-app." class="slide level2">
+<h2>Crear tu primera app.</h2>
+<p>Para crear tu Primera App en Django es necesario utilizar el siguiente comando:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>django-admin startapp primeraApp</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-183707_1920x1055_scrot.png"></p>
+</figure>
+</div>
+<p>Una vez creada nuestra Primera App en Django ahora vamos a modificar algunos archivos.</p>
+<p>holamundo/primeraApp/views.py</p>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">from</span> django.http <span class="im">import</span> HttpResponse</span>
+<span id="cb10-2"><a href="#cb10-2"></a> </span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">def</span> index(request):</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="cf">return</span> HttpResponse(<span class="st">"Hola Mundo"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-183807_1920x1055_scrot.png"></p>
+</figure>
+</div>
+<p>Ahora vamos a crear la ruta para poder devolver la función index a traves del navegador.</p>
+<p>holamundo/primeraApp/urls.py</p>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="im">from</span> . <span class="im">import</span> views</span>
+<span id="cb11-3"><a href="#cb11-3"></a> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb11-5"><a href="#cb11-5"></a>    path(<span class="st">''</span>, views.index, name<span class="op">=</span><span class="st">'index'</span>),</span>
+<span id="cb11-6"><a href="#cb11-6"></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-183857_1920x1055_scrot.png"></p>
+</figure>
+</div>
+<p>Ahora será necesario registrar nuestra app en el proyecto.</p>
+<p>holamundo/urls.py</p>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">from</span> firstApp <span class="im">import</span> urls</span>
+<span id="cb12-2"><a href="#cb12-2"></a> </span>
+<span id="cb12-3"><a href="#cb12-3"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    path(<span class="st">'fisrtApp/'</span>, include(<span class="st">'firstApp.urls'</span>)),</span>
+<span id="cb12-5"><a href="#cb12-5"></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-183857_1920x1055_scrot.png"></p>
+</figure>
+</div>
+<p>Registramos nuestra app en el archivo settings.py</p>
+<p>holamundo/settings.py</p>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Application definition</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>INSTALLED_APPS <span class="op">=</span> [</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="st">'django.contrib.admin'</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="st">'django.contrib.auth'</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="st">'django.contrib.contenttypes'</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="st">'django.contrib.sessions'</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="st">'django.contrib.messages'</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="st">'django.contrib.staticfiles'</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="st">'primeraApp'</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-184048_1920x1055_scrot.png"></p>
+</figure>
+</div>
+<p>Probamos nuestro servidor local</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>python manage.py runserver</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-184257_1366x743_scrot.png"></p>
+</figure>
+</div>
+<p>Ahora es necesario que nos dirijamos a la URL que hemos creado para la app <a href="http://127.0.0.1:8000/primeraApp/" class="uri">http://127.0.0.1:8000/primeraApp/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/2022-07-19-184432_1366x743_scrot.png"></p>
+</figure>
+</div>
+<p>Y con ello conseguimos nuestro primer <strong>hola mundo</strong> con <strong>Django</strong>.</p>
 </section>
 <section id="bibliografía." class="slide level2">
 <h2>Bibliografía.</h2>
@@ -820,7 +912,10 @@ Murugesan, A. (2022). <em>Python <span>Frameworks</span> | <span>Top</span> 20 <
         }
       }
       const toggleBodyColorPrimary = () => {
-        toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
       }
       toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

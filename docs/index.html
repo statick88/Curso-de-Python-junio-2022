@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.14">
+<meta name="generator" content="quarto-1.0.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Fecha de Publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">13 de julio de 2022</p>
+      <p class="date">19 de julio de 2022</p>
     </div>
   </div>
     
@@ -114,6 +114,9 @@ ul.task-list{list-style: none;}
 <section id="pyhon-y-base-de-datos" class="level2">
 <h2 class="anchored" data-anchor-id="pyhon-y-base-de-datos"><a href="https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Base_de_Datos_con_python">Pyhon y Base de Datos</a></h2>
 </section>
+<section id="frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="frameworks"><a href="https://5t4t1ck.github.io/Curso-de-Python-junio-2022/Frameworks">Frameworks</a></h2>
+</section>
 </section>
 
 </main>
@@ -132,7 +135,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

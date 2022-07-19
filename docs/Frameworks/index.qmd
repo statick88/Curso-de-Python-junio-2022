@@ -264,6 +264,12 @@ Django por lo general utiliza un Patrón de Arquitectura ligeramente diferente a
 
 ![](images/2022-07-15-174633_1366x768_scrot.png)
 
+## Estructura de Archivos.
+
+Realicemos un paseo por por lo que tenemos hasta el momento antes de introducirnos a fondo en el frameworks y su uso.
+
+![](images/2022-07-18-182117_1920x1055_scrot.png){fig-align="center"}
+
 ## Creación del Primer Proyecto en Django.
 
 Para crear el primer proyecto lo podemos hacer con el comando **django-admin** el mismo que permitirá mostrar algunas de las opciones más utilizadas.
@@ -290,7 +296,102 @@ Poco a poco iremos analizando cada una de ellas, por ahora nos interesa el subco
 django-admin startproject holamundo .
 ```
 
+![](images/2022-07-19-183536_1920x1055_scrot.png){fig-align="center"}
+
 Empezamos creando un proyecto al que denominamos **holamundo** el mismo es un proyecto sencillo para poder conocer lo básico y elemental de la arquitectura.
+
+## Crear tu primera app.
+
+Para crear tu Primera App en Django es necesario utilizar el siguiente comando:
+
+```{bash}
+django-admin startapp primeraApp
+```
+
+![](images/2022-07-19-183707_1920x1055_scrot.png){fig-align="center"}
+
+Una vez creada nuestra Primera App en Django ahora vamos a modificar algunos archivos.
+
+holamundo/primeraApp/views.py
+
+```{python}
+#| eval: false
+
+from django.http import HttpResponse
+ 
+def index(request):
+    return HttpResponse("Hola Mundo")
+```
+
+![](images/2022-07-19-183807_1920x1055_scrot.png){fig-align="center"}
+
+Ahora vamos a crear la ruta para poder devolver la función index a traves del navegador.
+
+holamundo/primeraApp/urls.py
+
+```{python}
+#| eval: false
+
+from django.urls import path
+from . import views
+ 
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+
+![](images/2022-07-19-183857_1920x1055_scrot.png){fig-align="center"}
+
+Ahora será necesario registrar nuestra app en el proyecto.
+
+holamundo/urls.py
+
+```{python}
+#| eval: false
+from firstApp import urls
+ 
+urlpatterns = [
+    path('fisrtApp/', include('firstApp.urls')),
+]
+```
+
+![](images/2022-07-19-183857_1920x1055_scrot.png){fig-align="center"}
+
+Registramos nuestra app en el archivo settings.py
+
+holamundo/settings.py
+
+```{python}
+#| eval: false
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'primeraApp'
+]
+```
+
+![](images/2022-07-19-184048_1920x1055_scrot.png){fig-align="center"}
+
+Probamos nuestro servidor local
+
+```{bash}
+python manage.py runserver
+```
+
+![](images/2022-07-19-184257_1366x743_scrot.png){fig-align="center"}
+
+Ahora es necesario que nos dirijamos a la URL que hemos creado para la app <http://127.0.0.1:8000/primeraApp/>
+
+![](images/2022-07-19-184432_1366x743_scrot.png){fig-align="center"}
+
+Y con ello conseguimos nuestro primer **hola mundo** con **Django**.
 
 ## Bibliografía.
 
