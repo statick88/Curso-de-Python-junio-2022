@@ -1,0 +1,337 @@
+---
+title: "TkInter"
+subtitle: ""
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    #toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/favicon-50x56.png
+    #css: styles.css
+    footer: <https://abacom.edu.ec>
+    theme: dark
+    makeindex: true
+    #multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+    presentation-title-slide-text-alig: left
+    presentation-slide-text-align: justify
+    #menu: true
+  #html: 
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+editor: visual
+execute: 
+  echo: true
+    
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Generalidades
+
+El paquete `tkinter` («interfaz Tk») es la interfaz por defecto de Python para el kit de herramientas de **GUI Tk**. Tanto **Tk** como `tkinter` están disponibles en la mayoría de las plataformas **Unix**, así como en sistemas **Windows** (Tk en sí no es parte de Python, es mantenido por **ActiveState**). [@python2022]
+
+Para instalar python en sistemas operativos Mac se debe utilizar el siguiente comando.
+
+```{bash}
+brew install python-tk
+```
+
+En Gnu/Linux depende mucho del Sistema Operativo que se esté utilizando.
+
+Debian y Derivados
+
+```{bash}
+sudo apt install python3-tk
+```
+
+Red Hat y Derivados
+
+```{bash}
+yum install python3-tkinter
+```
+
+En Microsoft Windows por defecto ya viene instalado cuando instalamos Python.
+
+Si queremos comprobar que está TkInter en nuestro sistema, en una consola utilicemos el siguiente comando.
+
+```{bash}
+pyhton -m tkinter
+```
+
+Ejecutar `python -m tkinter` desde la línea de comandos debería abrir una ventana que demuestre una interfaz Tk simple para saber si `tkinter` está instalado correctamente en su sistema. También muestra qué versión de Tcl/Tk está instalada para que pueda leer la documentación de Tcl/Tk específica de esa versión [@python2022].
+
+## Utilizando TkInter.
+
+Para empezar a utilizar TkInter vamos a crear nuestro primer "Hola Mundo" un nuevo directorio y un nuevo archivo y escribimos el siguiente código.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+
+root.mainloop()
+```
+
+Para salir de ello es necesario utilizar el botón de Cerrar (**X**) o la combinación de teclas **Ctrl + C.**
+
+## Un poco más de TkInter.
+
+Continuamos probando la Interfaz gráfica agregando la opción **geometry** con el siguiente código.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+root.geometry("400x400")
+
+root.mainloop()
+```
+
+## Etiquetas con TkInter.
+
+Ahora vamos a interactuar un poco más, para ello es necesario conocer los distintos componentes que existen en las interfaces gráficas, en este caso vamos a empezar con **label** (Etiqueta) y la mostramos con el método **pack**.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+root.geometry("400x400")
+label = Label(root, text = "Hola Mundo!")
+
+label.pack()
+
+root.mainloop()
+```
+
+Una opción adicional es simplificar en una sola línea el método **pack** y la instancia de **label**
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+root.geometry("400x400")
+etiqueta = Label(root, text = "Hola Mundo!").pack()
+
+root.mainloop()
+```
+
+## Agregando elementos en la pantalla.
+
+Se puede agregar más elementos con distintas instancias.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+root.geometry("400x400")
+
+label1 = Label(root, text = "Hola Mundo!")
+label2 = Label(root, text = "Hola Mundo!")
+label3 = Label(root, text = "Hola Mundo!")
+
+label1.pack()
+label2.pack()
+label3.pack()
+
+root.mainloop()
+```
+
+Sin embargo se genera un inconveniente, el cual es que no es tan sencillo poder empezar agregar más elementos, por ejemplo utilizando elementos a la izquierda o derecha, en estos casos vamos a aprender a utilizar **grid.**
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola mundo")
+root.geometry("400x400")
+
+label1 = Label(root, text = "Primera Etiqueta")
+label2 = Label(root, text = "Segunda Etiqueta")
+
+label1.grid(row=0, column=0)
+label2.grid(row=0, column=1)
+
+root.mainloop()
+```
+
+Podemos jugar un poco con las posiciones **row** y **column**, inclusive si lo que hacemos es utilizar columnas donde queden espacios en blanco
+
+![](img/Imagen1.jpg){fig-align="center"}
+
+Intentemos hacer lo siguiente:
+
+-   Agregar un tercer label (label3), al ubicarlo en la fila 1 y columna 1
+
+-   La 2da etiqueta (label2) ubicarla en la fila 10 y columna 10
+
+**Nota:** La tercera etiqueta (Agregamos sin ningún contenido --\> **""**, y posteriormente agreguemos solo espacios en blanco --\> **" "**).
+
+## Agregando Botones.
+
+Para agregar botones con TkInter vamos a crear un nuevo archivo e ingresamos el siguiente código.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+btn = Button(root, text="Click")
+btn.pack()
+
+root.mainloop()
+```
+
+Ahora vamos a agregar una acción para que se ejecute cuando utilizamos el **botón** que hemos agregado.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+def click():
+  label = Label(root, text="Hola Mundo!")
+  label.pack()
+
+btn = Button(root, text="Click", command=click)
+btn.pack()
+
+root.mainloop()
+```
+
+Sacando la etiqueta label de la función.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+label = Label(root, text="Hola Mundo!")
+  
+def click():
+  label.pack()
+
+btn = Button(root, text="Click", command=click)
+btn.pack()
+
+root.mainloop()
+```
+
+Conociendo los argumentos **fg** para cambiar el color del texto.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+label = Label(root, text="Hola Mundo!")
+  
+def click():
+  label.pack()
+
+btn = Button(root, text="Click", command=click, fg="yellow", bg="blue")
+btn.pack()
+
+root.mainloop()
+```
+
+## Input.
+
+Los **Input** son campos de texto con los cuales vamos a poder obtener datos ingresados por el usuario. Para ello vamos a crear un nuevo archivo y vamos a insertar el siguiente código. Para ello utilizaremos **Entry.**
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+root.geometry("800x600")
+
+e = Entry(root, width=60)
+e.pack()
+
+root.mainloop()
+```
+
+Si queremos agregar texto predefinido debemos utilizar **insert**
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+root.geometry("800x600")
+
+e = Entry(root, width=60)
+e.pack()
+e.insert(0, "Ingresa Texto")
+
+root.mainloop()
+```
+
+Vamos uniendo lo que hemos aprendido.
+
+```{python}
+#| eval: false
+from tkiinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+root.geometry("800x600")
+
+e = Entry(root, width=60)
+e.pack()
+e.insert(0, "Ingresa Texto")
+
+def click():
+  texto = e.get()
+  label.configure(text=texto)
+  e.delete(0, END)
+
+btn = Button(root, text="click", command=click)
+btn.pack()
+
+label = Label(root, text="Texto de la etiqueta")
+label.pack()
+
+root.mainloop()
+```
+
+## Bibliografía
+
+## 
