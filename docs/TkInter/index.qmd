@@ -191,7 +191,7 @@ Intentemos hacer lo siguiente:
 
 -   La 2da etiqueta (label2) ubicarla en la fila 10 y columna 10
 
-**Nota:** La tercera etiqueta (Agregamos sin ningún contenido --\> **""**, y posteriormente agreguemos solo espacios en blanco --\> **" "**).
+**Nota:** La tercera etiqueta (Agregamos sin ningún contenido --\> **"", y posteriormente agreguemos solo espacios en blanco --\>** " ").
 
 ## Agregando Botones.
 
@@ -328,6 +328,138 @@ btn.pack()
 
 label = Label(root, text="Texto de la etiqueta")
 label.pack()
+
+root.mainloop()
+```
+
+## Botón Salir.
+
+Vamos a conocer un poco acerca de los frame.
+
+```{python}
+#| eval: false
+#| 
+from tkinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+frame = LabelFrame(root, text="Login")
+frame.pack()
+
+label = Label(frame, text="Estoy dentro de un Frame")
+btn = Button(frame, text="Salir", command=root.quit)
+
+label.pack()
+btn.pack()
+
+root.mainloop()
+```
+
+Algunas propiedades pueden ser interesantes para poder agregar un **pading** fuera del marco.
+
+```{python}
+#| eval: false
+#| 
+from tkinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+frame = LabelFrame(root, text="Login")
+frame.pack(padx=50, pady=50)
+
+label = Label(frame, text="Estoy dentro de un Frame")
+btn = Button(frame, text="Salir", command=root.quit)
+
+label.pack()
+btn.pack()
+
+root.mainloop()
+```
+
+## Creando Marcos.
+
+Ahora vamos a agregar un **pading** dentro del marco.
+
+```{python}
+#| eval: false
+#| 
+from tkinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+frame = LabelFrame(root, text="Login", padx=10, pady=10, borderwidth=10)
+frame.pack(padx=50, pady=50)
+
+label = Label(frame, text="Estoy dentro de un Frame")
+btn = Button(frame, text="Salir", command=root.quit)
+
+label.pack()
+btn.pack()
+
+root.mainloop()
+```
+
+Marco sin argumento de texto.
+
+```{python}
+#| eval: false
+#| 
+from tkinter import *
+
+root = Tk()
+root.title("Hola Mundo!")
+
+frame = LabelFrame(root, padx=10, pady=10, borderwidth=10)
+frame.pack(padx=50, pady=50)
+
+label = Label(frame, text="Estoy dentro de un Frame")
+btn = Button(frame, text="Salir", command=root.quit)
+
+label.pack()
+btn.pack()
+
+root.mainloop()
+```
+
+## Creando la app Pies a Metros.
+
+```{python}
+#| eval: false
+#| 
+from tkinter import *
+
+root = Tk()
+root.title("Pies a Metros")
+
+def calcular(*args):
+  try:
+      value = float(pies.get())
+      m = int(0.3048 * value * 10000 + 0.5)/10000
+      metros.set(m)
+  except ValueError:
+    metros.set("Error")
+    
+frame = Frame(root, pady=3, padx=12)
+frame.grid(column=0, row=0)
+
+pies = StringVar()
+pies_input = Entry(frame, width=7, textvariable=pies)
+pies_input.grid(column=1, row=0)
+
+metros = StringVar()Labe
+l(frame, textvariable=metros).grid(column=1, row=1)
+
+Button(frame, text="Calcular", command=calcular).grid(column=2, row=2)
+
+Label(frame, text="Pies").grid(column=0, row=0)
+Label(frame, text="es igual a ").grid(column=0, row=1)
+Label(frame, text="metros").grid(column=2, row=1)
+
+pies_input.focus()
+root.bind("<Return>")
 
 root.mainloop()
 ```
