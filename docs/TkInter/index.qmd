@@ -82,7 +82,7 @@ Para empezar a utilizar TkInter vamos a crear nuestro primer "Hola Mundo" un nue
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -98,7 +98,7 @@ Continuamos probando la Interfaz gráfica agregando la opción **geometry** con 
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -113,7 +113,7 @@ Ahora vamos a interactuar un poco más, para ello es necesario conocer los disti
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -129,7 +129,7 @@ Una opción adicional es simplificar en una sola línea el método **pack** y la
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -145,7 +145,7 @@ Se puede agregar más elementos con distintas instancias.
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -166,7 +166,7 @@ Sin embargo se genera un inconveniente, el cual es que no es tan sencillo poder 
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola mundo")
@@ -199,7 +199,7 @@ Para agregar botones con TkInter vamos a crear un nuevo archivo e ingresamos el 
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -214,7 +214,7 @@ Ahora vamos a agregar una acción para que se ejecute cuando utilizamos el **bot
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -233,7 +233,7 @@ Sacando la etiqueta label de la función.
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -253,7 +253,7 @@ Conociendo los argumentos **fg** para cambiar el color del texto.
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -275,7 +275,7 @@ Los **Input** son campos de texto con los cuales vamos a poder obtener datos ing
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -291,7 +291,7 @@ Si queremos agregar texto predefinido debemos utilizar **insert**
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -308,7 +308,7 @@ Vamos uniendo lo que hemos aprendido.
 
 ```{python}
 #| eval: false
-from tkiinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Hola Mundo!")
@@ -449,8 +449,8 @@ pies = StringVar()
 pies_input = Entry(frame, width=7, textvariable=pies)
 pies_input.grid(column=1, row=0)
 
-metros = StringVar()Labe
-l(frame, textvariable=metros).grid(column=1, row=1)
+metros = StringVar()
+Label(frame, textvariable=metros).grid(column=1, row=1)
 
 Button(frame, text="Calcular", command=calcular).grid(column=2, row=2)
 
